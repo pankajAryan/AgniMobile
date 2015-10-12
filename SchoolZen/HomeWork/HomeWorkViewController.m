@@ -93,7 +93,7 @@ else if (sender.tag==2)
         [alert show];
         
     }
-    else if (btnClass.titleLabel.text.length==0)
+    else if (btnSection.titleLabel.text.length==0)
     {
         UIAlertView *alert = KALERT(KApplicationName,@"Please Select Section", self);
         
