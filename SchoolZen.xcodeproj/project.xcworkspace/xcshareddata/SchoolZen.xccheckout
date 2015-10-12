@@ -10,6 +10,8 @@
 	<string>SchoolZen</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>04C0373586FA1A9586B67FDB8160D6D204A31D47</key>
+		<string>https://github.com/pankajAryan/AgniMobile.git</string>
 		<key>32BE81AC8A913DC17A59170FEEC7ECDB56457639</key>
 		<string>https://github.com/pankajAryan/SchoolZen.git</string>
 	</dict>
@@ -17,17 +19,27 @@
 	<string>SchoolZen.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>32BE81AC8A913DC17A59170FEEC7ECDB56457639</key>
+		<key>04C0373586FA1A9586B67FDB8160D6D204A31D47</key>
 		<string>../..</string>
+		<key>32BE81AC8A913DC17A59170FEEC7ECDB56457639</key>
+		<string>../../../SchoolZen</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/pankajAryan/SchoolZen.git</string>
+	<string>https://github.com/pankajAryan/AgniMobile.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>32BE81AC8A913DC17A59170FEEC7ECDB56457639</string>
+	<string>04C0373586FA1A9586B67FDB8160D6D204A31D47</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>04C0373586FA1A9586B67FDB8160D6D204A31D47</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AgniMobile</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
