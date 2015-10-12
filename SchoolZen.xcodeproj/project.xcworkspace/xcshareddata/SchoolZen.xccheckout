@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>765F0B45-179F-46CA-84F5-22FB962A95E9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SchoolZen</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>32BE81AC8A913DC17A59170FEEC7ECDB56457639</key>
+		<string>https://github.com/pankajAryan/SchoolZen.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SchoolZen.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>32BE81AC8A913DC17A59170FEEC7ECDB56457639</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/pankajAryan/SchoolZen.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>32BE81AC8A913DC17A59170FEEC7ECDB56457639</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>32BE81AC8A913DC17A59170FEEC7ECDB56457639</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SchoolZen</string>
+		</dict>
+	</array>
+</dict>
+</plist>
