@@ -46,7 +46,7 @@ arrMain=[[NSMutableArray alloc] init];
 
     }
     else if ((btn_Section.titleLabel.text.length==0)
-             || ([btn_Class.titleLabel.text isEqualToString:@"Section"]))
+             || ([btn_Section.titleLabel.text isEqualToString:@"Section"]))
     {
         UIAlertView *alert = KALERT(KApplicationName,@"Please Select Section", self);
         
