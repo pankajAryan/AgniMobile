@@ -86,21 +86,22 @@ else if (sender.tag==2)
 
 - (IBAction)Click_HomeProceed:(id)sender {
     
-    if (btnClass.titleLabel.text.length==0) {
+    if (btnClass.titleLabel.text.length==0 || [btnClass.titleLabel.text isEqualToString:@"Class"]) {
         
         UIAlertView *alert = KALERT(KApplicationName,@"Please Select Class", self);
         
         [alert show];
         
     }
-    else if (btnSection.titleLabel.text.length==0)
+    else if ((btnSection.titleLabel.text.length==0)
+             || ([btnSection.titleLabel.text isEqualToString:@"Section"]))
     {
         UIAlertView *alert = KALERT(KApplicationName,@"Please Select Section", self);
         
         [alert show];
-        
     }
-    else if (btn_Subject.titleLabel.text.length==0)
+    else if ((btn_Subject.titleLabel.text.length==0)
+             || ([btn_Subject.titleLabel.text isEqualToString:@"Subject"]))
     {
         UIAlertView *alert = KALERT(KApplicationName,@"Please Select Subject", self);
         
