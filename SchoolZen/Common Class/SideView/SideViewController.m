@@ -81,7 +81,7 @@
     
     NSLog(@"%@",[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"schoolImage"] );
     
-    
+    self.imgSchool.placeholderImage = [UIImage imageNamed:@"login_top"];
     [self.imgSchool setImageURL:[NSURL URLWithString:[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"schoolImage"]]];
     self.lblSchoolName.text=[NSString stringWithFormat:@"  %@",[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"schoolName"]];
     

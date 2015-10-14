@@ -40,7 +40,14 @@
     [super viewDidLoad];
     
     GlobalDataPersistence *obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
-        
+
+    WebCommunicationClass *obj_web=[WebCommunicationClass new];
+    
+    [obj_web setACaller:self];
+    
+    [obj_web getTicker:[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"schoolId"]];
+    
+    
     CGRect frame = sclParent.frame;
     frame.size.height = ([UIScreen mainScreen].bounds.size.height - 120);
     sclParent.frame = frame;
@@ -54,7 +61,6 @@
     self.demoLabel1.fadeLength = 10.0f;
     self.demoLabel1.leadingBuffer = 30.0f;
     self.demoLabel1.trailingBuffer = 20.0f;
-    
     
     [CustomNavigation addTarget:self backRequired:NO title:[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"schoolName"]];
     
@@ -338,37 +344,42 @@
         [request startAsynchronous];
     }
 }
+
 #pragma mark- Webservice callback
 #pragma mark-
 -(void) dataDidFinishDowloading:(ASIHTTPRequest*)aReq withMethood:(NSString *)MethoodName withOBJ:(WebCommunicationClass *)aObj
 {
     NSError *jsonParsingError = nil;
     
-    NSString *strResult=[NSJSONSerialization JSONObjectWithData:[aReq responseData]options:0 error:&jsonParsingError];
+    id result = [NSJSONSerialization JSONObjectWithData:[aReq responseData]options:0 error:&jsonParsingError];
     
-    NSLog(@"%@",[strResult valueForKey:@"errorCode"]);
-    NSNumber * isSuccessNumber = (NSNumber *)[strResult valueForKey:@"errorCode"];
+    NSNumber * isSuccessNumber = (NSNumber *)[result valueForKey:@"errorCode"];
     
     if(isSuccessNumber)
     {
-        GlobalDataPersistence *obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
-        
-        obj_GlobalDataPersistence.arrTeacher=[strResult valueForKey:@"responseObject"];
-        NSLog(@"%@",obj_GlobalDataPersistence.arrTeacher);
+        if (aReq.tag == 41) {
+            self.demoLabel1.text = [result valueForKey:@"responseObject"];
+        }
+        else {
+            GlobalDataPersistence *obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
+            
+            obj_GlobalDataPersistence.arrTeacher = [result valueForKey:@"responseObject"];
+            NSLog(@"%@",obj_GlobalDataPersistence.arrTeacher);
+        }
     }
     else
         
     {
-        
-        UIAlertView *alert = KALERT(KApplicationName, [strResult valueForKey:@"errorMessage"], self);
-        
-        
-        
-        [alert show];
-        
+        if (aReq.tag != 41)
+        {
+            UIAlertView *alert = KALERT(KApplicationName, [result valueForKey:@"errorMessage"], self);
+            
+            [alert show];
+        }
         
     }
 }
+
 -(IBAction)Click_Calendar:(id)sender
 {
     CalenderNewViewController *obj_HomeWorkViewController=[CalenderNewViewController new];

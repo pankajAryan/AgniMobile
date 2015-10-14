@@ -15,7 +15,7 @@
 
 #define KALERT(TITLE,MSG,DELEGATE) [[UIAlertView alloc]initWithTitle:TITLE message:MSG delegate:DELEGATE cancelButtonTitle:@"OK" otherButtonTitles:nil, nil]
 
-#define KALERT_YN(TITLE,MSG,DELEGATE) [[UIAlertView alloc]initWithTitle:TITLE message:MSG delegate:DELEGATE cancelButtonTitle:@"Ok" otherButtonTitles:@"YES", nil]
+#define KALERT_YN(TITLE,MSG,DELEGATE) [[UIAlertView alloc]initWithTitle:TITLE message:MSG delegate:DELEGATE cancelButtonTitle:nil otherButtonTitles:@"NO",@"YES", nil]
 
 //#define AppDelegate (AppDelegate*)[UIApplication sharedApplication].delegate
 
@@ -36,6 +36,9 @@
 
 #define kAPNS_WEBSERVICE @"registerPushNotificationId"
 #define Login_MethodName @"login"
+
+#define API_GET_TICKER @"getTicker"
+
 
 #define kgetPlannedHolidays @"getPlannedHolidays"
 #define kgetUnPlannedHolidays @"getUnPlannedHolidays"

@@ -13,6 +13,8 @@
 #import "GlobalDataPersistence.h"
 #import "HomeworkTableViewCell.h"
 #import "ShowmsgTableViewCell.h"
+#import "FFZoomImageCollectionView.h"
+
 
 @interface PlannedTableViewController ()
 
@@ -138,6 +140,10 @@
         
         cell.lblboxdate.text=[dateArray objectAtIndex:0];
         cell.lbldate.text=[NSString stringWithFormat:@"%@%@",[dateArray objectAtIndex:1],[dateArray objectAtIndex:2]];
+        
+        [cell.buttonImage1 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.buttonIMAGE2 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.buttonImage3 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
         
         return cell;
     }
@@ -294,4 +300,20 @@
     }
 
 }
+
+- (void)imageGalleryDidTap:(UIButton*)sender {
+    
+    NSArray *images = [[self.dictPlanCommon objectAtIndex:0] valueForKey:@"mediaFiles"];
+
+    if (images.count > 0)
+    {
+        if (images.count > [sender tag]) {
+            
+            FFZoomImageCollectionView *zoomCollectionView = [[FFZoomImageCollectionView alloc] initWithDataSource:images andSelectedIndex:[sender tag]];
+            [[UIApplication sharedApplication].keyWindow addSubview:zoomCollectionView];
+        }
+    }
+}
+
+
 @end

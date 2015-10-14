@@ -215,6 +215,10 @@
 		CE9C37CD1B65734A00716564 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9C37C01B65734A00716564 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE9C37CE1B65734A00716564 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9C37C21B65734A00716564 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE9C37CF1B65734A00716564 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9C37C61B65734A00716564 /* Reachability.m */; };
+		CEA93A221BCD819900B3AE33 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA93A191BCD819900B3AE33 /* TPKeyboardAvoidingCollectionView.m */; };
+		CEA93A231BCD819900B3AE33 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA93A1B1BCD819900B3AE33 /* TPKeyboardAvoidingScrollView.m */; };
+		CEA93A241BCD819900B3AE33 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA93A1D1BCD819900B3AE33 /* TPKeyboardAvoidingTableView.m */; };
+		CEA93A251BCD819900B3AE33 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA93A1F1BCD819900B3AE33 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		CEAE302A1BCB78D10078F0FD /* TimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAE30281BCB78D10078F0FD /* TimeTableViewController.m */; };
 		CEAE302B1BCB78D10078F0FD /* TimeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAE30291BCB78D10078F0FD /* TimeTableViewController.xib */; };
 		CEAE302E1BCBB1AD0078F0FD /* login_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEAE302C1BCBB1AD0078F0FD /* login_bg@2x.jpg */; };
@@ -226,6 +230,10 @@
 		CEB22DE81BCC0FD80023CBAE /* text_field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB22DE01BCC0FD80023CBAE /* text_field@2x.png */; };
 		CEB22DE91BCC0FD80023CBAE /* text_field@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB22DE11BCC0FD80023CBAE /* text_field@3x.png */; };
 		CEB22DEA1BCC0FD80023CBAE /* user_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB22DE21BCC0FD80023CBAE /* user_icon.png */; };
+		CEB878DB1BCDB192009C8565 /* FFZoomImageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB878DA1BCDB192009C8565 /* FFZoomImageCollectionView.m */; settings = {ASSET_TAGS = (); }; };
+		CEB878DE1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB878DD1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m */; settings = {ASSET_TAGS = (); }; };
+		CEB878E01BCDB285009C8565 /* ZoomImageCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB878DF1BCDB285009C8565 /* ZoomImageCollectionView.xib */; settings = {ASSET_TAGS = (); }; };
+		CEB878E21BCDB4EB009C8565 /* ZoomImageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB878E11BCDB4EB009C8565 /* ZoomImageCollectionCell.xib */; settings = {ASSET_TAGS = (); }; };
 		CEC5D7D31BA2137C00F1690F /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC5D7D21BA2137C00F1690F /* arrow_left@2x.png */; };
 		CEE16E1F1B654BC800C6A191 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE16E171B654BC800C6A191 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEE16E201B654BC800C6A191 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE16E191B654BC800C6A191 /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -508,6 +516,14 @@
 		CE9C37C31B65734A00716564 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
 		CE9C37C51B65734A00716564 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		CE9C37C61B65734A00716564 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		CEA93A181BCD819900B3AE33 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		CEA93A191BCD819900B3AE33 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		CEA93A1A1BCD819900B3AE33 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		CEA93A1B1BCD819900B3AE33 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		CEA93A1C1BCD819900B3AE33 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		CEA93A1D1BCD819900B3AE33 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		CEA93A1E1BCD819900B3AE33 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		CEA93A1F1BCD819900B3AE33 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		CEAE30271BCB78D10078F0FD /* TimeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTableViewController.h; sourceTree = "<group>"; };
 		CEAE30281BCB78D10078F0FD /* TimeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTableViewController.m; sourceTree = "<group>"; };
 		CEAE30291BCB78D10078F0FD /* TimeTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeTableViewController.xib; sourceTree = "<group>"; };
@@ -520,6 +536,12 @@
 		CEB22DE01BCC0FD80023CBAE /* text_field@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text_field@2x.png"; sourceTree = "<group>"; };
 		CEB22DE11BCC0FD80023CBAE /* text_field@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text_field@3x.png"; sourceTree = "<group>"; };
 		CEB22DE21BCC0FD80023CBAE /* user_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_icon.png; sourceTree = "<group>"; };
+		CEB878D91BCDB17E009C8565 /* FFZoomImageCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFZoomImageCollectionView.h; sourceTree = "<group>"; };
+		CEB878DA1BCDB192009C8565 /* FFZoomImageCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFZoomImageCollectionView.m; sourceTree = "<group>"; };
+		CEB878DC1BCDB1B0009C8565 /* FFZoomImageCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFZoomImageCollectionCell.h; sourceTree = "<group>"; };
+		CEB878DD1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFZoomImageCollectionCell.m; sourceTree = "<group>"; };
+		CEB878DF1BCDB285009C8565 /* ZoomImageCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoomImageCollectionView.xib; sourceTree = "<group>"; };
+		CEB878E11BCDB4EB009C8565 /* ZoomImageCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoomImageCollectionCell.xib; sourceTree = "<group>"; };
 		CEC5D7D21BA2137C00F1690F /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left@2x.png"; sourceTree = "<group>"; };
 		CEE16E161B654BC800C6A191 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
 		CEE16E171B654BC800C6A191 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
@@ -697,11 +719,18 @@
 		1D7DD2C71B62B29D00CC95F4 = {
 			isa = PBXGroup;
 			children = (
+				CEA93A171BCD819900B3AE33 /* TPKeyboardAvoiding */,
 				1DD792DD1B66AE7A003004DD /* EOGImageLoading */,
 				1DD792D61B66A4A5003004DD /* Global Classes */,
 				CE9C37AB1B6571E600716564 /* Progress HUD */,
 				CE9C37A81B65717F00716564 /* ALUtilityClass.h */,
 				CE9C37A91B65717F00716564 /* ALUtilityClass.m */,
+				CEB878D91BCDB17E009C8565 /* FFZoomImageCollectionView.h */,
+				CEB878DA1BCDB192009C8565 /* FFZoomImageCollectionView.m */,
+				CEB878DF1BCDB285009C8565 /* ZoomImageCollectionView.xib */,
+				CEB878DC1BCDB1B0009C8565 /* FFZoomImageCollectionCell.h */,
+				CEB878DD1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m */,
+				CEB878E11BCDB4EB009C8565 /* ZoomImageCollectionCell.xib */,
 				CEE16E151B654BC800C6A191 /* GTMOAuth2 */,
 				1D7DD2D21B62B29D00CC95F4 /* SchoolZen */,
 				CEE16E141B65471C00C6A191 /* Frameworks */,
@@ -1098,6 +1127,22 @@
 			path = Reachability_ARC;
 			sourceTree = "<group>";
 		};
+		CEA93A171BCD819900B3AE33 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				CEA93A181BCD819900B3AE33 /* TPKeyboardAvoidingCollectionView.h */,
+				CEA93A191BCD819900B3AE33 /* TPKeyboardAvoidingCollectionView.m */,
+				CEA93A1A1BCD819900B3AE33 /* TPKeyboardAvoidingScrollView.h */,
+				CEA93A1B1BCD819900B3AE33 /* TPKeyboardAvoidingScrollView.m */,
+				CEA93A1C1BCD819900B3AE33 /* TPKeyboardAvoidingTableView.h */,
+				CEA93A1D1BCD819900B3AE33 /* TPKeyboardAvoidingTableView.m */,
+				CEA93A1E1BCD819900B3AE33 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				CEA93A1F1BCD819900B3AE33 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			name = TPKeyboardAvoiding;
+			path = TPKeyboardAvoiding/TPKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
 		CEB22DDA1BCC0FD80023CBAE /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1294,6 +1339,7 @@
 				1D7BA32E1B89053A00D591CA /* selectbox-selected@2x.png in Resources */,
 				1D6085031B64251B006DE39D /* about_bg@2x.png in Resources */,
 				1D6085181B64251B006DE39D /* curcular@2x.png in Resources */,
+				CEB878E01BCDB285009C8565 /* ZoomImageCollectionView.xib in Resources */,
 				1DD15ED41B791277009F2727 /* subject_icon.png in Resources */,
 				CEE16E231B654BC800C6A191 /* GTMOAuth2ViewTouch.xib in Resources */,
 				1DD15ED01B791277009F2727 /* homework@3x.png in Resources */,
@@ -1338,6 +1384,7 @@
 				1D7DD32D1B62B3E900CC95F4 /* CalendarCell.xib in Resources */,
 				1D6085261B64251B006DE39D /* feedback@2x.png in Resources */,
 				1D6085091B64251B006DE39D /* address_icon@2x.png in Resources */,
+				CEB878E21BCDB4EB009C8565 /* ZoomImageCollectionCell.xib in Resources */,
 				1D60850A1B64251B006DE39D /* address_icon@3x.png in Resources */,
 				1DD15EE11B793042009F2727 /* google_btn@3x.png in Resources */,
 				1D60853F1B64251B006DE39D /* rate_app@3x.png in Resources */,
@@ -1390,6 +1437,7 @@
 				1D7DD33A1B62B3E900CC95F4 /* MFSideMenuShadow.m in Sources */,
 				CEE16E201B654BC800C6A191 /* GTMOAuth2Authentication.m in Sources */,
 				CE9C37A71B656FFD00716564 /* ALSServiceInvoker.m in Sources */,
+				CEA93A231BCD819900B3AE33 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				1D7DD33E1B62B3E900CC95F4 /* SideViewController.m in Sources */,
 				1DDBFD0D1B83CC0A00A17074 /* HomeDetailViewController.m in Sources */,
 				1D7DD33C1B62B3E900CC95F4 /* SideViewCell.m in Sources */,
@@ -1399,6 +1447,7 @@
 				CE9C37CE1B65734A00716564 /* ASINetworkQueue.m in Sources */,
 				1D7DCBFC1B94B642000704C4 /* CalenderCollectionViewCell.m in Sources */,
 				1D7DD33B1B62B3E900CC95F4 /* UIViewController+MFSideMenuAdditions.m in Sources */,
+				CEA93A251BCD819900B3AE33 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				1D5D844A1B87938300F0F3FB /* DropDownButton.m in Sources */,
 				CEE16E221B654BC800C6A191 /* GTMOAuth2ViewControllerTouch.m in Sources */,
 				1DDBFCFF1B83C91C00A17074 /* TeacherFeedbackViewController.m in Sources */,
@@ -1406,17 +1455,21 @@
 				1D2624441BCB08AB00C228B6 /* ShowmsgTableViewCell.m in Sources */,
 				1D7DD2D61B62B29D00CC95F4 /* main.m in Sources */,
 				1DD792F31B66AE7A003004DD /* UIImage+Additions.m in Sources */,
+				CEB878DB1BCDB192009C8565 /* FFZoomImageCollectionView.m in Sources */,
 				1D7DD32E1B62B3E900CC95F4 /* CalendarViewController.m in Sources */,
 				CE9C37CA1B65734A00716564 /* ASIDownloadCache.m in Sources */,
 				1D7DD3321B62B3E900CC95F4 /* PlannedTableViewController.m in Sources */,
 				1D7DD3401B62B3E900CC95F4 /* DashBoradViewController.m in Sources */,
+				CEA93A241BCD819900B3AE33 /* TPKeyboardAvoidingTableView.m in Sources */,
 				1D7DD3301B62B3E900CC95F4 /* CircularTableViewCell.m in Sources */,
 				CEE16E1F1B654BC800C6A191 /* GTMHTTPFetcher.m in Sources */,
 				CE9C37AE1B6571E600716564 /* MBProgressHUD.m in Sources */,
+				CEA93A221BCD819900B3AE33 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				1DD15EDA1B7923B3009F2727 /* HomeworkTableViewCell.m in Sources */,
 				1DD792F01B66AE7A003004DD /* EGOImageLoadConnection.m in Sources */,
 				1DD792DC1B66A4A5003004DD /* GlobalDataPersistence.m in Sources */,
 				1D7DD32C1B62B3E900CC95F4 /* CalendarCell.m in Sources */,
+				CEB878DE1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m in Sources */,
 				1DDBFCFD1B83C91C00A17074 /* SendFeedTableViewCell.m in Sources */,
 				CEAE302A1BCB78D10078F0FD /* TimeTableViewController.m in Sources */,
 				1D5D844C1B87938300F0F3FB /* DropDownView.m in Sources */,
@@ -1528,13 +1581,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Kartik Sharma (KJ83N4RBD7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Kartik Sharma (KJ83N4RBD7)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = SchoolZen/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e93d4faa-b4ba-4e2f-b653-4f10ee515a53";
 			};
 			name = Debug;
 		};
@@ -1543,13 +1596,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Kartik Sharma (KJ83N4RBD7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Kartik Sharma (KJ83N4RBD7)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = SchoolZen/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e93d4faa-b4ba-4e2f-b653-4f10ee515a53";
 			};
 			name = Release;
 		};

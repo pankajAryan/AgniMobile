@@ -20,4 +20,9 @@
 @property(nonatomic,weak)IBOutlet UIButton *btnLink;
 @property(nonatomic,weak)IBOutlet UIImageView *imgcircle;
 
+@property (weak, nonatomic) IBOutlet UIButton *buttonImage1;
+@property (weak, nonatomic) IBOutlet UIButton *buttonIMAGE2;
+@property (weak, nonatomic) IBOutlet UIButton *buttonImage3;
+
+
 @end

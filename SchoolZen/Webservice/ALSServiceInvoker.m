@@ -41,6 +41,8 @@
             // ********* Initialise Request ******** //
             NSURL *url = [NSURL URLWithString:[BASE_URL_STRING stringByAppendingString:stringURL]];
             
+            NSLog(@"API URL = %@",url.absoluteString);
+            
             ASIFormDataRequest *request = [[ASIFormDataRequest alloc]initWithURL:url];
             request.tag = tag;
             
@@ -56,7 +58,7 @@
                 }
             }
             
-            [request addPostValue:[ALUtilityClass getDeviceIdentifier] forKey:@"deviceId"];
+            //[request addPostValue:[ALUtilityClass getDeviceIdentifier] forKey:@"deviceId"];
             
             
             __weak typeof(request) weakRequest = request;

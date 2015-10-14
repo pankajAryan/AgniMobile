@@ -7,6 +7,8 @@
 #import "SVProgressHUD.h"
 #import "Config.h"
 #import "AppDelegate.h"
+#import "ALUtilityClass.h"
+
 @implementation WebCommunicationClass
 
 @synthesize aCaller,MethoodName;
@@ -43,9 +45,13 @@
     if (password && password.length)//[usertype isEqualToString:@"P"]
     {
         [aUserInfo setValue:@"Email" forKey:@"loginType"];
+        
+        [ALUtilityClass SaveDatatoUserDefault:@"Email" :@"loginType"];
     }
     else {
         [aUserInfo setValue:@"G+" forKey:@"loginType"];
+        
+        [ALUtilityClass SaveDatatoUserDefault:@"G+" :@"loginType"];
     }
     
     //    [self ASICallSyncToServerWithFunctionName:Login_MethodName PostDataDictonery:aUserInfo];
@@ -245,7 +251,7 @@
     [[ALServiceInvoker sharedInstance] serviceInvokerRequestWithParams:aUserInfo requestAPI:Kgethomework reqTag:13 delegate:self];
 }
 
--(void)updateProfile:(NSString*)userId userType:(NSString*)userType userName:(NSString*)userName userEmail:(NSString*)userEmail userMobile:(NSString*)userMobile
+-(void)updateProfile:(NSString*)userId userType:(NSString*)userType userName:(NSString*)userName userEmail:(NSString*)userEmail userMobile:(NSString*)userMobile newPassword:(NSString*)loginPass
 {
     
     [SVProgressHUD showWithStatus:@"Please wait..."];
@@ -255,11 +261,23 @@
     [aUserInfo setValue:userName forKey:@"userName"];
     [aUserInfo setValue:userEmail forKey:@"userEmail"];
     [aUserInfo setValue:userMobile forKey:@"userMobile"];
+    [aUserInfo setValue:loginPass forKey:@"password"];
     
     [self retain];
     
     
     [[ALServiceInvoker sharedInstance] serviceInvokerRequestWithParams:aUserInfo requestAPI:KupdateUser reqTag:14 delegate:self];
+}
+
+-(void)getTicker:(NSString*)schoolId {
+    
+    NSMutableDictionary *aUserInfo= [NSMutableDictionary dictionary];
+    [aUserInfo setValue:schoolId forKey:@"schoolId"];
+    
+    [self retain];
+
+    ALServiceInvoker *serviceInvoker = [[ALServiceInvoker alloc] init];
+    [serviceInvoker serviceInvokerRequestWithParams:aUserInfo requestAPI:API_GET_TICKER reqTag:41 delegate:self];
 }
 
 -(void)GetStaffClassSectionSubjectStructure:(NSString*)schoolId staffId:(NSString*)staffId
@@ -279,6 +297,7 @@
 
 
 }
+
 -(void)GetStudentsOfClass:(NSString*)schoolId classId:(NSString*)classId sectionId:(NSString*)sectionId
 {
 

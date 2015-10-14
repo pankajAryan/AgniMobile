@@ -45,7 +45,7 @@
 -(void)GetHomeWork:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection;
 
 -(void)forgotPassword:(NSString*)EmailID;
--(void)updateProfile:(NSString*)userId userType:(NSString*)userType userName:(NSString*)userName userEmail:(NSString*)userEmail userMobile:(NSString*)userMobile;
+-(void)updateProfile:(NSString*)userId userType:(NSString*)userType userName:(NSString*)userName userEmail:(NSString*)userEmail userMobile:(NSString*)userMobile newPassword:(NSString*)loginPass;
 
 -(void)GetStaffClassSectionSubjectStructure:(NSString*)schoolId staffId:(NSString*)staffId;
 
@@ -66,7 +66,7 @@ attachmentURL:(NSString*)attachmentURL sectionId:(NSString*)sectionId subjectId:
 
 -(void)GetMessage:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection;
 
-
+-(void)getTicker:(NSString*)schoolId;
 
 + (NSString *)urlEncodeValue:(NSString *)str;
 + (NSString *)urlDecodeValue:(NSString *)str;

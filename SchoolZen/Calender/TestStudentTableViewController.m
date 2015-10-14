@@ -12,6 +12,7 @@
 #import  "MediaTableViewCell.h"
 #import "GlobalDataPersistence.h"
 #import "ShowmsgTableViewCell.h"
+#import "FFZoomImageCollectionView.h"
 
 @interface TestStudentTableViewController ()
 
@@ -135,7 +136,11 @@
         
         cell.lblboxdate.text=[dateArray objectAtIndex:0];
         cell.lbldate.text=[NSString stringWithFormat:@"%@%@",[dateArray objectAtIndex:1],[dateArray objectAtIndex:2]];
-                
+        
+        [cell.buttonImage1 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.buttonIMAGE2 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
+        [cell.buttonImage3 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
+        
         return cell;
     }
     else if([self.strCateg isEqualToString:@"send"])
@@ -242,4 +247,21 @@
     }
 
 }
+
+
+- (void)imageGalleryDidTap:(UIButton*)sender {
+    
+    NSArray *images = [[self.dictCommon objectAtIndex:0] valueForKey:@"mediaFiles"];
+    
+    if (images.count > 0)
+    {
+        if (images.count > [sender tag]) {
+            
+            FFZoomImageCollectionView *zoomCollectionView = [[FFZoomImageCollectionView alloc] initWithDataSource:images andSelectedIndex:[sender tag]];
+            [[UIApplication sharedApplication].keyWindow addSubview:zoomCollectionView];
+        }
+    }
+}
+
+
 @end

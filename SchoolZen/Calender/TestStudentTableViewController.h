@@ -14,4 +14,6 @@
 }
 @property(nonatomic,assign)NSString *strCateg;
 @property(nonatomic,strong)NSArray *dictCommon;
+
+
 @end

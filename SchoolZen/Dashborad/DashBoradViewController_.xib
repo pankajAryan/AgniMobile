@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DashBoradViewController">
             <connections>
                 <outlet property="btnHomeWork" destination="ekJ-QB-gor" id="f94-G4-I0w"/>
+                <outlet property="demoLabel1" destination="nrR-uI-erJ" id="uht-UV-2PS"/>
                 <outlet property="lblUserName" destination="VAJ-82-XJS" id="M8X-kM-lDj"/>
                 <outlet property="sclParent" destination="s9K-wT-xHO" id="z31-VX-ZXB"/>
                 <outlet property="view" destination="uGn-dp-xf2" id="fF7-5l-gKg"/>
-                <outlet property="vwMarquee" destination="nrR-uI-erJ" id="c8h-s3-AhS"/>
+                <outlet property="vwMarquee" destination="lgx-do-DLC" id="35z-Ut-jfP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -115,11 +115,11 @@
                 </scrollView>
                 <view clipsSubviews="YES" contentMode="scaleToFill" id="lgx-do-DLC">
                     <rect key="frame" x="0.0" y="446" width="320" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Morden Public School. Powered by Agnitio." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nrR-uI-erJ" customClass="MarqueeLabel">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nrR-uI-erJ" customClass="MarqueeLabel">
                             <rect key="frame" x="9" y="9" width="296" height="16"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
