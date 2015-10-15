@@ -17,6 +17,8 @@
 @property(nonatomic,weak)IBOutlet UIButton *btnLink;
 @property(nonatomic,weak)IBOutlet UIImageView *imgcircle;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttonHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *subjectTopSpaceToButton;
 @property (weak, nonatomic) IBOutlet UIImageView *imageLink;
 
 

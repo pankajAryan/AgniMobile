@@ -13,6 +13,7 @@
 #import "WebCommunicationClass.h"
 #import "Config.h"
 #import "ALUtilityClass.h"
+#import "NSString+MD5.h"
 
 @interface MyProfileViewController ()
 
@@ -21,6 +22,7 @@
 @implementation MyProfileViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     GlobalDataPersistence *obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
@@ -36,7 +38,7 @@
     
     NSString *userLoginType = [ALUtilityClass RetrieveDataFromUserDefault:@"loginType"];
     
-    if (userLoginType && userLoginType.length)//[usertype isEqualToString:@"P"]
+    if (userLoginType && userLoginType.length)
     {
         if ([userLoginType isEqualToString:@"Email"]) {
             
@@ -115,12 +117,32 @@
 {
     if(buttonIndex==1)
     {
+        NSString *userLoginType = [ALUtilityClass RetrieveDataFromUserDefault:@"loginType"];
+        
+        NSString *password = @"";
+        
+        if (userLoginType && userLoginType.length)
+        {
+            if ([userLoginType isEqualToString:@"Email"])
+            {
+                if (_txtField_newPassword.text.length) {
+                    password = [_txtField_newPassword.text MD5String];
+                }
+                else
+                    password = [ALUtilityClass RetrieveDataFromUserDefault:@"pass"];
+            }
+            else { // G+ type
+                password = @"";
+            }
+        }
+        
+        
         WebCommunicationClass *obj_web=[WebCommunicationClass new];
         
         [obj_web setACaller:self];
         GlobalDataPersistence *obj_glob=[GlobalDataPersistence sharedGlobalDataPersistence];
         
-        [obj_web updateProfile:[obj_glob.dictUserInfo valueForKey:@"userId"] userType:obj_glob.strUserType userName:lblName.text userEmail:lblEmail.text userMobile:lblcontact.text newPassword:@"e6053eb8d35e02ae40beeeacef203c1a"]; //_txtField_newPassword.text
+        [obj_web updateProfile:[obj_glob.dictUserInfo valueForKey:@"userId"] userType:obj_glob.strUserType userName:lblName.text userEmail:lblEmail.text userMobile:lblcontact.text newPassword:password]; //@"e6053eb8d35e02ae40beeeacef203c1a"] = newpass
     }
 
 }

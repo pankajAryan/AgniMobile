@@ -27,7 +27,7 @@
     
     GlobalDataPersistence*obj_GlobalDataPersistence = [GlobalDataPersistence sharedGlobalDataPersistence];
 
-    [aCommunication getTimetable:[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"schoolId"] childclass:[self.dictChild valueForKey:@"childClass"] childsetion:[self.dictChild valueForKey:@"childSection"] childId:[self.dictChild valueForKey:@"childId"]];
+    [aCommunication getTimetable:[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"schoolId"] childclass:[self.dictChild valueForKey:@"childClass"] childsetion:[self.dictChild valueForKey:@"childSection"]];
 }
 
 - (void)didReceiveMemoryWarning {

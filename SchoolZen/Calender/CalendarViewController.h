@@ -10,15 +10,9 @@
 #import <UIKit/UIKit.h>
 #import "CalendarViewController.h"
 #import "CAPSPageMenu.h"
-#import "TestStudentTableViewController.h"
-#import "PlannedTableViewController.h"
 
-@interface CalendarViewController : UIViewController
+@interface CalendarViewController : UIViewController <CAPSPageMenuDelegate>
 {
-    TestStudentTableViewController *controller1;
-    TestStudentTableViewController *controller3;
-    PlannedTableViewController *controller2;
-    PlannedTableViewController *controller4;
     NSArray *controllerArray;
     
     IBOutlet UILabel *lblHeader;

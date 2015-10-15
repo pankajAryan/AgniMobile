@@ -8,6 +8,7 @@
 #import "Config.h"
 #import "AppDelegate.h"
 #import "ALUtilityClass.h"
+#import "NSString+MD5.h"
 
 @implementation WebCommunicationClass
 
@@ -35,8 +36,10 @@
 
 -(void)loginUserName:(NSString*)username  withpassword:(NSString*)password UserType:(NSString*)usertype
 {    
-
     [SVProgressHUD showWithStatus:@"Please wait..."];
+
+    password = [password MD5String];
+    
     NSMutableDictionary *aUserInfo= [NSMutableDictionary dictionary];
     [aUserInfo setValue:username forKey:@"email"];
     [aUserInfo setValue:password forKey:@"password"];
@@ -47,6 +50,7 @@
         [aUserInfo setValue:@"Email" forKey:@"loginType"];
         
         [ALUtilityClass SaveDatatoUserDefault:@"Email" :@"loginType"];
+        [ALUtilityClass SaveDatatoUserDefault:password :@"pass"];
     }
     else {
         [aUserInfo setValue:@"G+" forKey:@"loginType"];
@@ -82,9 +86,7 @@
     [aUserInfo setValue:childSection forKey:@"childSection"];
     [aUserInfo setValue:month forKey:@"month"];
     
-    
     [self retain];
-    
     
     [[ALServiceInvoker sharedInstance] serviceInvokerRequestWithParams:aUserInfo requestAPI:kgetUnPlannedHolidays reqTag:3 delegate:self];
 
@@ -105,7 +107,7 @@
 
 }
 
--(void)getTimetable:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection childId:(NSString*)childId
+-(void)getTimetable:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection
 {
     
     [SVProgressHUD showWithStatus:@"Please wait..."];
@@ -113,7 +115,6 @@
     [aUserInfo setValue:schoolId forKey:@"schoolId"];
     [aUserInfo setValue:childClass forKey:@"classId"];
     [aUserInfo setValue:childSection forKey:@"sectionId"];
-//    [aUserInfo setValue:childId forKey:@"childId"];
     
     [self retain];
     
@@ -151,7 +152,7 @@
 
 
 }
--(void)Getfeedback:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection
+-(void)Getfeedback:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection childId:(NSString*)childId
 {
 
     [SVProgressHUD showWithStatus:@"Please wait..."];
@@ -159,7 +160,8 @@
     [aUserInfo setValue:schoolId forKey:@"schoolId"];
     [aUserInfo setValue:childClass forKey:@"childClass"];
     [aUserInfo setValue:childSection forKey:@"childSection"];
-    
+    [aUserInfo setValue:childId forKey:@"childId"];
+
     [self retain];
     
     

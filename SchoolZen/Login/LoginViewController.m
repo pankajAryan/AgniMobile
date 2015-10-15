@@ -57,7 +57,7 @@
     {
         WebCommunicationClass* aCommunication = [[WebCommunicationClass alloc]init];
         [aCommunication setACaller:self];
-        [aCommunication loginUserName:@"demo@demo.com" withpassword:@"e6053eb8d35e02ae40beeeacef203c1a" UserType:@"T"];
+        [aCommunication loginUserName:@"demo@demo.com" withpassword:@"newpass" UserType:@"T"];
    /* WebCommunicationClass* aCommunication = [[WebCommunicationClass alloc]init];
     [aCommunication setACaller:self];
     [aCommunication loginUserName:@"aasdasd@asd.com" withpassword:@"101193d7181cc88340ae5b2b17bba8a1" UserType:@"T"];*/

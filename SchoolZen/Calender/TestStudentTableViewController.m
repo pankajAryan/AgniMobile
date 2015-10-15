@@ -123,14 +123,43 @@
         [cell.btnLink addTarget:self action:@selector(Link:) forControlEvents:UIControlEventTouchUpInside];
         
         NSArray *images = [[self.dictCommon objectAtIndex:0] valueForKey:@"mediaFiles"];
-        if (images.count) {
-             [cell.imgfirst setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[images objectAtIndex:0]]]];
-            if (images.count>1) {
-                 [cell.imgSec setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[images objectAtIndex:0]]]];
-                if (images.count>2)
-                 [cell.imgthird setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[images objectAtIndex:0]]]];
+        int index = 0;
+        
+        for (NSString *imageUrl in images) {
+            
+            switch (index)
+            {
+                case 0:
+                    [cell.imgfirst setImageURL:[NSURL URLWithString:imageUrl]];
+                    
+                    break;
+                    
+                case 1:
+                    [cell.imgSec setImageURL:[NSURL URLWithString:imageUrl]];
+                    
+                    break;
+                    
+                case 2:
+                    [cell.imgthird setImageURL:[NSURL URLWithString:imageUrl]];
+                    
+                    break;
+                    
+                default:
+                    break;
             }
+            
+            index++;
         }
+
+//        if (images.count) {
+//             [cell.imgfirst setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[images objectAtIndex:0]]]];
+//            if (images.count>1) {
+//                 [cell.imgSec setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[images objectAtIndex:0]]]];
+//                if (images.count>2)
+//                 [cell.imgthird setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[images objectAtIndex:0]]]];
+//            }
+//        }
+        
         NSString *dateString =[[self.dictCommon valueForKey:@"addedOn"] objectAtIndex:indexPath.row];
         NSArray* dateArray = [dateString componentsSeparatedByString: @" "];
         
@@ -171,7 +200,6 @@
     }
     else
     {
-    
         CircularTableViewCell*   cell1 = (CircularTableViewCell *)[tblTest dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell1 == nil)
         {

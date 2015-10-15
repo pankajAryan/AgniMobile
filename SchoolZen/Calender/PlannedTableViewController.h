@@ -16,5 +16,11 @@
 @property(nonatomic,assign)NSString *strCateg;
 @property(nonatomic,strong)NSArray *dictPlanCommon;
 
+@property (assign) NSInteger selectedTabIndex;
+@property(assign) BOOL isCommonType;
+
+@property(nonatomic,strong) NSString *strMonthIndex;
+
+
 
 @end

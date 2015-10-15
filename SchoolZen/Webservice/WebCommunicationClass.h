@@ -28,10 +28,10 @@
 -(void)Get_commonCircular:(NSString *)schoolId;
 -(void)GetCircular:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection;
 
--(void)getTimetable:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection childId:(NSString*)childId;
+-(void)getTimetable:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection;
 
 -(void)Get_commonfeedback:(NSString *)schoolId;
--(void)Getfeedback:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection;
+-(void)Getfeedback:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection childId:(NSString*)childId;
 
 -(void)Get_commonMedia:(NSString *)schoolId;
 -(void)Getmedia:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection;

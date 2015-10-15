@@ -12,7 +12,6 @@
 @interface TimeTableViewController : UIViewController <UIScrollViewDelegate>
 
 @property (strong) NSDictionary *dictChild;
-@property (assign) NSInteger index;
 
 @property (weak, nonatomic) IBOutlet EGOImageView *imageView_Timetable;
 

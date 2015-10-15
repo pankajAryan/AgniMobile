@@ -59,7 +59,8 @@
             }
             
             //[request addPostValue:[ALUtilityClass getDeviceIdentifier] forKey:@"deviceId"];
-            
+            NSLog(@"API Request Params = %@",postParams);
+
             
             __weak typeof(request) weakRequest = request;
             
