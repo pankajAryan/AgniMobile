@@ -11,7 +11,7 @@
 @interface AddFeedbackViewController : UIViewController
 - (IBAction)Click_Back:(id)sender;
 @property (strong, nonatomic) IBOutlet UITextField *txttitle;
-@property (strong, nonatomic) IBOutlet UITextField *txtMessage;
+@property (strong, nonatomic) IBOutlet UITextView *txtMessage;
 @property(strong,nonatomic)IBOutlet UIImageView *imgHeading;
 - (IBAction)Click_Send:(id)sender;
 

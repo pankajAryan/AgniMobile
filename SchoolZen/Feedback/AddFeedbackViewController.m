@@ -23,12 +23,11 @@
     GlobalDataPersistence*obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
     if([obj_GlobalDataPersistence.strUserType isEqualToString:@"T"])
     {
-         _imgHeading.backgroundColor=[UIColor colorWithRed:153.0/255.0 green:153.0/255.0 blue:102.0/255.0 alpha:1.0];
-        
+        _imgHeading.backgroundColor=[UIColor colorWithRed:153.0/255.0 green:153.0/255.0 blue:102.0/255.0 alpha:1.0];
     }
     else
     {
-     _imgHeading.backgroundColor=[UIColor colorWithRed:193.0/255.0 green:106.0/255.0 blue:255.0/255.0 alpha:1.0];
+        _imgHeading.backgroundColor=[UIColor colorWithRed:193.0/255.0 green:106.0/255.0 blue:255.0/255.0 alpha:1.0];
     }
     
     // Do any additional setup after loading the view from its nib.
@@ -76,6 +75,7 @@
         [obj_Web AddFeedback:[obj_glob.dictUserInfo valueForKey:@"schoolId"] parentId:[[obj_glob.arrChild valueForKey:@"parentId"] objectAtIndex:0] title:self.txttitle.text message:self.txtMessage.text];
     }
 }
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     
@@ -83,6 +83,7 @@
     
     return true;
 }
+
 #pragma mark- Webservice callback
 #pragma mark-
 -(void) dataDidFinishDowloading:(ASIHTTPRequest*)aReq withMethood:(NSString *)MethoodName withOBJ:(WebCommunicationClass *)aObj

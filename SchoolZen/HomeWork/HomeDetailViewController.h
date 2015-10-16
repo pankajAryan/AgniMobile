@@ -12,7 +12,7 @@
 {
     IBOutlet UITextField *txttitle;
 
-    IBOutlet UITextField *txtHomeWork;
+    IBOutlet UITextView *txtHomeWork;
     
 }
 

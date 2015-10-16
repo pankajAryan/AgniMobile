@@ -13,7 +13,7 @@
     NSMutableArray *obj_student;
     IBOutlet UITableView *tblSendFeedBack;
     
-    IBOutlet UITextField *txtPostMessage;
+    IBOutlet UITextView *txtPostMessage;
     NSMutableArray *arrSelected;
     
 
