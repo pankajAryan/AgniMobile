@@ -14,5 +14,6 @@
 @property (strong) NSDictionary *dictChild;
 
 @property (weak, nonatomic) IBOutlet EGOImageView *imageView_Timetable;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

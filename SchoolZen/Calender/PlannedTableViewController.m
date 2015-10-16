@@ -400,19 +400,19 @@
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-//    if([self.strCateg isEqualToString:@"Circular"] || [self.strCateg isEqualToString:@"Feedback"])
-//    {
-//        return 86.0;
-//    }
-//    else if ([self.strCateg isEqualToString:@"Homework"]) {
-//        return 119.0;
-//    }
-//    else if ([self.strCateg isEqualToString:@"Message"]) {
-//        return 100.0;
-//    }
-//    else if ([self.strCateg isEqualToString:@"Media"]) {
-//            return 152.0;
-//    }
+    if([self.strCateg isEqualToString:@"Circular"] || [self.strCateg isEqualToString:@"Feedback"])
+    {
+        return 86.0;
+    }
+    else if ([self.strCateg isEqualToString:@"Homework"]) {
+        return 119.0;
+    }
+    else if ([self.strCateg isEqualToString:@"Message"]) {
+        return 100.0;
+    }
+    else if ([self.strCateg isEqualToString:@"Media"]) {
+            return 152.0;
+    }
 
     return UITableViewAutomaticDimension;
 }

@@ -30,6 +30,13 @@
     [aCommunication getTimetable:[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"schoolId"] childclass:[self.dictChild valueForKey:@"childClass"] childsetion:[self.dictChild valueForKey:@"childSection"]];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    
+    CGRect rect = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 100);
+    self.scrollView.frame = rect;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
