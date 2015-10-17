@@ -38,8 +38,8 @@
     if([self.strCateg isEqualToString:@"Circular"]
        || [self.strCateg isEqualToString:@"Feedback"]
        || [self.strCateg isEqualToString:@"Homework"]
-       || [self.strCateg isEqualToString:@"Message"]
-       || [self.strCateg isEqualToString:@"Media"])
+       || [self.strCateg isEqualToString:@"Message"])
+       //|| [self.strCateg isEqualToString:@"Media"])
     {
 //        tblPlanned.estimatedRowHeight = 86;
 
@@ -411,7 +411,7 @@
         return 100.0;
     }
     else if ([self.strCateg isEqualToString:@"Media"]) {
-            return 152.0;
+            return 170.0;
     }
 
     return UITableViewAutomaticDimension;
