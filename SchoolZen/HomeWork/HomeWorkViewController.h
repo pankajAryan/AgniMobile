@@ -22,13 +22,17 @@
     NSMutableArray *arrMain;
     NSString *strBtnSelection;
 
-    
+    NSInteger selectedClassIndex;
+    NSInteger selectedSectionIndex;
+    NSInteger selectedSubjectIndex;
+
 }
+
 -(IBAction)Btn_Common:(id)sender;
 - (IBAction)Click_HomeProceed:(id)sender;
 - (IBAction)Click_Back:(id)sender;
-@property(nonatomic,assign)NSString *strHomeClassName;
-@property(nonatomic,assign)NSString *strHomeSectionName;
+@property(nonatomic,strong)NSString *strHomeClassName;
+@property(nonatomic,strong)NSString *strHomeSectionName;
 
 
 

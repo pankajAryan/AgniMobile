@@ -73,7 +73,7 @@
     GlobalDataPersistence *obj_glob=[GlobalDataPersistence sharedGlobalDataPersistence];
     WebCommunicationClass *obj_web=[WebCommunicationClass new];
     [obj_web setACaller:self];
-    [obj_web addHomework:[obj_glob.dictUserInfo valueForKey:@"schoolId"]  staffId:[obj_glob.dictUserInfo valueForKey:@"userId"]  title:txttitle.text message:txtHomeWork.text classId:[NSString stringWithFormat:@"%@",[[obj_glob.arrTeacher valueForKey:@"classId"] objectAtIndex:0]] attachmentURL:self.attachementUrl sectionId:[NSString stringWithFormat:@"%@",[[obj_glob.arrTeacher valueForKey:@"sectionId"] objectAtIndex:0]] subjectId:[NSString stringWithFormat:@"%@",[[obj_glob.arrTeacher valueForKey:@"subjectId"] objectAtIndex:0]]];
+        [obj_web addMsg:[obj_glob.dictUserInfo valueForKey:@"schoolId"] staffId:[obj_glob.dictUserInfo valueForKey:@"userId"] title:txttitle.text message:txtHomeWork.text classId:_strClassId attachmentURL:self.attachementUrl sectionId:_strSectionId];
     }
 }
 

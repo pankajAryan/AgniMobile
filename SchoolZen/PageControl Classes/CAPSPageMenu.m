@@ -709,19 +709,19 @@ NSString * const CAPSPageMenuOptionHideTopMenuBar                       = @"hide
                 _currentPageIndex = itemIndex;
                 _didTapMenuItemToScroll = YES;
                 
-                // Add pages in between current and tapped page if necessary
-                NSInteger smallerIndex = _lastPageIndex < _currentPageIndex ? _lastPageIndex : _currentPageIndex;
-                NSInteger largerIndex = _lastPageIndex > _currentPageIndex ? _lastPageIndex : _currentPageIndex;
-                
-                if (smallerIndex + 1 != largerIndex) {
-                    for (NSInteger i=smallerIndex + 1; i< largerIndex; i++) {
-                        
-                        if (![_pagesAddedSet containsObject:@(i)]) {
-                            [self addPageAtIndex:i];
-                            [_pagesAddedSet addObject:@(i)];
-                        }
-                    }
-                }
+//                // Add pages in between current and tapped page if necessary
+//                NSInteger smallerIndex = _lastPageIndex < _currentPageIndex ? _lastPageIndex : _currentPageIndex;
+//                NSInteger largerIndex = _lastPageIndex > _currentPageIndex ? _lastPageIndex : _currentPageIndex;
+//                
+//                if (smallerIndex + 1 != largerIndex) {
+//                    for (NSInteger i=smallerIndex + 1; i< largerIndex; i++) {
+//                        
+//                        if (![_pagesAddedSet containsObject:@(i)]) {
+//                            [self addPageAtIndex:i];
+//                            [_pagesAddedSet addObject:@(i)];
+//                        }
+//                    }
+//                }
                 
                 [self addPageAtIndex:itemIndex];
                 

@@ -13,7 +13,7 @@
     IBOutlet UITableView *tblPlanned;
 
 }
-@property(nonatomic,assign)NSString *strCateg;
+@property(nonatomic,strong)NSString *strCateg;
 @property(nonatomic,strong)NSArray *dictPlanCommon;
 
 @property (assign) NSInteger selectedTabIndex;

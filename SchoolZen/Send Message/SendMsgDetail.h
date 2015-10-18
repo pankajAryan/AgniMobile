@@ -20,7 +20,7 @@
 - (IBAction)Click_send:(id)sender;
 - (IBAction)Click_Back:(id)sender;
 
-@property(nonatomic,assign)NSString *strsubjectId;
+@property(nonatomic,strong)NSString *strsubjectId;
 @property(nonatomic,strong)NSString *strClassId;
 @property(nonatomic,strong)NSString *strSectionId;
 @property (nonatomic, strong) NSString *attachementUrl;

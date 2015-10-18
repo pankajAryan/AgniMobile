@@ -20,6 +20,8 @@
     NSMutableArray *arrMain;
     NSMutableArray *arrClassSection;
 
+    NSInteger selectedClassIndex;
+    NSInteger selectedSectionIndex;
 }
 
 -(IBAction)Click_BAck:(id)sender;

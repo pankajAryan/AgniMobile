@@ -366,9 +366,13 @@
     
     [aUserInfo setValue:title forKey:@"title"];
     [aUserInfo setValue:message forKey:@"message"];
-        [aUserInfo setValue:classId forKey:@"classId"];
+    [aUserInfo setValue:classId forKey:@"classId"];
     
-     [aUserInfo setValue:attachmentURL forKey:@"attachmentURL"];
+    if (attachmentURL) {
+        [aUserInfo setValue:attachmentURL forKey:@"attachmentURL"];
+    }
+    else
+        [aUserInfo setValue:@"" forKey:@"attachmentURL"];
     
     [aUserInfo setValue:sectionId forKey:@"sectionId"];
     
@@ -384,6 +388,7 @@
 
 
 }
+
 -(void)ForgotPassword:(NSString *)email :(NSString*)userType;
 {
     [SVProgressHUD showWithStatus:@"Please wait..."];
@@ -394,8 +399,7 @@
      [[ALServiceInvoker sharedInstance] serviceInvokerRequestWithParams:aUserInfo requestAPI:KforgotPassword reqTag:20 delegate:self];
 }
 
--(void)addMsg:(NSString*)schoolId staffId:(NSString*)staffId title:(NSString*)title message:(NSString*)message classId:(NSString*)classId
-     attachmentURL:(NSString*)attachmentURL sectionId:(NSString*)sectionId subjectId:(NSString*)subjectId
+-(void)addMsg:(NSString*)schoolId staffId:(NSString*)staffId title:(NSString*)title message:(NSString*)message classId:(NSString*)classId attachmentURL:(NSString*)attachmentURL sectionId:(NSString*)sectionId
 {
     
     [SVProgressHUD showWithStatus:@"Please wait..."];
@@ -407,22 +411,21 @@
     [aUserInfo setValue:message forKey:@"message"];
     [aUserInfo setValue:classId forKey:@"classId"];
     
-    [aUserInfo setValue:attachmentURL forKey:@"attachmentURL"];
+    if (attachmentURL) {
+        [aUserInfo setValue:attachmentURL forKey:@"attachmentURL"];
+    }
+    else
+        [aUserInfo setValue:@"" forKey:@"attachmentURL"];
+
     
     [aUserInfo setValue:sectionId forKey:@"sectionId"];
     
-    [aUserInfo setValue:subjectId forKey:@"subjectId"];
-    
-    
-    
     [self retain];
     
-    
     [[ALServiceInvoker sharedInstance] serviceInvokerRequestWithParams:aUserInfo requestAPI:KaddMessage reqTag:21 delegate:self];
-    
-    
-    
 }
+
+
 -(void)GetMessage:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection
 {
     

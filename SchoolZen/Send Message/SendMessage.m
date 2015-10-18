@@ -58,8 +58,8 @@ arrMain=[[NSMutableArray alloc] init];
     
     SendMsgDetail *obj_SendFeedbackViewController=[SendMsgDetail new];
     GlobalDataPersistence *obj_glob=[GlobalDataPersistence sharedGlobalDataPersistence];
-    obj_SendFeedbackViewController.strClassId=[NSString stringWithFormat:@"%@",[[obj_glob.arrTeacher valueForKey:@"classId"] objectAtIndex:0]];
-    obj_SendFeedbackViewController.strSectionId = [NSString stringWithFormat:@"%@",[[obj_glob.arrTeacher valueForKey:@"sectionId"] objectAtIndex:0]];
+    obj_SendFeedbackViewController.strClassId=[NSString stringWithFormat:@"%@",[[obj_glob.arrTeacher valueForKey:@"classId"] objectAtIndex:selectedClassIndex]];
+    obj_SendFeedbackViewController.strSectionId = [NSString stringWithFormat:@"%@",[[obj_glob.arrTeacher valueForKey:@"sectionId"] objectAtIndex:selectedSectionIndex]];
     
     [self.navigationController pushViewController:obj_SendFeedbackViewController animated:YES];
     
@@ -126,10 +126,12 @@ numberOfRowsInComponent:(NSInteger)component{
 if([strBtnSelection isEqualToString:@"C"])
 {
     [btn_Class setTitle:[arrMain objectAtIndex:row] forState:UIControlStateNormal];
+    selectedClassIndex = row;
 }
     else
     {
      [btn_Section setTitle:[arrMain objectAtIndex:row] forState:UIControlStateNormal];
+        selectedSectionIndex = row;
     }
     
     [UIView beginAnimations:nil context:NULL];

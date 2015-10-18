@@ -61,8 +61,7 @@ attachmentURL:(NSString*)attachmentURL sectionId:(NSString*)sectionId subjectId:
 
 -(void)ForgotPassword:(NSString *)email :(NSString*)userType;
 
--(void)addMsg:(NSString*)schoolId staffId:(NSString*)staffId title:(NSString*)title message:(NSString*)message classId:(NSString*)classId
-attachmentURL:(NSString*)attachmentURL sectionId:(NSString*)sectionId subjectId:(NSString*)subjectId;
+-(void)addMsg:(NSString*)schoolId staffId:(NSString*)staffId title:(NSString*)title message:(NSString*)message classId:(NSString*)classId attachmentURL:(NSString*)attachmentURL sectionId:(NSString*)sectionId;
 
 -(void)GetMessage:(NSString*)schoolId childclass:(NSString*)childClass childsetion:(NSString*)childSection;
 

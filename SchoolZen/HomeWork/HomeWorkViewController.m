@@ -111,9 +111,15 @@ else if (sender.tag==2)
     
     else
     {
-    
+
+        GlobalDataPersistence *obj_glob=[GlobalDataPersistence sharedGlobalDataPersistence];
+        
     HomeDetailViewController *obj_HomeDetailViewController=[HomeDetailViewController new];
   
+        obj_HomeDetailViewController.strclassId=[NSString stringWithFormat:@"%@",[[obj_glob.arrTeacher valueForKey:@"classId"] objectAtIndex:selectedClassIndex]];
+        obj_HomeDetailViewController.strsectionId = [NSString stringWithFormat:@"%@",[[obj_glob.arrTeacher valueForKey:@"sectionId"] objectAtIndex:selectedSectionIndex]];
+        obj_HomeDetailViewController.strsubjectId = [[obj_glob.arrTeacher valueForKey:@"subjectId"] objectAtIndex:selectedSubjectIndex];
+        
         [self.navigationController pushViewController:obj_HomeDetailViewController animated:YES];
     }
  
@@ -152,15 +158,17 @@ numberOfRowsInComponent:(NSInteger)component{
     if([strBtnSelection isEqualToString:@"C"])
     {
         [btnClass setTitle:[arrMain objectAtIndex:row] forState:UIControlStateNormal];
+        selectedClassIndex = row;
     }
     else if([strBtnSelection isEqualToString:@"S"])
     {
         [btnSection setTitle:[arrMain objectAtIndex:row] forState:UIControlStateNormal];
+        selectedSectionIndex = row;
     }
     else
     {
      [btn_Subject setTitle:[arrMain objectAtIndex:row] forState:UIControlStateNormal];
-    
+        selectedSubjectIndex = row;
     }
     
     [UIView beginAnimations:nil context:NULL];

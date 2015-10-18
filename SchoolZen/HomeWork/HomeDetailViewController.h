@@ -19,9 +19,9 @@
 - (IBAction)Click_Attached:(id)sender;
 - (IBAction)Click_send:(id)sender;
 - (IBAction)Click_Back:(id)sender;
-@property(nonatomic,assign)NSString *strclassId;
-@property(nonatomic,assign)NSString *strsectionId;
-@property(nonatomic,assign)NSString *strsubjectId;
+@property(nonatomic,strong)NSString *strclassId;
+@property(nonatomic,strong)NSString *strsectionId;
+@property(nonatomic,strong)NSString *strsubjectId;
 @property (nonatomic, strong) NSString *attachementUrl;
 
 @end
