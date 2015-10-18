@@ -67,7 +67,6 @@
         WebCommunicationClass* aCommunication = [[WebCommunicationClass alloc]init];
         [aCommunication setACaller:self];
         [aCommunication loginUserName:@"abc@gmail.com" withpassword:@"" UserType:@"P"];
-    
     }
 
 }
@@ -237,28 +236,31 @@
     {
         if(isSuccessNumber)
         {
+            UIAlertView *alert =KALERT(KApplicationName, [strResult valueForKey:@"responseObject"], self);
+            [alert show];
+
+//        [UIView beginAnimations:nil context:NULL];
+//        [UIView setAnimationDuration:0.3];
+//        CGRect mainScreenBound = [[UIScreen mainScreen] bounds];
+//        
+//        if (mainScreenBound.size.height==568)
+//        {
+//            vwForgotPassword.frame = CGRectMake(0,870,320,568);
+//        }
+//        else
+//        {
+//            vwForgotPassword.frame = CGRectMake(0,850, 320, 480);
+//        }
+//        
+//        [self.view addSubview:vwForgotPassword];
+//        [UIView commitAnimations];
+        }
+        else {
+            
             UIAlertView *alert =KALERT(KApplicationName, [strResult valueForKey:@"errorMessage"], self);
-            
-            
             
             [alert show];
 
-        [UIView beginAnimations:nil context:NULL];
-        [UIView setAnimationDuration:0.3];
-        CGRect mainScreenBound = [[UIScreen mainScreen] bounds];
-        
-        
-        if (mainScreenBound.size.height==568)
-        {
-            vwForgotPassword.frame = CGRectMake(0,870,320,568);
-        }
-        else
-        {
-            vwForgotPassword.frame = CGRectMake(0,850, 320, 480);
-        }
-        
-        [self.view addSubview:vwForgotPassword];
-        [UIView commitAnimations];
         }
     }
     
@@ -318,22 +320,55 @@ else
 -(IBAction)Click_ForgetPassword:(id)sender
 {
 
-    [UIView beginAnimations:nil context:NULL];
-    [UIView setAnimationDuration:0.3];
-    CGRect mainScreenBound = [[UIScreen mainScreen] bounds];
+    UIAlertController *alertController = [UIAlertController
+                                          alertControllerWithTitle:@"Enter your email"
+                                          message:nil
+                                          preferredStyle:UIAlertControllerStyleAlert];
     
-  
-        if (mainScreenBound.size.height==568)
-        {
-            vwForgotPassword.frame = CGRectMake(0,0,320,568);
-        }
-        else
-        {
-            vwForgotPassword.frame = CGRectMake(0,0, 320, 480);
-        }
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
+     {
+         textField.placeholder = @"Email";
+     }];
     
-    [self.view addSubview:vwForgotPassword];
-    [UIView commitAnimations];
+    UIAlertAction *okAction = [UIAlertAction
+                               actionWithTitle:NSLocalizedString(@"OK", @"OK action")
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction *action)
+                               {
+                                   UITextField *login = alertController.textFields.firstObject;
+                                   [self Click_Okay:login];
+                               }];
+    
+    
+    UIAlertAction *cancelAction = [UIAlertAction
+                                   actionWithTitle:@"Cancel"
+                                   style:UIAlertActionStyleCancel
+                                   handler:^(UIAlertAction *action)
+                                   {
+                                       NSLog(@"Cancel action");
+                                   }];
+    
+    [alertController addAction:cancelAction];
+    [alertController addAction:okAction];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+
+//    [UIView beginAnimations:nil context:NULL];
+//    [UIView setAnimationDuration:0.3];
+//    CGRect mainScreenBound = [[UIScreen mainScreen] bounds];
+//    
+//  
+//        if (mainScreenBound.size.height==568)
+//        {
+//            vwForgotPassword.frame = CGRectMake(0,0,320,568);
+//        }
+//        else
+//        {
+//            vwForgotPassword.frame = CGRectMake(0,0, 320, 480);
+//        }
+//    
+//    [self.view addSubview:vwForgotPassword];
+//    [UIView commitAnimations];
 
 }
 -(IBAction)Click_Cancel:(id)sender
@@ -358,15 +393,14 @@ else
 
 
 }
--(IBAction)Click_Okay:(id)sender
+
+-(void)Click_Okay:(UITextField*)textField
 {
     GlobalDataPersistence *obj_glob=[GlobalDataPersistence sharedGlobalDataPersistence];
     
     WebCommunicationClass* aCommunication = [[WebCommunicationClass alloc]init];
     [aCommunication setACaller:self];
-    [aCommunication ForgotPassword:txtpasswordFeild.text :obj_glob.strUserType];
-    
-   
-
+    [aCommunication ForgotPassword:textField.text :obj_glob.strUserType];
 }
+
 @end

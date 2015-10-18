@@ -10,55 +10,55 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" selectionStyle="none" indentationWidth="10" id="AYT-I8-i6n" customClass="MediaTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+        <tableViewCell contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" selectionStyle="none" indentationWidth="10" rowHeight="152" id="AYT-I8-i6n" customClass="MediaTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="152"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AYT-I8-i6n" id="iG6-gN-m07">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="169.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="151.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_large.png" id="FnY-8a-wbS">
-                        <rect key="frame" x="5" y="2" width="310" height="165.5"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="5" y="2" width="310" height="145.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ZcA-N2-Xj4">
-                        <rect key="frame" x="20" y="54" width="40" height="40"/>
+                        <rect key="frame" x="22" y="42" width="40" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.074509803920000006" green="0.58039215690000001" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tAY-yx-klv">
-                        <rect key="frame" x="27" y="61" width="26" height="26"/>
+                        <rect key="frame" x="29" y="49" width="26" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="20 July" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cGc-LM-QPy">
-                        <rect key="frame" x="12" y="100" width="56" height="14.5"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="DEC, 2015" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cGc-LM-QPy">
+                        <rect key="frame" x="12" y="88" width="60" height="14.5"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Heavy Rains Heavy Rains Heavy Rains Heavy Rains Heavy Rains Heavy Rains Heavy Rains Heavy Rains Heavy Rains Heavy Rains " lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fcd-g1-Zou">
-                        <rect key="frame" x="83" y="89" width="221" height="50"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Heavy Rains Heavy Rains " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fcd-g1-Zou">
+                        <rect key="frame" x="84" y="92" width="220" height="16"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Universal Children day Universal Children day" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Udn-KR-bIP">
-                        <rect key="frame" x="81" y="8" width="223" height="38"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Universal Children day" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Udn-KR-bIP">
+                        <rect key="frame" x="84" y="16" width="220" height="18"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globle.png" id="9FK-an-uxp">
-                        <rect key="frame" x="81" y="139" width="21" height="21"/>
+                        <rect key="frame" x="80" y="114" width="21" height="19"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BX5-th-Pgo">
-                        <rect key="frame" x="103" y="138" width="201" height="20"/>
+                        <rect key="frame" x="103" y="113" width="201" height="20"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                         <state key="normal" title="www.google.com">
@@ -67,27 +67,27 @@
                         </state>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="IKl-tb-rlN" customClass="EGOImageView">
-                        <rect key="frame" x="81" y="46" width="40" height="40"/>
+                        <rect key="frame" x="85" y="43" width="40" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3zr-Ac-dfZ" customClass="EGOImageView">
-                        <rect key="frame" x="134" y="46" width="40" height="40"/>
+                        <rect key="frame" x="144" y="43" width="40" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="rnT-g2-JsE" customClass="EGOImageView">
-                        <rect key="frame" x="187" y="46" width="40" height="40"/>
+                        <rect key="frame" x="203" y="43" width="40" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nyy-OL-dIy">
-                        <rect key="frame" x="86" y="45" width="30" height="42"/>
+                        <rect key="frame" x="89" y="42" width="32" height="42"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </button>
                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C6S-Rx-DRq">
-                        <rect key="frame" x="139" y="45" width="30" height="42"/>
+                        <rect key="frame" x="148" y="42" width="32" height="42"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </button>
                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cxh-T9-khF">
-                        <rect key="frame" x="192" y="45" width="30" height="42"/>
+                        <rect key="frame" x="207" y="42" width="32" height="42"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </button>
                 </subviews>
@@ -98,6 +98,7 @@
                 <outlet property="buttonIMAGE2" destination="C6S-Rx-DRq" id="Gso-7F-9fZ"/>
                 <outlet property="buttonImage1" destination="nyy-OL-dIy" id="56W-kA-eE5"/>
                 <outlet property="buttonImage3" destination="cxh-T9-khF" id="kQJ-G9-FOp"/>
+                <outlet property="imgBg" destination="FnY-8a-wbS" id="adc-lQ-uxE"/>
                 <outlet property="imgSec" destination="3zr-Ac-dfZ" id="w7a-Ol-Im8"/>
                 <outlet property="imgcircle" destination="ZcA-N2-Xj4" id="qVG-ci-zym"/>
                 <outlet property="imgfirst" destination="IKl-tb-rlN" id="Sbi-K9-gaO"/>
@@ -106,6 +107,7 @@
                 <outlet property="lblSubHeading" destination="fcd-g1-Zou" id="NZB-NN-FaV"/>
                 <outlet property="lblboxdate" destination="tAY-yx-klv" id="rLV-oq-tgm"/>
                 <outlet property="lbldate" destination="cGc-LM-QPy" id="oR7-FP-XGj"/>
+                <outlet property="linkIcon" destination="9FK-an-uxp" id="yOj-5T-gfb"/>
             </connections>
             <point key="canvasLocation" x="47" y="222"/>
         </tableViewCell>

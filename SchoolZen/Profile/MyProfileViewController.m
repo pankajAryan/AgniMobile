@@ -163,18 +163,22 @@
     {
         [obj_glob.dictUserInfo setValue:lblName.text forKey:@"userName"];
         [obj_glob.dictUserInfo setValue:lblcontact.text forKey:@"userMobile"];
+        
+        UIAlertView *alert = KALERT(KApplicationName, @"Your profile has been updated.", self);
+        
+        [alert show];
     }
     else
     {
+        
+        UIAlertView *alert = KALERT(KApplicationName, [strResult valueForKey:@"errorMessage"], self);
+        
+        [alert show];
 //        lblName.text = [obj_glob.dictUserInfo valueForKey:@"userName"];
 //        lblcontact.text = [obj_glob.dictUserInfo valueForKey:@"userMobile"];
     }
-    
-        UIAlertView *alert = KALERT(KApplicationName, [strResult valueForKey:@"errorMessage"], self);
-
-        [alert show];
-
 }
+
 /*
 #pragma mark - Navigation
 

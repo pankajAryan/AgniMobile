@@ -1,33 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestStudentTableViewController">
             <connections>
-                <outlet property="tblTest" destination="1mC-W7-WoD" id="24m-lv-KnQ"/>
-                <outlet property="view" destination="2G3-6Y-5tA" id="bmE-yd-ZDz"/>
+                <outlet property="tblPlanned" destination="6cg-Un-hmU" id="7i1-79-KFk"/>
+                <outlet property="view" destination="mBU-lE-pHi" id="2xv-OB-GDP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="2G3-6Y-5tA">
+        <view contentMode="scaleToFill" id="mBU-lE-pHi">
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="1mC-W7-WoD">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6cg-Un-hmU">
+                    <rect key="frame" x="0.0" y="6" width="320" height="468"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="MYo-YI-evp"/>
-                        <outlet property="delegate" destination="-1" id="p8J-rs-app"/>
+                        <outlet property="dataSource" destination="-1" id="Yj2-fK-Pf9"/>
+                        <outlet property="delegate" destination="-1" id="qdN-er-F5C"/>
                     </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="6cg-Un-hmU" firstAttribute="leading" secondItem="mBU-lE-pHi" secondAttribute="leading" id="0LR-nX-LQr"/>
+                <constraint firstAttribute="centerX" secondItem="6cg-Un-hmU" secondAttribute="centerX" id="8A2-R2-IMU"/>
+                <constraint firstAttribute="trailing" secondItem="6cg-Un-hmU" secondAttribute="trailing" id="CRk-8l-gQL"/>
+                <constraint firstItem="6cg-Un-hmU" firstAttribute="top" secondItem="mBU-lE-pHi" secondAttribute="top" constant="6" id="L8o-ae-ft8"/>
+                <constraint firstAttribute="bottom" secondItem="6cg-Un-hmU" secondAttribute="bottom" constant="6" id="PTU-JI-Qbw"/>
+                <constraint firstAttribute="centerY" secondItem="6cg-Un-hmU" secondAttribute="centerY" id="rc6-1G-fHr"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="275" y="-14"/>
+            <point key="canvasLocation" x="283" y="809"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -8,12 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TestStudentTableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface TestStudentTableViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 {
-    IBOutlet UITableView *tblTest;
+    IBOutlet UITableView *tblPlanned;
+    
 }
 @property(nonatomic,assign)NSString *strCateg;
-@property(nonatomic,strong)NSArray *dictCommon;
+@property(nonatomic,strong)NSArray *dictPlanCommon;
+
+@property (assign) NSInteger selectedTabIndex;
+@property(assign) BOOL isCommonType;
+
+@property(nonatomic,strong) NSString *strMonthIndex;
+
 
 
 @end

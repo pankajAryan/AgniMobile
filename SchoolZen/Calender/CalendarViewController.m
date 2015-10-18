@@ -7,19 +7,20 @@
 //
 
 #import "CalendarViewController.h"
-//#import "TestStudentTableViewController.h"
+#import "TestStudentTableViewController.h"
 #import "PlannedTableViewController.h"
 #import "GlobalDataPersistence.h"
 #import "Config.h"
 #import "TimeTableViewController.h"
 
+@class TestStudentTableViewController;
 
 @interface CalendarViewController () {
     
     PlannedTableViewController *controller1;
     PlannedTableViewController *controller2;
     PlannedTableViewController *controller3;
-//    PlannedTableViewController *controller4;
+    TestStudentTableViewController *controller4;
 
 }
 @property (nonatomic) CAPSPageMenu *pageMenu;
@@ -143,7 +144,7 @@
         {
             for (int index = 0; index < obj_GlobalDataPersistence.arrChild.count; index++) {
                 
-                PlannedTableViewController *controller = [[PlannedTableViewController alloc] initWithNibName:@"PlannedTableViewController" bundle:nil];
+                TestStudentTableViewController *controller = [[TestStudentTableViewController alloc] initWithNibName:@"TestStudentTableViewController" bundle:nil];
                 controller.navigationController.navigationBarHidden=YES;
                 
                 controller.strCateg=strCat;
@@ -154,12 +155,12 @@
             }
         }
         
-        controller3 = [[PlannedTableViewController alloc]initWithNibName:@"PlannedTableViewController" bundle:nil];
-        controller3.strCateg=strCat;
-        controller3.isCommonType = YES;
-        controller3.title = @"Common";
+        controller4 = [[TestStudentTableViewController alloc]initWithNibName:@"TestStudentTableViewController" bundle:nil];
+        controller4.strCateg=strCat;
+        controller4.isCommonType = YES;
+        controller4.title = @"Common";
         
-        [arrcontrollers addObject:controller3];
+        [arrcontrollers addObject:controller4];
     }
     
     else if ([strCat isEqualToString:@"Homework"])

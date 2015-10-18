@@ -20,6 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.edgesForExtendedLayout=UIRectEdgeNone;
+    self.extendedLayoutIncludesOpaqueBars=YES;
+    self.automaticallyAdjustsScrollViewInsets=NO;
+    
     GlobalDataPersistence*obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
     if([obj_GlobalDataPersistence.strUserType isEqualToString:@"T"])
     {

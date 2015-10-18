@@ -21,6 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.edgesForExtendedLayout=UIRectEdgeNone;
+    self.extendedLayoutIncludesOpaqueBars=YES;
+    self.automaticallyAdjustsScrollViewInsets=NO;
+
     obj_student=[[NSMutableArray alloc] init];
     
     arrSelected=[[NSMutableArray alloc] init];
@@ -29,7 +33,7 @@
     [obj_Web setACaller:self];
     GlobalDataPersistence *obj_glob=[GlobalDataPersistence sharedGlobalDataPersistence];
     
-    [obj_Web GetStudentsOfClass:[obj_glob.dictUserInfo valueForKey:@"schoolId"]  classId:@"3" sectionId:@"71"];
+    [obj_Web GetStudentsOfClass:[obj_glob.dictUserInfo valueForKey:@"schoolId"] classId:_strClassId sectionId:_strSectionId];//  classId:@"3" sectionId:@"71"];
 
     // Do any additional setup after loading the view from its nib.
     GlobalDataPersistence*obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
@@ -78,7 +82,7 @@
         if(aReq.tag==17)
         
         {
-            UIAlertView *alert = KALERT(KApplicationName, [strResult valueForKey:@"errorMessage"], nil);
+            UIAlertView *alert = KALERT(KApplicationName, @"Feedback sent successfully.", nil);
             
             [alert show];
             

@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonImage1;
 @property (weak, nonatomic) IBOutlet UIButton *buttonIMAGE2;
 @property (weak, nonatomic) IBOutlet UIButton *buttonImage3;
+@property (weak, nonatomic) IBOutlet UIImageView *linkIcon;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imgBg;
 
 @end

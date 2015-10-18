@@ -21,6 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.edgesForExtendedLayout=UIRectEdgeNone;
+    self.extendedLayoutIncludesOpaqueBars=YES;
+    self.automaticallyAdjustsScrollViewInsets=NO;
+
 }
 
 - (void)didReceiveMemoryWarning {

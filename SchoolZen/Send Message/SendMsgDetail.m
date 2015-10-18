@@ -21,6 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.edgesForExtendedLayout=UIRectEdgeNone;
+    self.extendedLayoutIncludesOpaqueBars=YES;
+    self.automaticallyAdjustsScrollViewInsets=NO;
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -121,7 +126,7 @@
     if(isSuccessNumber)
     {
         
-        UIAlertView *alert =KALERT(KApplicationName, @"Homework Submitted successfully!", nil);
+        UIAlertView *alert =KALERT(KApplicationName, @"Message sent successfully.", nil);
         
         [alert show];
         
@@ -136,11 +141,6 @@
         
         [alert show];
     }
-    
-    
-    
-    
-    
     
 }
 

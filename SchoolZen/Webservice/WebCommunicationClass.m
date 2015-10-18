@@ -317,6 +317,7 @@
 
 
 }
+
 -(void)AddFeedbackTeacher:(NSString*)schoolId staffId:(NSString*)staffId message:(NSString*)message classId:(NSString*)classId sectionId:(NSString*)sectionId childIds:(NSString*)childIds
 {
 
@@ -392,6 +393,7 @@
  [self retain];
      [[ALServiceInvoker sharedInstance] serviceInvokerRequestWithParams:aUserInfo requestAPI:KforgotPassword reqTag:20 delegate:self];
 }
+
 -(void)addMsg:(NSString*)schoolId staffId:(NSString*)staffId title:(NSString*)title message:(NSString*)message classId:(NSString*)classId
      attachmentURL:(NSString*)attachmentURL sectionId:(NSString*)sectionId subjectId:(NSString*)subjectId
 {

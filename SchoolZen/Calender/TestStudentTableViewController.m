@@ -8,11 +8,13 @@
 
 #import "TestStudentTableViewController.h"
 #import "CalendarCell.h"
+#import "MediaTableViewCell.h"
 #import "CircularTableViewCell.h"
-#import  "MediaTableViewCell.h"
 #import "GlobalDataPersistence.h"
+#import "HomeworkTableViewCell.h"
 #import "ShowmsgTableViewCell.h"
 #import "FFZoomImageCollectionView.h"
+#import "WebCommunicationClass.h"
 
 @interface TestStudentTableViewController ()
 
@@ -21,20 +23,57 @@
 @implementation TestStudentTableViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
+    GlobalDataPersistence *obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
     
-     GlobalDataPersistence *obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
+    self.dictPlanCommon=obj_GlobalDataPersistence.arrPlan;
     
-    self.dictCommon=obj_GlobalDataPersistence.arrTable;
-    
-    NSLog(@"%@",self.dictCommon);
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    // ******************** || PANKAJ ||**************************************//
+    
+    WebCommunicationClass* aCommunication = [[WebCommunicationClass alloc]init];
+    [aCommunication setACaller:self];
+    
+    if ([_strCateg isEqualToString:@"Media"])
+    {
+        if([obj_GlobalDataPersistence.strUserType isEqualToString:@"T"] || _isCommonType)
+        {
+            [aCommunication Get_commonMedia:[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"schoolId"]];
+        }
+        else
+        {
+            [aCommunication Getmedia:[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"schoolId"] childclass:[[obj_GlobalDataPersistence.arrChild valueForKey:@"childClass"] objectAtIndex:_selectedTabIndex] childsetion:[[obj_GlobalDataPersistence.arrChild valueForKey:@"childSection"] objectAtIndex:_selectedTabIndex]];
+        }
+    }
 }
+
+
+#pragma mark- Webservice callback
+#pragma mark-
+-(void) dataDidFinishDowloading:(ASIHTTPRequest*)aReq withMethood:(NSString *)MethoodName withOBJ:(WebCommunicationClass *)aObj
+{
+    NSError *jsonParsingError = nil;
+    
+    id responseDict =[NSJSONSerialization JSONObjectWithData:[aReq responseData]options:0 error:&jsonParsingError];
+    
+    NSNumber * isSuccessNumber = (NSNumber *)[responseDict valueForKey:@"errorCode"];
+    
+    if(isSuccessNumber)
+    {
+        self.dictPlanCommon = [responseDict valueForKey:@"responseObject"];
+        [tblPlanned reloadData];
+    }
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -43,243 +82,185 @@
 
 
 #pragma mark - Table view data source
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    if([self.strCateg isEqualToString:@"Cir"]|| [self.strCateg isEqualToString:@"Me"]||[self.strCateg isEqualToString:@"send"] )
-    {
-        
-        return 1;
-    }
-    else
-    {
-    return [self.dictCommon count];
-    }
-}
-
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    if([self.strCateg isEqualToString:@"Cir"]|| [self.strCateg isEqualToString:@"Me"]||[self.strCateg isEqualToString:@"send"])
-    {
-        
-        return [self.dictCommon count];
-    }
-    else
-    {
- NSArray *arr= [[self.dictCommon objectAtIndex:section] objectForKey:@"holidays"];
-    return [arr count];
-    }
-    return 0;
+    
+    return [self.dictPlanCommon count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"Cell";
+    MediaTableViewCell*   cell = (MediaTableViewCell *)[tblPlanned dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    if([self.strCateg isEqualToString:@"Cir"] || [self.strCateg isEqualToString:@"Feed"])
+    if([self.strCateg isEqualToString:@"Media"])
     {
-    
-        CalendarCell*   cell = (CalendarCell *)[tblTest dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil)
-        {
-            UIViewController *view = [[UIViewController alloc]initWithNibName:@"CalendarCell" bundle:nil];
-            cell = (CalendarCell *)view.view;
-            cell.selectedBackgroundView.backgroundColor = [UIColor clearColor];
-        }
-        
-        cell.lblMainHeading.text=[NSString stringWithFormat:@"%@",[[self.dictCommon valueForKey:@"title"] objectAtIndex:indexPath.row]];
-        
-        cell.lblSubHeading.text=[NSString stringWithFormat:@"%@",[[self.dictCommon valueForKey:@"message"] objectAtIndex:indexPath.row]];
-        cell.imgDate.layer.cornerRadius=cell.imgDate.frame.size.width/2;
-        cell.imgDate.clipsToBounds=YES;
-        
-        NSString *dateString =[[self.dictCommon valueForKey:@"dateOf"] objectAtIndex:indexPath.row];
-        NSArray* dateArray = [dateString componentsSeparatedByString: @" "];
-        
-        cell.lblboxdate.text=[dateArray objectAtIndex:0];
-        cell.lbldate.text=[NSString stringWithFormat:@"%@%@",[dateArray objectAtIndex:1],[dateArray objectAtIndex:2]];
-        return cell;
-        
-    }
-    else if([self.strCateg isEqualToString:@"Me"])
-    {
-        
-        MediaTableViewCell*   cell = (MediaTableViewCell *)[tblTest dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil)
         {
             UIViewController *view = [[UIViewController alloc]initWithNibName:@"MediaTableViewCell" bundle:nil];
             cell = (MediaTableViewCell *)view.view;
             cell.selectedBackgroundView.backgroundColor = [UIColor clearColor];
         }
-        cell.lblMainHeading.text=[NSString stringWithFormat:@"%@",[[self.dictCommon valueForKey:@"caption"] objectAtIndex:indexPath.row]];
         
+        cell.lblMainHeading.text=[NSString stringWithFormat:@"%@",[[self.dictPlanCommon valueForKey:@"caption"] objectAtIndex:indexPath.row]];
         
-       cell.lblSubHeading.text=[NSString stringWithFormat:@"%@",[[self.dictCommon valueForKey:@"message"] objectAtIndex:indexPath.row]];
+        cell.lblSubHeading.text=[NSString stringWithFormat:@"%@",[[self.dictPlanCommon valueForKey:@"message"] objectAtIndex:indexPath.row]];
+        
+        [cell.lblMainHeading sizeToFit];
+        [cell.lblSubHeading sizeToFit];
+        
         cell.imgcircle.layer.cornerRadius=cell.imgcircle.frame.size.width/2;
         cell.imgcircle.clipsToBounds=YES;
-       [cell.btnLink setTitle:[NSString stringWithFormat:@"%@",[[[self.dictCommon objectAtIndex:indexPath.row] valueForKey:@"mediaURLs"] objectAtIndex:0]] forState:UIControlStateNormal];
-        cell.btnLink.tag=indexPath.row;
-        [cell.btnLink addTarget:self action:@selector(Link:) forControlEvents:UIControlEventTouchUpInside];
         
-        NSArray *images = [[self.dictCommon objectAtIndex:0] valueForKey:@"mediaFiles"];
-        int index = 0;
+        CGRect frame = CGRectZero;
         
-        for (NSString *imageUrl in images) {
+        NSArray *images = [[self.dictPlanCommon objectAtIndex:0] valueForKey:@"mediaFiles"];
+        if (images.count)
+        {
+            int index = 0;
             
-            switch (index)
-            {
-                case 0:
-                    [cell.imgfirst setImageURL:[NSURL URLWithString:imageUrl]];
-                    
-                    break;
-                    
-                case 1:
-                    [cell.imgSec setImageURL:[NSURL URLWithString:imageUrl]];
-                    
-                    break;
-                    
-                case 2:
-                    [cell.imgthird setImageURL:[NSURL URLWithString:imageUrl]];
-                    
-                    break;
-                    
-                default:
-                    break;
+            for (NSString *imageUrl in images) {
+                
+                switch (index)
+                {
+                    case 0:
+                        [cell.imgfirst setImageURL:[NSURL URLWithString:imageUrl]];
+                        [cell.buttonImage1 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
+                        
+                        break;
+                        
+                    case 1:
+                        [cell.imgSec setImageURL:[NSURL URLWithString:imageUrl]];
+                        [cell.buttonIMAGE2 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
+                        
+                        break;
+                        
+                    case 2:
+                        [cell.imgthird setImageURL:[NSURL URLWithString:imageUrl]];
+                        [cell.buttonImage3 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
+                        
+                        break;
+                        
+                    default:
+                        break;
+                }
+                
+                index++;
             }
-            
-            index++;
         }
-
-//        if (images.count) {
-//             [cell.imgfirst setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[images objectAtIndex:0]]]];
-//            if (images.count>1) {
-//                 [cell.imgSec setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[images objectAtIndex:0]]]];
-//                if (images.count>2)
-//                 [cell.imgthird setImageURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",[images objectAtIndex:0]]]];
-//            }
-//        }
+        else {
+            cell.imgfirst.hidden = cell.buttonImage1.hidden = YES;
+            cell.imgSec.hidden = cell.buttonIMAGE2.hidden = YES;
+            cell.imgthird.hidden = cell.buttonImage3.hidden = YES;
+            
+            frame = cell.lblMainHeading.frame;
+            frame.origin.y = cell.buttonImage1.frame.origin.y;
+            cell.lblMainHeading.frame = frame;
+        }
         
-        NSString *dateString =[[self.dictCommon valueForKey:@"addedOn"] objectAtIndex:indexPath.row];
+        NSString *linkText = [NSString stringWithFormat:@"%@",[[[self.dictPlanCommon objectAtIndex:0] valueForKey:@"mediaURLs"] objectAtIndex:0]];
+        if (!linkText) {
+            cell.linkIcon.hidden = cell.btnLink.hidden = YES;
+        }
+        else {
+            [cell.btnLink setTitle:[NSString stringWithFormat:@"%@",[[[self.dictPlanCommon objectAtIndex:0] valueForKey:@"mediaURLs"] objectAtIndex:0]] forState:UIControlStateNormal];
+            [cell.btnLink addTarget:self action:@selector(Link:) forControlEvents:UIControlEventTouchUpInside];
+            
+            frame = cell.btnLink.frame;
+            frame.origin.y = cell.lblSubHeading.frame.origin.y + cell.lblSubHeading.frame.size.height + 5;
+            cell.btnLink.frame = frame;
+            
+            CGPoint centre = cell.linkIcon.center;
+            centre.y = cell.btnLink.center.y;
+            cell.linkIcon.center = centre;
+        }
+        
+        
+        NSString *dateString =[[self.dictPlanCommon valueForKey:@"addedOn"] objectAtIndex:indexPath.row];
         NSArray* dateArray = [dateString componentsSeparatedByString: @" "];
         
         cell.lblboxdate.text=[dateArray objectAtIndex:0];
         cell.lbldate.text=[NSString stringWithFormat:@"%@%@",[dateArray objectAtIndex:1],[dateArray objectAtIndex:2]];
         
-        [cell.buttonImage1 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
-        [cell.buttonIMAGE2 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
-        [cell.buttonImage3 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
+        frame = cell.frame;
+        cell.imgBg.frame = CGRectMake(5, 2, frame.size.width -10, frame.size.height -6);
         
         return cell;
     }
-    else if([self.strCateg isEqualToString:@"send"])
-    {
-        
-        ShowmsgTableViewCell*   cell = (ShowmsgTableViewCell *)[tblTest dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell == nil)
-        {
-            UIViewController *view = [[UIViewController alloc]initWithNibName:@"ShowmsgTableViewCell" bundle:nil];
-            cell = (ShowmsgTableViewCell *)view.view;
-            cell.selectedBackgroundView.backgroundColor = [UIColor clearColor];
-        }
-        cell.lblMainHeading.text=[NSString stringWithFormat:@"%@",[[self.dictCommon valueForKey:@"title"] objectAtIndex:indexPath.row]];
-        
-        cell.lblSubHeading.text=[NSString stringWithFormat:@"%@",[[self.dictCommon valueForKey:@"description"] objectAtIndex:indexPath.row]];
-        
-        cell.lblsubheadingvalue.text=[NSString stringWithFormat:@"Posted by %@",[[self.dictCommon valueForKey:@"teacherName"] objectAtIndex:indexPath.row]];
-        
-        cell.imgDate.layer.cornerRadius=cell.imgDate.frame.size.width/2;
-        cell.imgDate.clipsToBounds=YES;
-        
-        NSString *dateString =[[self.dictCommon valueForKey:@"addedOn"] objectAtIndex:indexPath.row];
-        NSArray* dateArray = [dateString componentsSeparatedByString: @" "];
-        
-        cell.lblboxdate.text=[dateArray objectAtIndex:0];
-        cell.lbldate.text=[NSString stringWithFormat:@"%@%@",[dateArray objectAtIndex:1],[dateArray objectAtIndex:2]];
-         return cell;
-    }
-    else
-    {
-        CircularTableViewCell*   cell1 = (CircularTableViewCell *)[tblTest dequeueReusableCellWithIdentifier:CellIdentifier];
-        if (cell1 == nil)
-        {
-            UIViewController *view = [[UIViewController alloc]initWithNibName:@"CircularTableViewCell" bundle:nil];
-            cell1 = (CircularTableViewCell *)view.view;
-            cell1.selectedBackgroundView.backgroundColor = [UIColor clearColor];
-            NSArray *arr= [[self.dictCommon objectAtIndex:indexPath.section] objectForKey:@"holidays"];
-            cell1.lblSubHeading.text=[NSString stringWithFormat:@"%@",[[arr objectAtIndex:indexPath.row] valueForKey:@"reason"]];
-             cell1.lblHeading.text=[NSString stringWithFormat:@"%@",[[arr objectAtIndex:indexPath.row] valueForKey:@"date"]];
-            
-            return cell1;
-        }
-    }
     
-    return nil;
-}
--(void)Link:(UIButton*)sender
-{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: [[[self.dictCommon objectAtIndex:sender.tag] valueForKey:@"mediaURLs"] objectAtIndex:0]]];
-
-   
-    
+    return cell;
 }
 
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 25.0f;
-}
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    
-    if([self.strCateg isEqualToString:@"cal"])
-    {
-        
-        UILabel *myLabel = [[UILabel alloc] init];
-        myLabel.frame = CGRectMake(10,0, 320, 25);
-        myLabel.font = [UIFont boldSystemFontOfSize:13.0f];
-        myLabel.text = [self tableView:tableView titleForHeaderInSection:section]  ;
-        myLabel.font=[UIFont fontWithName:@"arial-Bold" size:15.0];
-        myLabel.textColor=[UIColor colorWithRed:7/255.0 green:42/255.0 blue:33/255.0 alpha:1.0f];
-        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-        
-        
-        [headerView addSubview:myLabel];
-        
-        return headerView;
-
-    }
-    return nil;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if([self.strCateg isEqualToString:@"cal"])
-    {
-        return [[self.dictCommon valueForKey:@"month"] objectAtIndex:section];
-    }
-    return nil;
-}
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if([self.strCateg isEqualToString:@"Cir"])
-    {
-        return 90.0;
-    }
-    else if ([self.strCateg isEqualToString:@"Me"]||[self.strCateg isEqualToString:@"send"])
-    {
-    return 170.0;
-    }
-    else
-    {
-        return 100.0;
-    }
-
+    return [self calculateMediaCellHeight:indexPath];
 }
 
+- (CGFloat)calculateMediaCellHeight:(NSIndexPath*)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    MediaTableViewCell*   cell = (MediaTableViewCell *)[tblPlanned dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil)
+    {
+        UIViewController *view = [[UIViewController alloc]initWithNibName:@"MediaTableViewCell" bundle:nil];
+        cell = (MediaTableViewCell *)view.view;
+        cell.selectedBackgroundView.backgroundColor = [UIColor clearColor];
+    }
+    
+    cell.lblMainHeading.text=[NSString stringWithFormat:@"%@",[[self.dictPlanCommon valueForKey:@"caption"] objectAtIndex:indexPath.row]];
+    cell.lblSubHeading.text=[NSString stringWithFormat:@"%@",[[self.dictPlanCommon valueForKey:@"message"] objectAtIndex:indexPath.row]];
+    
+    CGFloat removedComponentsHeight = 0.0;
+    
+    NSString *linkText = [NSString stringWithFormat:@"%@",[[[self.dictPlanCommon objectAtIndex:0] valueForKey:@"mediaURLs"] objectAtIndex:0]];
+    if (!linkText)
+        removedComponentsHeight += 25 ;
+    
+    NSArray *images = [[self.dictPlanCommon objectAtIndex:0] valueForKey:@"mediaFiles"];
+    if (!images.count)
+        removedComponentsHeight += (42 + 9) ;
+    
+    CGFloat defaultCellHeight = 152.0;
+    CGFloat defaultTitleHeight = 18.0;
+    CGFloat defaultDetailLabelHeight = 16.0;
+    
+    CGFloat additionalTitlelabelHeight = [self heightForLabel:cell.lblMainHeading] - defaultTitleHeight;
+    CGFloat additionalDetailLabelHeight = [self heightForLabel:cell.lblSubHeading] - defaultDetailLabelHeight;
+    
+    CGFloat calculatedCellHeight = (defaultCellHeight - removedComponentsHeight + additionalTitlelabelHeight + additionalDetailLabelHeight + 5);  // 5 is added for error margin
+    
+    return calculatedCellHeight;
+}
+
+- (CGFloat)heightForLabel:(UILabel*)label {
+    
+    //   [UIFont systemFontOfSize:label.font.pointSize]
+    NSDictionary *attributes = @{NSFontAttributeName:label.font};
+    
+    CGRect textRect = [label.text boundingRectWithSize:CGSizeMake(label.frame.size.width, 120) options:NSStringDrawingUsesLineFragmentOrigin attributes:attributes context:nil];
+    
+    return textRect.size.height;
+}
+
+
+#pragma mark-
+
+-(void)Link:(UIButton*)sender
+{
+    NSArray *links = [[self.dictPlanCommon objectAtIndex:sender.tag] valueForKey:@"mediaURLs"];
+
+    if (links.count > 0)
+    {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString: [[[self.dictPlanCommon objectAtIndex:sender.tag] valueForKey:@"mediaURLs"] objectAtIndex:0]]];
+    }
+    
+}
 
 - (void)imageGalleryDidTap:(UIButton*)sender {
     
-    NSArray *images = [[self.dictCommon objectAtIndex:0] valueForKey:@"mediaFiles"];
+    NSArray *images = [[self.dictPlanCommon objectAtIndex:0] valueForKey:@"mediaFiles"];
     
     if (images.count > 0)
     {
