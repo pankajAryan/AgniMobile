@@ -13,10 +13,12 @@
 {
     IBOutlet UILabel *lblAddress;
     IBOutlet UILabel *lblcontact;
-    IBOutlet UILabel *lblEmail;
-    IBOutlet UILabel *lblURL;
+    IBOutlet UITextView *lblEmail;
+    IBOutlet UITextView *lblURL;
 
     IBOutlet EGOImageView *img;
 
 }
+
+
 @end

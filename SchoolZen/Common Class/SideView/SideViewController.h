@@ -34,7 +34,7 @@
 #import "MFSideMenu.h"
 #import "EGOImageView.h"
 
-@interface SideViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface SideViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
 @property (nonatomic, retain) NSArray *arrMenuItems;
 @property (nonatomic, retain) NSArray *arrImages;

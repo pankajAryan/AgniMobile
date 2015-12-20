@@ -40,7 +40,6 @@
 #import "MyProfileViewController.h"
 #import "ContactViewController.h"
 
-
 @interface SideViewController()
 {
    
@@ -162,6 +161,16 @@
 	}
     if (indexPath.row == 4)
     {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Logout from AgnitioMobile" message:@"Are you sure ?" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Cancel",@"Yes", nil];
+        alertView.tag = 1;
+        [alertView show];
+    }
+
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    if ( (alertView.tag == 1) && (buttonIndex == 1)) {
         AppDelegate *appdel=(AppDelegate *)[[UIApplication sharedApplication]delegate];
         LoginViewController *LoginViewObj=[[LoginViewController alloc]initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
         
@@ -169,8 +178,8 @@
         [appdel.navigationController setNavigationBarHidden:YES];
         [appdel.window setRootViewController:appdel.navigationController];
     }
-
 }
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {

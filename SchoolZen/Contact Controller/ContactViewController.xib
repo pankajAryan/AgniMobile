@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactViewController">
             <connections>
                 <outlet property="img" destination="1LE-AH-f7E" id="szs-Kp-dno"/>
                 <outlet property="lblAddress" destination="Ju0-OQ-Ixv" id="B9I-su-Tyf"/>
-                <outlet property="lblEmail" destination="L45-S2-hPz" id="qnQ-Rw-rn6"/>
-                <outlet property="lblURL" destination="ZZX-DN-LAw" id="YbZ-bf-Whn"/>
+                <outlet property="lblEmail" destination="5B7-uU-nqg" id="UUU-a1-MpD"/>
+                <outlet property="lblURL" destination="SAb-op-FJQ" id="cnb-Mg-VK0"/>
                 <outlet property="lblcontact" destination="xSX-tg-4K2" id="E8t-rW-BeT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,7 +23,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="uyM-bf-paJ">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.074509803920000006" green="0.58039215690000001" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.51372549020000002" green="0.67450980390000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wK2-7N-w97">
                     <rect key="frame" x="25" y="23" width="286" height="34"/>
@@ -61,7 +61,7 @@
                     <rect key="frame" x="8" y="344" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L45-S2-hPz">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L45-S2-hPz">
                     <rect key="frame" x="46" y="338" width="266" height="41"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -72,7 +72,7 @@
                     <rect key="frame" x="8" y="401" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZZX-DN-LAw">
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZZX-DN-LAw">
                     <rect key="frame" x="46" y="395" width="266" height="41"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -94,6 +94,22 @@
                     <rect key="frame" x="8" y="230" width="30" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" id="5B7-uU-nqg">
+                    <rect key="frame" x="46" y="333" width="266" height="53"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
+                </textView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" id="SAb-op-FJQ">
+                    <rect key="frame" x="46" y="399" width="266" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <dataDetectorType key="dataDetectorTypes" link="YES" address="YES"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -107,9 +123,4 @@
         <image name="globle.png" width="21" height="21"/>
         <image name="phone_icon.png" width="31" height="30"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

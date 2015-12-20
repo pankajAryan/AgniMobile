@@ -21,6 +21,7 @@
 
 @property(nonatomic,strong) NSString *strMonthIndex;
 
+@property (weak, nonatomic) IBOutlet UILabel *label_noInfo;
 
 
 @end
