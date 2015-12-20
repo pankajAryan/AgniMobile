@@ -70,6 +70,9 @@
     }
     else
     {
+        [_txttitle resignFirstResponder];
+        [_txtMessage resignFirstResponder];
+
 
     WebCommunicationClass *obj_Web=[[WebCommunicationClass alloc] init];
     

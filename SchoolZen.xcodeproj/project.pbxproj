@@ -238,6 +238,7 @@
 		CEB878E21BCDB4EB009C8565 /* ZoomImageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB878E11BCDB4EB009C8565 /* ZoomImageCollectionCell.xib */; };
 		CEC5D7D31BA2137C00F1690F /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEC5D7D21BA2137C00F1690F /* arrow_left@2x.png */; };
 		CEDAABA61BCEF0700022ABFA /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDAABA51BCEF0700022ABFA /* NSString+MD5.m */; };
+		CEDC41491BECB91400476737 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC41481BECB91400476737 /* placeholder.png */; };
 		CEE16E1F1B654BC800C6A191 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE16E171B654BC800C6A191 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEE16E201B654BC800C6A191 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE16E191B654BC800C6A191 /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEE16E211B654BC800C6A191 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE16E1B1B654BC800C6A191 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -550,6 +551,7 @@
 		CEC5D7D21BA2137C00F1690F /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left@2x.png"; sourceTree = "<group>"; };
 		CEDAABA41BCEF0700022ABFA /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		CEDAABA51BCEF0700022ABFA /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		CEDC41481BECB91400476737 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		CEE16E161B654BC800C6A191 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
 		CEE16E171B654BC800C6A191 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
 		CEE16E181B654BC800C6A191 /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2Authentication.h; sourceTree = "<group>"; };
@@ -783,6 +785,7 @@
 		1D7DD2D31B62B29D00CC95F4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEDC41481BECB91400476737 /* placeholder.png */,
 				CE89797D1BCFEE9B0029FD46 /* calendar_icon@2x.png */,
 				CE89797F1BCFEEA10029FD46 /* calendar_icon@3x.png */,
 				CEB22DDA1BCC0FD80023CBAE /* iOS */,
@@ -1235,6 +1238,7 @@
 				TargetAttributes = {
 					1D7DD2CF1B62B29D00CC95F4 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = KJ83N4RBD7;
 					};
 				};
 			};
@@ -1370,6 +1374,7 @@
 				1DEC05251BC707AA00219CBC /* send_homework@3x.png in Resources */,
 				1DB369351B8A497C007E0BC5 /* home_bg.png in Resources */,
 				1D60853E1B64251B006DE39D /* rate_app@2x.png in Resources */,
+				CEDC41491BECB91400476737 /* placeholder.png in Resources */,
 				1DE511181B8CC9D60027753D /* Back.png in Resources */,
 				1D6085351B64251B006DE39D /* media@2x.png in Resources */,
 				1D6085211B64251B006DE39D /* email_icon@3x.png in Resources */,
