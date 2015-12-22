@@ -17,8 +17,8 @@
     IBOutlet UIButton *btnCircular;
     IBOutlet UIButton *btnFeedback;
     IBOutlet UIButton *btnMedia;
-        IBOutlet UIButton *btnAddFeedback;
-IBOutlet UIButton *btnHomeWork;
+    IBOutlet UIButton *btnAddFeedback;
+    IBOutlet UIButton *btnHomeWork;
     IBOutlet UILabel *lblCalendar;
     IBOutlet UILabel *lblCircular;
     IBOutlet UILabel *lblFeedback;

@@ -129,6 +129,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 -(IBAction)Select_Option:(id)sender
 {
      GlobalDataPersistence*obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
@@ -156,10 +157,29 @@
             [self.navigationController pushViewController:parentController animated:YES];
             break;
             
-           case 2:
-           
+        case 2:
+            if([obj_GlobalDataPersistence.strUserType isEqualToString:@"T"])
+            {
+                parentController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
+                parentController.strCat=@"Media";
+                CGRect rect3 = parentController.view.frame;
+                rect3.origin.y = 64;
+                parentController.view.frame = rect3;
+                [self.navigationController pushViewController:parentController animated:YES];
+            }
+            else
+            {
+                parentController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
+                parentController.strCat=@"Feedback";
+                CGRect rect2 = parentController.view.frame;
+                rect2.origin.y = 64;
+                parentController.view.frame = rect2;
+                [self.navigationController pushViewController:parentController animated:YES];
+            }
+            break;
             
-
+        case 3:
+            
             if([obj_GlobalDataPersistence.strUserType isEqualToString:@"T"])
             {
                 TeacherFeedbackViewController *obj_TeacherFeedbackViewController=[TeacherFeedbackViewController new];
@@ -168,22 +188,14 @@
             }
             else
             {
-            parentController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
-            parentController.strCat=@"Feedback";
-            CGRect rect2 = parentController.view.frame;
-            rect2.origin.y = 64;
-            parentController.view.frame = rect2;
-            [self.navigationController pushViewController:parentController animated:YES];
+                parentController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
+                parentController.strCat=@"Media";
+                CGRect rect3 = parentController.view.frame;
+                rect3.origin.y = 64;
+                parentController.view.frame = rect3;
+                [self.navigationController pushViewController:parentController animated:YES];
             }
-            break;
             
-        case 3:
-            parentController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
-            parentController.strCat=@"Media";
-            CGRect rect3 = parentController.view.frame;
-            rect3.origin.y = 64;
-            parentController.view.frame = rect3;
-            [self.navigationController pushViewController:parentController animated:YES];
             break;
             
             
@@ -219,7 +231,7 @@
             parentController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
             parentController.strCat=@"Homework";
             CGRect rect4 = parentController.view.frame;
-            rect3.origin.y = 64;
+            rect4.origin.y = 64;
             parentController.view.frame = rect4;
             [self.navigationController pushViewController:parentController animated:YES];
             }
@@ -230,7 +242,7 @@
             parentController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
             parentController.strCat=@"timetable";
             CGRect rect5 = parentController.view.frame;
-            rect3.origin.y = 64;
+            rect5.origin.y = 64;
             parentController.view.frame = rect5;
             [self.navigationController pushViewController:parentController animated:YES];
             
@@ -244,7 +256,7 @@
     parentController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
     parentController.strCat=@"Message";
     CGRect rect6 = parentController.view.frame;
-    rect3.origin.y = 64;
+    rect6.origin.y = 64;
     parentController.view.frame = rect6;
     [self.navigationController pushViewController:parentController animated:YES];
     

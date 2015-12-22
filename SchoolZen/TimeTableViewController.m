@@ -72,6 +72,9 @@
     {        
         NSString *imageUrl = [strResult valueForKey:@"responseObject"];
         NSLog(@"%@",imageUrl);
+        
+//        _label_noInfo.hidden = (self.dictPlanCommon.count ? YES:NO);
+
         [self.imageView_Timetable setImageURL:[NSURL URLWithString:imageUrl]];
     }
     else

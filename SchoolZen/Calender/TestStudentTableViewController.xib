@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestStudentTableViewController">
             <connections>
+                <outlet property="label_noInfo" destination="GqB-IK-fiL" id="Ke6-lH-cKC"/>
                 <outlet property="tblPlanned" destination="6cg-Un-hmU" id="7i1-79-KFk"/>
                 <outlet property="view" destination="mBU-lE-pHi" id="2xv-OB-GDP"/>
             </connections>
@@ -23,23 +26,30 @@
                         <outlet property="delegate" destination="-1" id="qdN-er-F5C"/>
                     </connections>
                 </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No iformation to display." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqB-IK-fiL">
+                    <rect key="frame" x="8" y="230" width="304" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="oU2-p2-QOZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="6cg-Un-hmU" firstAttribute="leading" secondItem="mBU-lE-pHi" secondAttribute="leading" id="0LR-nX-LQr"/>
+                <constraint firstItem="GqB-IK-fiL" firstAttribute="centerX" secondItem="6cg-Un-hmU" secondAttribute="centerX" id="7Ug-PE-pWZ"/>
                 <constraint firstAttribute="centerX" secondItem="6cg-Un-hmU" secondAttribute="centerX" id="8A2-R2-IMU"/>
                 <constraint firstAttribute="trailing" secondItem="6cg-Un-hmU" secondAttribute="trailing" id="CRk-8l-gQL"/>
                 <constraint firstItem="6cg-Un-hmU" firstAttribute="top" secondItem="mBU-lE-pHi" secondAttribute="top" constant="6" id="L8o-ae-ft8"/>
                 <constraint firstAttribute="bottom" secondItem="6cg-Un-hmU" secondAttribute="bottom" constant="6" id="PTU-JI-Qbw"/>
+                <constraint firstItem="GqB-IK-fiL" firstAttribute="leading" secondItem="mBU-lE-pHi" secondAttribute="leadingMargin" id="kSq-fF-G0E"/>
+                <constraint firstItem="GqB-IK-fiL" firstAttribute="centerY" secondItem="6cg-Un-hmU" secondAttribute="centerY" id="nee-46-K50"/>
                 <constraint firstAttribute="centerY" secondItem="6cg-Un-hmU" secondAttribute="centerY" id="rc6-1G-fHr"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="283" y="809"/>
         </view>
     </objects>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

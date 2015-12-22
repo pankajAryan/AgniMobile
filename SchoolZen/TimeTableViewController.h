@@ -16,4 +16,7 @@
 @property (weak, nonatomic) IBOutlet EGOImageView *imageView_Timetable;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+@property (weak, nonatomic) IBOutlet UILabel *label_noInfo;
+
+
 @end

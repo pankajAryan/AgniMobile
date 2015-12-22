@@ -69,6 +69,9 @@
     if(isSuccessNumber)
     {
         self.dictPlanCommon = [responseDict valueForKey:@"responseObject"];
+        
+        _label_noInfo.hidden = (self.dictPlanCommon.count ? YES:NO);
+
         [tblPlanned reloadData];
     }
     
