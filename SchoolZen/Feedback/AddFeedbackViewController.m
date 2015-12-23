@@ -37,6 +37,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -53,9 +54,13 @@
 */
 
 - (IBAction)Click_Back:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    [[ALServiceInvoker sharedInstance] cancelRequest];
+    [SVProgressHUD dismiss];
 
+    [self.navigationController popViewControllerAnimated:YES];
 }
+
 - (IBAction)Click_Send:(id)sender {
     
     if(_txttitle.text.length==0)

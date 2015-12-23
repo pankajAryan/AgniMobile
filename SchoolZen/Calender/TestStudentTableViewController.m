@@ -55,6 +55,20 @@
     }
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+//    [[ALServiceInvoker sharedInstance] cancelRequestforViewController:self];
+    [SVProgressHUD dismiss];
+}
+
+-(IBAction)Click_Back:(id)sender
+{
+    [[ALServiceInvoker sharedInstance] cancelRequest];
+    [SVProgressHUD dismiss];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 
 #pragma mark- Webservice callback
 #pragma mark-

@@ -4,7 +4,6 @@
 #import "WebCommunicationClass.h"
 #import "ASIHTTPRequest.h"
 #import "ASIFormDataRequest.h"
-#import "SVProgressHUD.h"
 #import "Config.h"
 #import "AppDelegate.h"
 #import "ALUtilityClass.h"
@@ -844,7 +843,10 @@
     
     NSLog(@"%@",string);
     
-    [self.aCaller dataDidFinishDowloading:request withMethood:MethoodName withOBJ:self];
+    if([aCaller respondsToSelector:@selector(dataDidFinishDowloading:withMethood:withOBJ:)])
+    {
+        [self.aCaller dataDidFinishDowloading:request withMethood:MethoodName withOBJ:self];
+    }
     
     //    if([aReq.methodName isEqualToString:Login_MethodName])
     //    {
@@ -862,6 +864,11 @@
     
 }
 
+- (void)cancelRequestAndDismissLoading {
+    
+    [[ALServiceInvoker sharedInstance] cancelRequest];
+    [SVProgressHUD dismiss];
+}
 /*
 #pragma mark - Response Methods
 -(void) dataDidFinishDowloading:(ASIHTTPRequest*)aReq

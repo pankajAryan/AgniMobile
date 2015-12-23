@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -21,11 +21,9 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_large.png" translatesAutoresizingMaskIntoConstraints="NO" id="Kbb-9M-zbJ">
                         <rect key="frame" x="4" y="2" width="310" height="111"/>
-                        <animations/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E0s-fA-aNp">
                         <rect key="frame" x="24" y="28" width="40" height="40"/>
-                        <animations/>
                         <color key="backgroundColor" red="0.074509803920000006" green="0.58039215690000001" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="ZWN-PD-Nfm"/>
@@ -34,14 +32,12 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Heavy Rains" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JA-Al-oYF">
                         <rect key="frame" x="78" y="37" width="227" height="16"/>
-                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9C-iv-bXZ">
                         <rect key="frame" x="31" y="35" width="26" height="26"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="26" id="KCk-9Q-U9k"/>
                             <constraint firstAttribute="height" constant="26" id="lEU-rj-vp3"/>
@@ -52,7 +48,6 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Universal Children day" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMl-ZP-qTv">
                         <rect key="frame" x="78" y="13" width="227" height="18"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="G0n-A3-f8V"/>
                         </constraints>
@@ -61,7 +56,6 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="251" verticalCompressionResistancePriority="251" image="link.png" translatesAutoresizingMaskIntoConstraints="NO" id="rZj-g1-5ez">
                         <rect key="frame" x="78" y="59" width="20" height="20"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="8d5-OI-DbV"/>
                             <constraint firstAttribute="height" constant="20" id="WEg-XH-9pG"/>
@@ -69,7 +63,6 @@
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yA-9f-hl0">
                         <rect key="frame" x="98" y="59" width="207" height="20"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="o8k-sy-OYI"/>
                         </constraints>
@@ -81,7 +74,6 @@
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" text="20 oct" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8Z-fM-OBg">
                         <rect key="frame" x="17" y="74" width="50" height="13.5"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="1Vy-H4-obj"/>
                             <constraint firstAttribute="height" constant="14" id="iTO-rt-JXN"/>
@@ -92,7 +84,6 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="20 July" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVa-BS-IXQ">
                         <rect key="frame" x="78" y="85" width="227" height="16"/>
-                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="jJa-a1-5sc"/>
                         </constraints>
@@ -101,7 +92,6 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <animations/>
                 <constraints>
                     <constraint firstItem="E0s-fA-aNp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FIK-KS-BGd" secondAttribute="leadingMargin" constant="6" id="1z9-Ql-kfL"/>
                     <constraint firstItem="t8Z-fM-OBg" firstAttribute="top" secondItem="E0s-fA-aNp" secondAttribute="bottom" constant="6" id="3im-x5-SS9"/>
@@ -132,7 +122,6 @@
                     <constraint firstItem="rZj-g1-5ez" firstAttribute="leading" secondItem="E0s-fA-aNp" secondAttribute="trailing" constant="14.5" id="y3z-yY-8sC"/>
                 </constraints>
             </tableViewCellContentView>
-            <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="btnLink" destination="2yA-9f-hl0" id="Crd-CM-ani"/>

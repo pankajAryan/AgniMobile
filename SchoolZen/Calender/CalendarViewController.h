@@ -21,5 +21,8 @@
 @property(nonatomic,strong)NSString *strCat;
 @property(nonatomic,strong)NSString *strMonthIndex;
 
+@property (weak, nonatomic) IBOutlet UIButton *buttonBack;
+
 -(IBAction)Click_Back:(id)sender;
+
 @end

@@ -50,6 +50,7 @@
 
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -263,13 +264,14 @@
         }
         [tblSendFeedBack reloadData];
     }
-
-
 }
+
 -(IBAction)Click_Back:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    [[ALServiceInvoker sharedInstance] cancelRequest];
+    [SVProgressHUD dismiss];
 
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)Click_Save:(id)sender {

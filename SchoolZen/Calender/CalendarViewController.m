@@ -222,8 +222,10 @@
 
 -(IBAction)Click_Back:(id)sender
 {
+    [[controllerArray objectAtIndex: _pageMenu.currentPageIndex] Click_Back:nil];
     [self.navigationController popViewControllerAnimated:YES];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

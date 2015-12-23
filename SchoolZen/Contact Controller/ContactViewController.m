@@ -32,6 +32,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 #pragma mark- Webservice callback
 #pragma mark-
 -(void) dataDidFinishDowloading:(ASIHTTPRequest*)aReq withMethood:(NSString *)MethoodName withOBJ:(WebCommunicationClass *)aObj
@@ -59,6 +60,9 @@
 }
 -(IBAction)Click_Back:(id)sender
 {
+    [[ALServiceInvoker sharedInstance] cancelRequest];
+    [SVProgressHUD dismiss];
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 /*

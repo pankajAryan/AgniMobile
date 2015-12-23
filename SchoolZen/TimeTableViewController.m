@@ -37,6 +37,21 @@
     self.scrollView.frame = rect;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+//    [[ALServiceInvoker sharedInstance] cancelRequestforViewController:self];
+    [SVProgressHUD dismiss];
+}
+
+-(IBAction)Click_Back:(id)sender
+{
+    [[ALServiceInvoker sharedInstance] cancelRequest];
+    [SVProgressHUD dismiss];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

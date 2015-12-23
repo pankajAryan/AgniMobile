@@ -482,7 +482,9 @@ static SVProgressHUD *sharedView = nil;
 
 - (UIWindow *)overlayWindow {
     if(!overlayWindow) {
-        overlayWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        
+        CGRect frame = [UIScreen mainScreen].bounds;
+        overlayWindow = [[UIWindow alloc] initWithFrame:CGRectMake(0, 65, frame.size.width, frame.size.height-65)];
         overlayWindow.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         overlayWindow.backgroundColor = [UIColor clearColor];
         overlayWindow.userInteractionEnabled = NO;

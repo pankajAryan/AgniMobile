@@ -2,7 +2,7 @@
 #import <Foundation/Foundation.h>
 #import "ASINetworkQueue.h"
 #import "ASIHTTPRequest.h"
-
+#import "SVProgressHUD.h"
 #import "ALServiceInvoker.h"
 //#import "NSString+URLEncoding.h"
 

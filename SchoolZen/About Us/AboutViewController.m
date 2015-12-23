@@ -67,7 +67,9 @@
 -(IBAction)Click_Back:(id)sender
 {
     
-    
+    [[ALServiceInvoker sharedInstance] cancelRequest];
+    [SVProgressHUD dismiss];
+
     [self.navigationController popViewControllerAnimated:YES];
 
 }

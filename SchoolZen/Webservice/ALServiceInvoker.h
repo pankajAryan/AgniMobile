@@ -27,6 +27,8 @@
 {
 @private
 	id <ALServiceInvokerDelegate> __unsafe_unretained _delegate;
+    
+    ASIFormDataRequest *request;
 }
 
 @property(unsafe_unretained,nonatomic) id<ALServiceInvokerDelegate> __unsafe_unretained delegate;
@@ -37,5 +39,6 @@
 
 - (void)serviceInvokerRequestWithParams:(NSDictionary*)postParams requestAPI:(NSString*)stringURL reqTag:(NSInteger)tag delegate:(id<ALServiceInvokerDelegate>)delegate;
 
+- (void)cancelRequest;
 
 @end

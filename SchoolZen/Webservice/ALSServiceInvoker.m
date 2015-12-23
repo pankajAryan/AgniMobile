@@ -27,6 +27,11 @@
 	return(instance);
 }
 
+- (void)cancelRequest {
+    if (request) {
+        [request clearDelegatesAndCancel];
+    }
+}
 
 #pragma mark - USER_API Request Methods
 
@@ -43,8 +48,10 @@
             
             NSLog(@"API URL = %@",url.absoluteString);
             
-            ASIFormDataRequest *request = [[ASIFormDataRequest alloc]initWithURL:url];
-            request.tag = tag;
+            ASIFormDataRequest *apiRequest = [[ASIFormDataRequest alloc]initWithURL:url];
+            apiRequest.tag = tag;
+            
+            request = apiRequest;
             
             if (postParams != nil)
             {

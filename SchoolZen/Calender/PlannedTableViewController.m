@@ -127,6 +127,19 @@
     
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+//    [[ALServiceInvoker sharedInstance] cancelRequestforViewController:self];
+
+}
+
+-(IBAction)Click_Back:(id)sender
+{
+    [[ALServiceInvoker sharedInstance] cancelRequest];
+    [SVProgressHUD dismiss];
+
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
