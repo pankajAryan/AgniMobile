@@ -32,8 +32,6 @@
 		1D60850B1B64251B006DE39D /* agnitio_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084CA1B64251B006DE39D /* agnitio_logo.png */; };
 		1D60850C1B64251B006DE39D /* agnitio_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084CB1B64251B006DE39D /* agnitio_logo@2x.png */; };
 		1D60850D1B64251B006DE39D /* agnitio_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084CC1B64251B006DE39D /* agnitio_logo@3x.png */; };
-		1D60850F1B64251B006DE39D /* app_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084CE1B64251B006DE39D /* app_logo@2x.png */; };
-		1D6085101B64251B006DE39D /* app_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084CF1B64251B006DE39D /* app_logo@3x.png */; };
 		1D6085111B64251B006DE39D /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084D01B64251B006DE39D /* calendar.png */; };
 		1D6085121B64251B006DE39D /* calendar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084D11B64251B006DE39D /* calendar@2x.png */; };
 		1D6085131B64251B006DE39D /* calendar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084D21B64251B006DE39D /* calendar@3x.png */; };
@@ -191,6 +189,7 @@
 		1DEC05371BC707AA00219CBC /* view_timetable@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DEC05221BC707AA00219CBC /* view_timetable@3x.png */; };
 		1DEC053A1BC70A6C00219CBC /* login_top@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DEC05381BC70A6C00219CBC /* login_top@2x.png */; };
 		1DEC053B1BC70A6C00219CBC /* login_top@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DEC05391BC70A6C00219CBC /* login_top@3x.png */; };
+		CE6D038F1CCAA6C100B991A1 /* app_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CE6D038E1CCAA6C100B991A1 /* app_logo.png */; };
 		CE8416301C29E70D0030EB8C /* arrow_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE84162E1C29E70D0030EB8C /* arrow_left@2x.png */; };
 		CE8416311C29E70D0030EB8C /* arrow_left@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE84162F1C29E70D0030EB8C /* arrow_left@3x.png */; };
 		CE8416341C29EF0E0030EB8C /* web@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE8416321C29EF0E0030EB8C /* web@2x.png */; };
@@ -276,8 +275,6 @@
 		1D6084CA1B64251B006DE39D /* agnitio_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agnitio_logo.png; sourceTree = "<group>"; };
 		1D6084CB1B64251B006DE39D /* agnitio_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "agnitio_logo@2x.png"; sourceTree = "<group>"; };
 		1D6084CC1B64251B006DE39D /* agnitio_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "agnitio_logo@3x.png"; sourceTree = "<group>"; };
-		1D6084CE1B64251B006DE39D /* app_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_logo@2x.png"; sourceTree = "<group>"; };
-		1D6084CF1B64251B006DE39D /* app_logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_logo@3x.png"; sourceTree = "<group>"; };
 		1D6084D01B64251B006DE39D /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
 		1D6084D11B64251B006DE39D /* calendar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar@2x.png"; sourceTree = "<group>"; };
 		1D6084D21B64251B006DE39D /* calendar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar@3x.png"; sourceTree = "<group>"; };
@@ -477,6 +474,7 @@
 		1DEC05221BC707AA00219CBC /* view_timetable@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "view_timetable@3x.png"; sourceTree = "<group>"; };
 		1DEC05381BC70A6C00219CBC /* login_top@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_top@2x.png"; sourceTree = "<group>"; };
 		1DEC05391BC70A6C00219CBC /* login_top@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_top@3x.png"; sourceTree = "<group>"; };
+		CE6D038E1CCAA6C100B991A1 /* app_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_logo.png; sourceTree = "<group>"; };
 		CE84162E1C29E70D0030EB8C /* arrow_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left@2x.png"; sourceTree = "<group>"; };
 		CE84162F1C29E70D0030EB8C /* arrow_left@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left@3x.png"; sourceTree = "<group>"; };
 		CE8416321C29EF0E0030EB8C /* web@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "web@2x.png"; sourceTree = "<group>"; };
@@ -603,6 +601,7 @@
 		1D6084BD1B64251B006DE39D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CE6D038E1CCAA6C100B991A1 /* app_logo.png */,
 				CE84163A1C29F28C0030EB8C /* usericon@2x.png */,
 				CE84163B1C29F28C0030EB8C /* usericon@3x.png */,
 				CE8416361C29F17B0030EB8C /* profile@2x.png */,
@@ -670,8 +669,6 @@
 				1D6084CA1B64251B006DE39D /* agnitio_logo.png */,
 				1D6084CB1B64251B006DE39D /* agnitio_logo@2x.png */,
 				1D6084CC1B64251B006DE39D /* agnitio_logo@3x.png */,
-				1D6084CE1B64251B006DE39D /* app_logo@2x.png */,
-				1D6084CF1B64251B006DE39D /* app_logo@3x.png */,
 				1D6084D01B64251B006DE39D /* calendar.png */,
 				1D6084D11B64251B006DE39D /* calendar@2x.png */,
 				1D6084D21B64251B006DE39D /* calendar@3x.png */,
@@ -1333,6 +1330,7 @@
 				1DEC05291BC707AA00219CBC /* share_feedback.png in Resources */,
 				1D60852D1B64251B006DE39D /* list@3x.png in Resources */,
 				CE8979801BCFEEA10029FD46 /* calendar_icon@3x.png in Resources */,
+				CE6D038F1CCAA6C100B991A1 /* app_logo.png in Resources */,
 				1DD15ED51B791277009F2727 /* subject_icon@2x.png in Resources */,
 				1D6085221B64251B006DE39D /* fax_icon.png in Resources */,
 				1D2624451BCB08AB00C228B6 /* ShowmsgTableViewCell.xib in Resources */,
@@ -1383,7 +1381,6 @@
 				1D60853D1B64251B006DE39D /* rate_app.png in Resources */,
 				1D7DD34D1B62B3FB00CC95F4 /* LoginViewController.xib in Resources */,
 				1DB3692F1B8A4963007E0BC5 /* home_bg@2x.png in Resources */,
-				1D60850F1B64251B006DE39D /* app_logo@2x.png in Resources */,
 				CE8416391C29F17B0030EB8C /* profile@3x.png in Resources */,
 				1D7DD33D1B62B3E900CC95F4 /* SideViewCell.xib in Resources */,
 				1DD15EE01B793042009F2727 /* google_btn@2x.png in Resources */,
@@ -1405,7 +1402,6 @@
 				CEAE302E1BCBB1AD0078F0FD /* login_bg@2x.jpg in Resources */,
 				1D2624401BCAFCA700C228B6 /* SendMsgDetail.xib in Resources */,
 				CE8416351C29EF0E0030EB8C /* web@3x.png in Resources */,
-				1D6085101B64251B006DE39D /* app_logo@3x.png in Resources */,
 				CEAE302B1BCB78D10078F0FD /* TimeTableViewController.xib in Resources */,
 				CEB22DE81BCC0FD80023CBAE /* text_field@2x.png in Resources */,
 				1D60850C1B64251B006DE39D /* agnitio_logo@2x.png in Resources */,
@@ -1528,7 +1524,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1571,7 +1568,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1596,13 +1594,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Kartik Sharma (KJ83N4RBD7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Kartik Sharma (KJ83N4RBD7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = SchoolZen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9793b53b-8977-430e-ad78-323a170b9d1b";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1611,13 +1609,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Kartik Sharma (KJ83N4RBD7)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Kartik Sharma (KJ83N4RBD7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = SchoolZen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9793b53b-8977-430e-ad78-323a170b9d1b";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

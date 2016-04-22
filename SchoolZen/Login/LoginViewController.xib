@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -139,10 +139,8 @@
                     </connections>
                 </button>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="app_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="AWU-Ms-7le">
-                    <rect key="frame" x="93" y="8" width="134" height="156"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="AWU-Ms-7le" secondAttribute="height" multiplier="67:78" id="StH-km-ivu"/>
-                    </constraints>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
+                    <color key="backgroundColor" white="1" alpha="0.60127217060810811" colorSpace="calibratedWhite"/>
                 </imageView>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="user_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="W2h-47-FG4">
                     <rect key="frame" x="16" y="242" width="30" height="30"/>
@@ -165,7 +163,7 @@
                 <constraint firstItem="aTT-HH-zyV" firstAttribute="top" secondItem="STt-b0-aFA" secondAttribute="bottom" constant="20" id="50z-bC-NN7"/>
                 <constraint firstItem="STt-b0-aFA" firstAttribute="leading" secondItem="hee-XU-fhG" secondAttribute="trailing" constant="2" id="8Wf-Lc-K5b"/>
                 <constraint firstItem="STt-b0-aFA" firstAttribute="top" secondItem="vDC-dd-OBi" secondAttribute="bottom" id="GUY-Gf-7mQ"/>
-                <constraint firstItem="AWU-Ms-7le" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="HJ9-2A-2yu"/>
+                <constraint firstItem="AWU-Ms-7le" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HJ9-2A-2yu"/>
                 <constraint firstItem="TCq-EI-wbG" firstAttribute="top" secondItem="wca-1I-DSV" secondAttribute="bottom" constant="8" id="LUn-zx-KOT"/>
                 <constraint firstItem="aSd-SC-SQ5" firstAttribute="top" secondItem="OQS-z0-MlV" secondAttribute="bottom" constant="25" id="MAD-VV-V1S"/>
                 <constraint firstAttribute="centerX" secondItem="TCq-EI-wbG" secondAttribute="centerX" id="OwT-G1-t2X"/>
@@ -175,7 +173,7 @@
                 <constraint firstItem="vDC-dd-OBi" firstAttribute="top" secondItem="aSd-SC-SQ5" secondAttribute="bottom" constant="20" id="UP8-gx-qId"/>
                 <constraint firstItem="aTT-HH-zyV" firstAttribute="centerX" secondItem="wca-1I-DSV" secondAttribute="centerX" constant="1" id="UUw-RD-QuQ"/>
                 <constraint firstItem="OQS-z0-MlV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Xzb-Ew-6aM"/>
-                <constraint firstItem="AWU-Ms-7le" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="93" id="YRY-eL-HIF"/>
+                <constraint firstItem="AWU-Ms-7le" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YRY-eL-HIF"/>
                 <constraint firstItem="STt-b0-aFA" firstAttribute="top" secondItem="vDC-dd-OBi" secondAttribute="bottom" id="dvi-ZC-vWT"/>
                 <constraint firstAttribute="centerX" secondItem="AWU-Ms-7le" secondAttribute="centerX" id="fXQ-tx-6c4"/>
                 <constraint firstItem="STt-b0-aFA" firstAttribute="centerY" secondItem="0HR-MI-ILB" secondAttribute="centerY" id="ggt-6C-kBJ"/>
@@ -183,7 +181,7 @@
                 <constraint firstItem="hee-XU-fhG" firstAttribute="centerY" secondItem="STt-b0-aFA" secondAttribute="centerY" id="kCL-Rw-lt5"/>
                 <constraint firstAttribute="centerX" secondItem="aSd-SC-SQ5" secondAttribute="centerX" id="lyG-u6-1AX"/>
                 <constraint firstAttribute="trailing" secondItem="OQS-z0-MlV" secondAttribute="trailing" id="nZE-Ky-KdV"/>
-                <constraint firstAttribute="trailing" secondItem="AWU-Ms-7le" secondAttribute="trailing" constant="93" id="nxc-Vk-eNl"/>
+                <constraint firstAttribute="trailing" secondItem="AWU-Ms-7le" secondAttribute="trailing" id="nxc-Vk-eNl"/>
                 <constraint firstItem="vDC-dd-OBi" firstAttribute="centerY" secondItem="W2h-47-FG4" secondAttribute="centerY" id="q6f-vr-eBc"/>
                 <constraint firstAttribute="centerX" secondItem="aTT-HH-zyV" secondAttribute="centerX" id="qrg-xT-a7m"/>
                 <constraint firstItem="aSd-SC-SQ5" firstAttribute="leading" secondItem="W2h-47-FG4" secondAttribute="leading" constant="-1" id="vIW-6u-mYT"/>
@@ -246,7 +244,7 @@
         </view>
     </objects>
     <resources>
-        <image name="app_logo.png" width="244" height="155"/>
+        <image name="app_logo.png" width="501" height="100"/>
         <image name="google_btn.png" width="328" height="48"/>
         <image name="lock_icon.png" width="96" height="96"/>
         <image name="login_bg.jpg" width="375" height="250"/>
