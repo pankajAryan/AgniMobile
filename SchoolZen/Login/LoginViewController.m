@@ -17,6 +17,7 @@
 #import "GTMOAuth2ViewControllerTouch.h"
 #import "GlobalDataPersistence.h"
 
+#import "ALUtilityClass.h"
 
 #define kClientsecret   @"LK47EdtWBnpKKC10gid2jwRb" //Google Secret key.
 #define kClientID       @"595810708680.apps.googleusercontent.com" //Google Client ID
@@ -52,24 +53,43 @@
 
 -(IBAction)Click_Login:(id)sender
 {
-    GlobalDataPersistence *obj_glob=[GlobalDataPersistence sharedGlobalDataPersistence];
-   if( [obj_glob.strUserType isEqualToString:@"T"])
-    {
+    
+    if ((txtEmail.text.length != 10) || (txtPassword.text.length == 0 )) {
+        [ALUtilityClass showAlertwithTitle:nil message:@"Wrong login credentials!"];
+    }
+    else {
+    
+        GlobalDataPersistence *obj_glob=[GlobalDataPersistence sharedGlobalDataPersistence];
         WebCommunicationClass* aCommunication = [[WebCommunicationClass alloc]init];
         [aCommunication setACaller:self];
-        [aCommunication loginUserName:@"demo@demo.com" withpassword:@"newpass" UserType:@"T"];
-   /* WebCommunicationClass* aCommunication = [[WebCommunicationClass alloc]init];
-    [aCommunication setACaller:self];
-    [aCommunication loginUserName:@"aasdasd@asd.com" withpassword:@"101193d7181cc88340ae5b2b17bba8a1" UserType:@"T"];*/
-    }
-    else
-    {
-        WebCommunicationClass* aCommunication = [[WebCommunicationClass alloc]init];
-        [aCommunication setACaller:self];
-        [aCommunication loginUserName:@"abc@gmail.com" withpassword:@"" UserType:@"P"];
-    }
+        
+        if( [obj_glob.strUserType isEqualToString:@"T"])
+        {
+//        Teacher Credentials:
+            
+//        Username: 9999999999
+//        Password: QUXuK6
+            
+            [aCommunication loginUserName:txtEmail.text withpassword:txtPassword.text UserType:@"T"];
+            //[aCommunication loginUserName:@"9999999999" withpassword:@"QUXuK6" UserType:@"T"];
+        }
+        else
+        {
+//        Parent Credential:
+           
+//        Narain Dass
+            
+//        Username: 9818731817
+//        Password: 123456789
+            
+            [aCommunication loginUserName:txtEmail.text withpassword:txtPassword.text UserType:@"P"];
+            //[aCommunication loginUserName:@"9810270591" withpassword:@"123456789" UserType:@"P"];
 
+        }
+    }
+ 
 }
+
 - (IBAction)segmentSwitch:(id)sender {
     UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
     NSInteger selectedSegment = segmentedControl.selectedSegmentIndex;
@@ -321,26 +341,26 @@ else
 {
 
     UIAlertController *alertController = [UIAlertController
-                                          alertControllerWithTitle:@"Enter your email"
-                                          message:nil
+                                          alertControllerWithTitle:@""
+                                          message:@"Please contact School Authorities to get the new password!"
                                           preferredStyle:UIAlertControllerStyleAlert];
     
-    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
+/*    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField)
      {
          textField.placeholder = @"Email";
      }];
-    
+*/
     UIAlertAction *okAction = [UIAlertAction
                                actionWithTitle:NSLocalizedString(@"OK", @"OK action")
                                style:UIAlertActionStyleDefault
                                handler:^(UIAlertAction *action)
                                {
-                                   UITextField *login = alertController.textFields.firstObject;
-                                   [self Click_Okay:login];
+//                                   UITextField *login = alertController.textFields.firstObject;
+//                                   [self Click_Okay:login];
                                }];
     
     
-    UIAlertAction *cancelAction = [UIAlertAction
+/*        UIAlertAction *cancelAction = [UIAlertAction
                                    actionWithTitle:@"Cancel"
                                    style:UIAlertActionStyleCancel
                                    handler:^(UIAlertAction *action)
@@ -349,8 +369,9 @@ else
                                    }];
     
     [alertController addAction:cancelAction];
+ */
     [alertController addAction:okAction];
-    
+ 
     [self presentViewController:alertController animated:YES completion:nil];
 
 //    [UIView beginAnimations:nil context:NULL];

@@ -27,7 +27,10 @@
 #define KApplicationName @"AgnitioMobile"
 
 
-#define BASE_URL_STRING @"http://128.199.129.241:8080/SchoolApp/rest/service/" 
+//#define BASE_URL_STRING @"http://128.199.129.241:8080/SchoolApp/rest/service/"
+
+#define BASE_URL_STRING @"http://agnitioworld.com:8080/SchoolApp/rest/service/"
+
 // 128.199.129.241
 // agnitioworld.com
 

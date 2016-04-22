@@ -40,7 +40,7 @@
     
     if (userLoginType && userLoginType.length)
     {
-        if ([userLoginType isEqualToString:@"Email"]) {
+        if ([userLoginType isEqualToString:@"Mobile"]) {
             
             _scroll_inputFieldsCOntainer.contentSize = CGSizeMake(_scroll_inputFieldsCOntainer.frame.size.width, 488);
         }
@@ -123,7 +123,7 @@
         
         if (userLoginType && userLoginType.length)
         {
-            if ([userLoginType isEqualToString:@"Email"])
+            if ([userLoginType isEqualToString:@"Mobile"])
             {
                 if (_txtField_newPassword.text.length) {
                     password = [_txtField_newPassword.text MD5String];

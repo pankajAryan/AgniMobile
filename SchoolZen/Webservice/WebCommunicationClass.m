@@ -37,27 +37,26 @@
 {    
     [SVProgressHUD showWithStatus:@"Please wait..."];
 
-    password = [password MD5String];
+//    password = [password MD5String];
     
     NSMutableDictionary *aUserInfo= [NSMutableDictionary dictionary];
-    [aUserInfo setValue:username forKey:@"email"];
+    [aUserInfo setValue:username forKey:@"mobile"];
     [aUserInfo setValue:password forKey:@"password"];
     [aUserInfo setValue:usertype forKey:@"userType"];
     
     if (password && password.length)//[usertype isEqualToString:@"P"]
     {
-        [aUserInfo setValue:@"Email" forKey:@"loginType"];
+//        [aUserInfo setValue:@"Mobile" forKey:@"loginType"];
         
-        [ALUtilityClass SaveDatatoUserDefault:@"Email" :@"loginType"];
+        [ALUtilityClass SaveDatatoUserDefault:@"Mobile" :@"loginType"];
         [ALUtilityClass SaveDatatoUserDefault:password :@"pass"];
     }
     else {
-        [aUserInfo setValue:@"G+" forKey:@"loginType"];
+//        [aUserInfo setValue:@"G+" forKey:@"loginType"];
         
         [ALUtilityClass SaveDatatoUserDefault:@"G+" :@"loginType"];
     }
     
-    //    [self ASICallSyncToServerWithFunctionName:Login_MethodName PostDataDictonery:aUserInfo];
     [self retain];
     
     [[ALServiceInvoker sharedInstance] serviceInvokerRequestWithParams:aUserInfo requestAPI:Login_MethodName reqTag:1 delegate:self];
@@ -392,7 +391,7 @@
 {
     [SVProgressHUD showWithStatus:@"Please wait..."];
     NSMutableDictionary *aUserInfo= [NSMutableDictionary dictionary];
-    [aUserInfo setValue:email forKey:@"email"];
+    [aUserInfo setValue:email forKey:@"mobile"];
        [aUserInfo setValue:userType forKey:@"userType"];
  [self retain];
      [[ALServiceInvoker sharedInstance] serviceInvokerRequestWithParams:aUserInfo requestAPI:KforgotPassword reqTag:20 delegate:self];
