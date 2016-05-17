@@ -71,6 +71,9 @@
             
             __weak typeof(request) weakRequest = request;
             
+           // __weak typeof(_delegate) weakDelegate = _delegate;
+
+            
             [request setCompletionBlock:^{
                 
                 __strong typeof(request) strongRequest = weakRequest;
@@ -108,7 +111,11 @@
                                     [_delegate serviceInvokerRequestFailed:strongRequest];
                                 }
                                 
-                                [ALUtilityClass showAlertwithTitle:@"Error" message:[responseDict objectForKey:@"errorMessage"]];
+                                if (strongRequest.tag != 41) // ie. not ticker api response.
+                                {
+                                    [ALUtilityClass showAlertwithTitle:@"Error" message:[responseDict objectForKey:@"errorMessage"]];
+                                }
+                                
                             }
                         }
                         else

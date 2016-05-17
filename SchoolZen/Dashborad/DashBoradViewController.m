@@ -39,6 +39,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    if (appDelegate.pushLayoutType != nil) {
+        //[[NSNotificationCenter defaultCenter]postNotificationName:@"handlePushAction" object:nil userInfo:nil];
+        [self pushViewControllerForNotificationAction];
+    }
+    
     GlobalDataPersistence *obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
 
     WebCommunicationClass *obj_web=[WebCommunicationClass new];
@@ -113,6 +119,84 @@
     [self sendDeviceTokenToserver:[ALUtilityClass RetrieveDataFromUserDefault:@"deviceToken"]];
 }
 
+
+- (void)pushViewControllerForNotificationAction {
+    
+    GlobalDataPersistence*obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
+    
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        
+    if([appDelegate.pushLayoutType isEqualToString:@"media"])
+    {
+        parentController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
+        parentController.strCat=@"Media";
+        CGRect rect3 = parentController.view.frame;
+        rect3.origin.y = 64;
+        parentController.view.frame = rect3;
+        [self.navigationController pushViewController:parentController animated:YES];
+    }
+    else if([appDelegate.pushLayoutType isEqualToString:@"circular"])
+    {
+        parentController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
+        parentController.strCat=@"Circular";
+        CGRect rect1 = parentController.view.frame;
+        rect1.origin.y = 64;
+        parentController.view.frame = rect1;
+        [self.navigationController pushViewController:parentController animated:YES];
+    }
+    else if([appDelegate.pushLayoutType isEqualToString:@"homework"])
+    {
+        if([obj_GlobalDataPersistence.strUserType isEqualToString:@"T"])
+        {
+            HomeWorkViewController *obj_HomeWorkViewController=[HomeWorkViewController new];
+            
+            [self.navigationController pushViewController:obj_HomeWorkViewController animated:YES];
+        }
+        else
+        {
+            parentController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
+            parentController.strCat=@"Homework";
+            CGRect rect4 = parentController.view.frame;
+            rect4.origin.y = 64;
+            parentController.view.frame = rect4;
+            [self.navigationController pushViewController:parentController animated:YES];
+        }
+    }
+    else if([appDelegate.pushLayoutType isEqualToString:@"holiday"])
+    {
+        parentController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
+        parentController.strCat=@"Calendar";
+        CGRect rect = parentController.view.frame;
+        rect.origin.y = 64;
+        parentController.view.frame = rect;
+        //   [self.view addSubview:parentController.view];
+        [self.navigationController pushViewController:parentController animated:YES];
+    }
+    else if([appDelegate.pushLayoutType isEqualToString:@"feedback"])
+    {
+        if([obj_GlobalDataPersistence.strUserType isEqualToString:@"T"])
+        {
+            TeacherFeedbackViewController *obj_TeacherFeedbackViewController=[TeacherFeedbackViewController new];
+            
+            [self.navigationController pushViewController:obj_TeacherFeedbackViewController animated:YES];
+        }
+        else
+        {
+            parentController = [[CalendarViewController alloc] initWithNibName:@"CalendarViewController" bundle:nil];
+            parentController.strCat=@"Feedback";
+            CGRect rect2 = parentController.view.frame;
+            rect2.origin.y = 64;
+            parentController.view.frame = rect2;
+            [self.navigationController pushViewController:parentController animated:YES];
+        }
+    }
+    else if([appDelegate.pushLayoutType isEqualToString:@"general"])
+    {
+        
+    }
+    
+    appDelegate.pushLayoutType = nil;
+}
 
 #pragma mark MFSidebarDelegate
 - (void)leftSideMenuButtonPressed:(id)sender

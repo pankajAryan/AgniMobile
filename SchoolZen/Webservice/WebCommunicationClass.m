@@ -44,7 +44,7 @@
     [aUserInfo setValue:password forKey:@"password"];
     [aUserInfo setValue:usertype forKey:@"userType"];
     
-    if (password && password.length)//[usertype isEqualToString:@"P"]
+    if (password && password.length)
     {
 //        [aUserInfo setValue:@"Mobile" forKey:@"loginType"];
         

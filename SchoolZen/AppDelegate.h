@@ -13,6 +13,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property(strong,nonatomic)UINavigationController *navigationController;
+@property (nonatomic) NSString *pushLayoutType;
+@property (nonatomic,assign) BOOL isAppLaunchedFromBackground;
 
 
 @end

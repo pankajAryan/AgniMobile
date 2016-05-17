@@ -40,11 +40,6 @@
 		1D6085171B64251B006DE39D /* curcular.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084D61B64251B006DE39D /* curcular.png */; };
 		1D6085181B64251B006DE39D /* curcular@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084D71B64251B006DE39D /* curcular@2x.png */; };
 		1D6085191B64251B006DE39D /* curcular@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084D81B64251B006DE39D /* curcular@3x.png */; };
-		1D60851A1B64251B006DE39D /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084D91B64251B006DE39D /* Default-568h.png */; };
-		1D60851B1B64251B006DE39D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084DA1B64251B006DE39D /* Default-568h@2x.png */; };
-		1D60851C1B64251B006DE39D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084DB1B64251B006DE39D /* Default.png */; };
-		1D60851D1B64251B006DE39D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084DC1B64251B006DE39D /* Default@2x.png */; };
-		1D60851E1B64251B006DE39D /* Default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084DD1B64251B006DE39D /* Default@3x.png */; };
 		1D6085201B64251B006DE39D /* email_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084DF1B64251B006DE39D /* email_icon@2x.png */; };
 		1D6085211B64251B006DE39D /* email_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084E01B64251B006DE39D /* email_icon@3x.png */; };
 		1D6085221B64251B006DE39D /* fax_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D6084E11B64251B006DE39D /* fax_icon.png */; };
@@ -283,11 +278,6 @@
 		1D6084D61B64251B006DE39D /* curcular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = curcular.png; sourceTree = "<group>"; };
 		1D6084D71B64251B006DE39D /* curcular@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "curcular@2x.png"; sourceTree = "<group>"; };
 		1D6084D81B64251B006DE39D /* curcular@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "curcular@3x.png"; sourceTree = "<group>"; };
-		1D6084D91B64251B006DE39D /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
-		1D6084DA1B64251B006DE39D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		1D6084DB1B64251B006DE39D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		1D6084DC1B64251B006DE39D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		1D6084DD1B64251B006DE39D /* Default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@3x.png"; sourceTree = "<group>"; };
 		1D6084DF1B64251B006DE39D /* email_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "email_icon@2x.png"; sourceTree = "<group>"; };
 		1D6084E01B64251B006DE39D /* email_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "email_icon@3x.png"; sourceTree = "<group>"; };
 		1D6084E11B64251B006DE39D /* fax_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fax_icon.png; sourceTree = "<group>"; };
@@ -677,11 +667,6 @@
 				1D6084D61B64251B006DE39D /* curcular.png */,
 				1D6084D71B64251B006DE39D /* curcular@2x.png */,
 				1D6084D81B64251B006DE39D /* curcular@3x.png */,
-				1D6084D91B64251B006DE39D /* Default-568h.png */,
-				1D6084DA1B64251B006DE39D /* Default-568h@2x.png */,
-				1D6084DB1B64251B006DE39D /* Default.png */,
-				1D6084DC1B64251B006DE39D /* Default@2x.png */,
-				1D6084DD1B64251B006DE39D /* Default@3x.png */,
 				1D6084DF1B64251B006DE39D /* email_icon@2x.png */,
 				1D6084E01B64251B006DE39D /* email_icon@3x.png */,
 				1D6084E11B64251B006DE39D /* fax_icon.png */,
@@ -743,6 +728,9 @@
 		1D7DD2D21B62B29D00CC95F4 /* SchoolZen */ = {
 			isa = PBXGroup;
 			children = (
+				1D7DD2D71B62B29D00CC95F4 /* AppDelegate.h */,
+				1D7DD2D81B62B29D00CC95F4 /* AppDelegate.m */,
+				1D7DD3261B62B3E900CC95F4 /* Dashborad */,
 				1D2624361BCAFCA700C228B6 /* Send Message */,
 				1D5D84431B87938300F0F3FB /* DropDown */,
 				1DDBFCDE1B83C91C00A17074 /* Contact Controller */,
@@ -757,9 +745,6 @@
 				1D7DD2FD1B62B3E900CC95F4 /* Calender */,
 				1D7DD30D1B62B3E900CC95F4 /* Cirular */,
 				1D7DD30E1B62B3E900CC95F4 /* Common Class */,
-				1D7DD3261B62B3E900CC95F4 /* Dashborad */,
-				1D7DD2D71B62B29D00CC95F4 /* AppDelegate.h */,
-				1D7DD2D81B62B29D00CC95F4 /* AppDelegate.m */,
 				1D7DD2E01B62B29E00CC95F4 /* Images.xcassets */,
 				1D7DD2E21B62B29E00CC95F4 /* LaunchScreen.xib */,
 				1D7DD2D31B62B29D00CC95F4 /* Supporting Files */,
@@ -1266,7 +1251,6 @@
 				1D6085191B64251B006DE39D /* curcular@3x.png in Resources */,
 				1D6085011B64251B006DE39D /* about@3x.png in Resources */,
 				1DDBFD0E1B83CC0A00A17074 /* HomeDetailViewController.xib in Resources */,
-				1D60851B1B64251B006DE39D /* Default-568h@2x.png in Resources */,
 				1DD15ECC1B791277009F2727 /* dropdown_field@2x.png in Resources */,
 				1D60850B1B64251B006DE39D /* agnitio_logo.png in Resources */,
 				1D7DCBFD1B94B642000704C4 /* CalenderCollectionViewCell.xib in Resources */,
@@ -1293,7 +1277,6 @@
 				1D6085061B64251B006DE39D /* add_feedback@2x.png in Resources */,
 				1D7DD32B1B62B3E900CC95F4 /* AboutViewController.xib in Resources */,
 				1D60852C1B64251B006DE39D /* list@2x.png in Resources */,
-				1D60851D1B64251B006DE39D /* Default@2x.png in Resources */,
 				1D6085041B64251B006DE39D /* about_bg@3x.png in Resources */,
 				1DEC05231BC707AA00219CBC /* send_homework.png in Resources */,
 				1D6085201B64251B006DE39D /* email_icon@2x.png in Resources */,
@@ -1310,7 +1293,6 @@
 				1D6085071B64251B006DE39D /* add_feedback@3x.png in Resources */,
 				1DDBFCFA1B83C91C00A17074 /* AddFeedbackViewController.xib in Resources */,
 				1D7DCC011B94DFB7000704C4 /* thumb_IMG_0762_1024.jpg in Resources */,
-				1D60851A1B64251B006DE39D /* Default-568h.png in Resources */,
 				1D60852B1B64251B006DE39D /* list.png in Resources */,
 				CEB22DE91BCC0FD80023CBAE /* text_field@3x.png in Resources */,
 				1DD15ECB1B791277009F2727 /* dropdown_field.png in Resources */,
@@ -1406,9 +1388,7 @@
 				CEB22DE81BCC0FD80023CBAE /* text_field@2x.png in Resources */,
 				1D60850C1B64251B006DE39D /* agnitio_logo@2x.png in Resources */,
 				CE8A7AA41BCBBEA4001A6CC6 /* add-feedback@2x.png in Resources */,
-				1D60851C1B64251B006DE39D /* Default.png in Resources */,
 				CE89797E1BCFEE9B0029FD46 /* calendar_icon@2x.png in Resources */,
-				1D60851E1B64251B006DE39D /* Default@3x.png in Resources */,
 				1DEC05351BC707AA00219CBC /* view_timetable.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1593,12 +1573,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SchoolZen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobiquel.SchoolZenTIADubai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1608,12 +1589,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SchoolZen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobiquel.SchoolZenTIADubai;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

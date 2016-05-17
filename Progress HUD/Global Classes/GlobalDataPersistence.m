@@ -25,8 +25,10 @@ static GlobalDataPersistence *sharedGlobalDataPersistence=nil;
 	
 	return sharedGlobalDataPersistence;
 }
+
 + (void)resetGlobalDataPersistence
 {
     sharedGlobalDataPersistence = nil;
 }
+
 @end

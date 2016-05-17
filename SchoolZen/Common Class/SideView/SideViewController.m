@@ -39,6 +39,7 @@
 #import "GlobalDataPersistence.h"
 #import "MyProfileViewController.h"
 #import "ContactViewController.h"
+#import "ALUtilityClass.h"
 
 @interface SideViewController()
 {
@@ -161,7 +162,7 @@
 	}
     if (indexPath.row == 4)
     {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Logout from AgnitioMobile" message:@"Are you sure ?" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Cancel",@"Yes", nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Logout from AgnitioMobile" message:@"Are you sure?" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Cancel",@"Yes", nil];
         alertView.tag = 1;
         [alertView show];
     }
@@ -177,6 +178,8 @@
         appdel.navigationController= [[UINavigationController alloc]initWithRootViewController:LoginViewObj];
         [appdel.navigationController setNavigationBarHidden:YES];
         [appdel.window setRootViewController:appdel.navigationController];
+        
+        [ALUtilityClass SaveDatatoUserDefault:@"NO" :@"isLoggedIn"];
     }
 }
 

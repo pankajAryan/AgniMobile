@@ -63,31 +63,10 @@
         WebCommunicationClass* aCommunication = [[WebCommunicationClass alloc]init];
         [aCommunication setACaller:self];
         
-        if( [obj_glob.strUserType isEqualToString:@"T"])
-        {
-//        Teacher Credentials:
-            
-//        Username: 9999999999
-//        Password: QUXuK6
-            
-            [aCommunication loginUserName:txtEmail.text withpassword:txtPassword.text UserType:@"T"];
-            //[aCommunication loginUserName:@"9999999999" withpassword:@"QUXuK6" UserType:@"T"];
-        }
-        else
-        {
-//        Parent Credential:
-           
-//        Narain Dass
-            
-//        Username: 9818731817
-//        Password: 123456789
-            
-            [aCommunication loginUserName:txtEmail.text withpassword:txtPassword.text UserType:@"P"];
-            //[aCommunication loginUserName:@"9810270591" withpassword:@"123456789" UserType:@"P"];
-
-        }
+        [aCommunication loginUserName:txtEmail.text
+                         withpassword:txtPassword.text
+                             UserType:([obj_glob.strUserType isEqualToString:@"T"]? @"T" : @"P")];
     }
- 
 }
 
 - (IBAction)segmentSwitch:(id)sender {
@@ -192,12 +171,10 @@
                      [aCommunication setACaller:self];
                      
                      GlobalDataPersistence *obj_glob=[GlobalDataPersistence sharedGlobalDataPersistence];
-                     if( [obj_glob.strUserType isEqualToString:@"T"]) {
-                         [aCommunication loginUserName:@"abc@gmail.com" withpassword:@"" UserType:@"T"];
-                     }
-                     else {
-                         [aCommunication loginUserName:@"abc@gmail.com" withpassword:@"" UserType:@"P"];
-                     }
+
+                     [aCommunication loginUserName:[resp valueForKey:@"email"]
+                                        withpassword:@""
+                                          UserType:([obj_glob.strUserType isEqualToString:@"T"]? @"T" : @"P")];
 
 /*                     email = [resp valueForKey:@"email"];
                      fName = [resp valueForKey:@"given_name"];
@@ -280,56 +257,50 @@
             UIAlertView *alert =KALERT(KApplicationName, [strResult valueForKey:@"errorMessage"], self);
             
             [alert show];
-
         }
     }
-    
-else
-{
-
-    if(isSuccessNumber)
-    {
-        
-        GlobalDataPersistence *obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
-        
-        obj_GlobalDataPersistence.dictUserInfo=[strResult valueForKey:@"responseObject"];
-        obj_GlobalDataPersistence.arrChild=[[strResult valueForKey:@"responseObject"] valueForKey:@"childList"];
-        NSLog(@"%@",obj_GlobalDataPersistence.arrChild);
-        
-        NSLog(@"%@",obj_GlobalDataPersistence.dictUserInfo);
-        
-        
-        DashBoradViewController *obj_dash=[[DashBoradViewController alloc] initWithNibName:([obj_GlobalDataPersistence.strUserType isEqualToString:@"T"])?@"DashBoradViewController_":@"DashBoradViewController" bundle:nil];
-        
-        UINavigationController *nav = [[UINavigationController alloc ] initWithRootViewController:obj_dash];
-        
-        nav.navigationBarHidden  = YES;
-        SideViewController *leftMenuViewController = [[SideViewController alloc] init];
-        MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
-                                                        containerWithCenterViewController:nav leftMenuViewController:leftMenuViewController rightMenuViewController:nil];
-        
-        [self.navigationController pushViewController:container animated:YES];
-        
-    }
     else
-        
     {
-        
-        UIAlertView *alert =KALERT(KApplicationName, [strResult valueForKey:@"errorMessage"], self);
-        
-        
-        
-        [alert show];
-        
-        
+        if(isSuccessNumber)
+        {
+            GlobalDataPersistence *obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
+            
+            obj_GlobalDataPersistence.dictUserInfo=[strResult valueForKey:@"responseObject"];
+            obj_GlobalDataPersistence.arrChild=[[strResult valueForKey:@"responseObject"] valueForKey:@"childList"];
+            NSLog(@"%@",obj_GlobalDataPersistence.arrChild);
+            
+            NSLog(@"%@",obj_GlobalDataPersistence.dictUserInfo);
+            
+            
+            DashBoradViewController *obj_dash=[[DashBoradViewController alloc] initWithNibName:([obj_GlobalDataPersistence.strUserType isEqualToString:@"T"])?@"DashBoradViewController_":@"DashBoradViewController" bundle:nil];
+            
+            UINavigationController *nav = [[UINavigationController alloc ] initWithRootViewController:obj_dash];
+            
+            nav.navigationBarHidden  = YES;
+            SideViewController *leftMenuViewController = [[SideViewController alloc] init];
+            MFSideMenuContainerViewController *container = [MFSideMenuContainerViewController
+                                                            containerWithCenterViewController:nav leftMenuViewController:leftMenuViewController rightMenuViewController:nil];
+            
+            [self.navigationController pushViewController:container animated:YES];
+            
+            [ALUtilityClass SaveDatatoUserDefault:@"YES" :@"isLoggedIn"];
+            [ALUtilityClass SaveDatatoUserDefault:(NSDictionary*)strResult :@"userDataPersistence"];
+            [ALUtilityClass SaveDatatoUserDefault:obj_GlobalDataPersistence.strUserType :@"loggedInUserType"];
+
+        }
+        else
+        {
+            
+            UIAlertView *alert =KALERT(KApplicationName, [strResult valueForKey:@"errorMessage"], self);
+            [alert show];
+            
+        }
+
     }
-    
-    
+
 }
-    
-    
-    
-}
+
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
 
