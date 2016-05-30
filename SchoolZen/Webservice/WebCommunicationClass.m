@@ -7,7 +7,7 @@
 #import "Config.h"
 #import "AppDelegate.h"
 #import "ALUtilityClass.h"
-#import "NSString+MD5.h"
+//#import "NSString+MD5.h"
 
 @implementation WebCommunicationClass
 

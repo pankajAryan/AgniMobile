@@ -228,7 +228,6 @@
 		CEB878DE1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB878DD1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m */; };
 		CEB878E01BCDB285009C8565 /* ZoomImageCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB878DF1BCDB285009C8565 /* ZoomImageCollectionView.xib */; };
 		CEB878E21BCDB4EB009C8565 /* ZoomImageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB878E11BCDB4EB009C8565 /* ZoomImageCollectionCell.xib */; };
-		CEDAABA61BCEF0700022ABFA /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDAABA51BCEF0700022ABFA /* NSString+MD5.m */; };
 		CEDC41491BECB91400476737 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC41481BECB91400476737 /* placeholder.png */; };
 		CEE16E1F1B654BC800C6A191 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE16E171B654BC800C6A191 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEE16E201B654BC800C6A191 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE16E191B654BC800C6A191 /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -381,8 +380,8 @@
 		1D7DD3791B62BEAB00CC95F4 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		1D7DD37A1B62BEAB00CC95F4 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = usr/lib/libz.1.dylib; sourceTree = SDKROOT; };
 		1D7DD37B1B62BEAB00CC95F4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		1D8B1D571B8BA0C200A98329 /* MarqueeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabel.h; sourceTree = "<group>"; };
-		1D8B1D581B8BA0C200A98329 /* MarqueeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLabel.m; sourceTree = "<group>"; };
+		1D8B1D571B8BA0C200A98329 /* MarqueeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarqueeLabel.h; path = "SchoolZen/Common Class/MarqueeLabel.h"; sourceTree = "<group>"; };
+		1D8B1D581B8BA0C200A98329 /* MarqueeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MarqueeLabel.m; path = "SchoolZen/Common Class/MarqueeLabel.m"; sourceTree = "<group>"; };
 		1DB3692C1B8A4963007E0BC5 /* home_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_bg@2x.png"; sourceTree = "<group>"; };
 		1DB3692D1B8A4963007E0BC5 /* home_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_bg@3x.png"; sourceTree = "<group>"; };
 		1DB369321B8A497C007E0BC5 /* home_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_bg.png; sourceTree = "<group>"; };
@@ -403,8 +402,8 @@
 		1DD15ED91B7923B3009F2727 /* HomeworkTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeworkTableViewCell.xib; sourceTree = "<group>"; };
 		1DD15EDD1B793042009F2727 /* google_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google_btn@2x.png"; sourceTree = "<group>"; };
 		1DD15EDE1B793042009F2727 /* google_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google_btn@3x.png"; sourceTree = "<group>"; };
-		1DD792D91B66A4A5003004DD /* GlobalDataPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDataPersistence.h; sourceTree = "<group>"; };
-		1DD792DA1B66A4A5003004DD /* GlobalDataPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalDataPersistence.m; sourceTree = "<group>"; };
+		1DD792D91B66A4A5003004DD /* GlobalDataPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalDataPersistence.h; path = "Progress HUD/Global Classes/GlobalDataPersistence.h"; sourceTree = "<group>"; };
+		1DD792DA1B66A4A5003004DD /* GlobalDataPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobalDataPersistence.m; path = "Progress HUD/Global Classes/GlobalDataPersistence.m"; sourceTree = "<group>"; };
 		1DD792DF1B66AE7A003004DD /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
 		1DD792E01B66AE7A003004DD /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
 		1DD792E21B66AE7A003004DD /* EGOImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageButton.h; sourceTree = "<group>"; };
@@ -531,8 +530,6 @@
 		CEB878DD1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFZoomImageCollectionCell.m; sourceTree = "<group>"; };
 		CEB878DF1BCDB285009C8565 /* ZoomImageCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoomImageCollectionView.xib; sourceTree = "<group>"; };
 		CEB878E11BCDB4EB009C8565 /* ZoomImageCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoomImageCollectionCell.xib; sourceTree = "<group>"; };
-		CEDAABA41BCEF0700022ABFA /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
-		CEDAABA51BCEF0700022ABFA /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		CEDC41481BECB91400476737 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		CEE16E161B654BC800C6A191 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
 		CEE16E171B654BC800C6A191 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
@@ -701,16 +698,8 @@
 		1D7DD2C71B62B29D00CC95F4 = {
 			isa = PBXGroup;
 			children = (
-				CE93F9A41BCEAFE6002DC2C1 /* GalleryCollectionView */,
-				CEA93A171BCD819900B3AE33 /* TPKeyboardAvoiding */,
-				1DD792DD1B66AE7A003004DD /* EOGImageLoading */,
-				1DD792D61B66A4A5003004DD /* Global Classes */,
-				CE9C37AB1B6571E600716564 /* Progress HUD */,
-				CE9C37A81B65717F00716564 /* ALUtilityClass.h */,
-				CE9C37A91B65717F00716564 /* ALUtilityClass.m */,
-				CEDAABA41BCEF0700022ABFA /* NSString+MD5.h */,
-				CEDAABA51BCEF0700022ABFA /* NSString+MD5.m */,
-				CEE16E151B654BC800C6A191 /* GTMOAuth2 */,
+				CEB4FB681CFC1EE300462551 /* Utility classes */,
+				CEB4FB691CFC1F9B00462551 /* Custom UI Controls */,
 				1D7DD2D21B62B29D00CC95F4 /* SchoolZen */,
 				CEE16E141B65471C00C6A191 /* Frameworks */,
 				1D7DD2D11B62B29D00CC95F4 /* Products */,
@@ -730,27 +719,26 @@
 			children = (
 				1D7DD2D71B62B29D00CC95F4 /* AppDelegate.h */,
 				1D7DD2D81B62B29D00CC95F4 /* AppDelegate.m */,
-				1D7DD3261B62B3E900CC95F4 /* Dashborad */,
+				1D7DD30E1B62B3E900CC95F4 /* Common Class */,
+				1D7DD3261B62B3E900CC95F4 /* Dashboard */,
 				1D2624361BCAFCA700C228B6 /* Send Message */,
 				1D5D84431B87938300F0F3FB /* DropDown */,
 				1DDBFCDE1B83C91C00A17074 /* Contact Controller */,
 				1DDBFCE21B83C91C00A17074 /* Feedback */,
 				1DDBFCF21B83C91C00A17074 /* HomeWork */,
 				1DDBFCF31B83C91C00A17074 /* Profile */,
-				1D7DD34F1B62BDD800CC95F4 /* Webservice */,
 				1D7DD3431B62B3FB00CC95F4 /* Login */,
 				1D7DD3471B62B3FB00CC95F4 /* Media */,
 				1D7DD3491B62B3FB00CC95F4 /* PageControl Classes */,
 				1D7DD2F91B62B3E900CC95F4 /* About Us */,
 				1D7DD2FD1B62B3E900CC95F4 /* Calender */,
 				1D7DD30D1B62B3E900CC95F4 /* Cirular */,
-				1D7DD30E1B62B3E900CC95F4 /* Common Class */,
 				1D7DD2E01B62B29E00CC95F4 /* Images.xcassets */,
 				1D7DD2E21B62B29E00CC95F4 /* LaunchScreen.xib */,
-				1D7DD2D31B62B29D00CC95F4 /* Supporting Files */,
 				CEAE30271BCB78D10078F0FD /* TimeTableViewController.h */,
 				CEAE30281BCB78D10078F0FD /* TimeTableViewController.m */,
 				CEAE30291BCB78D10078F0FD /* TimeTableViewController.xib */,
+				1D7DD2D31B62B29D00CC95F4 /* Supporting Files */,
 			);
 			path = SchoolZen;
 			sourceTree = "<group>";
@@ -832,8 +820,6 @@
 		1D7DD30E1B62B3E900CC95F4 /* Common Class */ = {
 			isa = PBXGroup;
 			children = (
-				1D8B1D571B8BA0C200A98329 /* MarqueeLabel.h */,
-				1D8B1D581B8BA0C200A98329 /* MarqueeLabel.m */,
 				1D7DD30F1B62B3E900CC95F4 /* CommonHeader */,
 				1D7DD3131B62B3E900CC95F4 /* CustomNavigation */,
 				1D7DD3161B62B3E900CC95F4 /* MFSideMenu */,
@@ -888,7 +874,7 @@
 			path = SideView;
 			sourceTree = "<group>";
 		};
-		1D7DD3261B62B3E900CC95F4 /* Dashborad */ = {
+		1D7DD3261B62B3E900CC95F4 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
 				1D7DD3271B62B3E900CC95F4 /* DashBoradViewController.h */,
@@ -896,6 +882,7 @@
 				1D7DD3291B62B3E900CC95F4 /* DashBoradViewController.xib */,
 				1DDD1ADA1B7E3BD9001B7F8D /* DashBoradViewController_.xib */,
 			);
+			name = Dashboard;
 			path = Dashborad;
 			sourceTree = "<group>";
 		};
@@ -936,7 +923,8 @@
 				CE9C37A51B656FFD00716564 /* ALServiceInvoker.h */,
 				CE9C37A61B656FFD00716564 /* ALSServiceInvoker.m */,
 			);
-			path = Webservice;
+			name = Webservice;
+			path = SchoolZen/Webservice;
 			sourceTree = "<group>";
 		};
 		1D7DD3631B62BDD900CC95F4 /* SVProgressHUD */ = {
@@ -947,16 +935,6 @@
 				1D7DD3661B62BDD900CC95F4 /* SVProgressHUD.m */,
 			);
 			path = SVProgressHUD;
-			sourceTree = "<group>";
-		};
-		1DD792D61B66A4A5003004DD /* Global Classes */ = {
-			isa = PBXGroup;
-			children = (
-				1DD792D91B66A4A5003004DD /* GlobalDataPersistence.h */,
-				1DD792DA1B66A4A5003004DD /* GlobalDataPersistence.m */,
-			);
-			name = "Global Classes";
-			path = "Progress HUD/Global Classes";
 			sourceTree = "<group>";
 		};
 		1DD792DD1B66AE7A003004DD /* EOGImageLoading */ = {
@@ -1149,6 +1127,32 @@
 				CEB22DE21BCC0FD80023CBAE /* user_icon.png */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		CEB4FB681CFC1EE300462551 /* Utility classes */ = {
+			isa = PBXGroup;
+			children = (
+				CEE16E151B654BC800C6A191 /* GTMOAuth2 */,
+				CE9C37A81B65717F00716564 /* ALUtilityClass.h */,
+				CE9C37A91B65717F00716564 /* ALUtilityClass.m */,
+				1DD792D91B66A4A5003004DD /* GlobalDataPersistence.h */,
+				1DD792DA1B66A4A5003004DD /* GlobalDataPersistence.m */,
+				1D7DD34F1B62BDD800CC95F4 /* Webservice */,
+			);
+			name = "Utility classes";
+			sourceTree = "<group>";
+		};
+		CEB4FB691CFC1F9B00462551 /* Custom UI Controls */ = {
+			isa = PBXGroup;
+			children = (
+				CE9C37AB1B6571E600716564 /* Progress HUD */,
+				1D8B1D571B8BA0C200A98329 /* MarqueeLabel.h */,
+				1D8B1D581B8BA0C200A98329 /* MarqueeLabel.m */,
+				CE93F9A41BCEAFE6002DC2C1 /* GalleryCollectionView */,
+				CEA93A171BCD819900B3AE33 /* TPKeyboardAvoiding */,
+				1DD792DD1B66AE7A003004DD /* EOGImageLoading */,
+			);
+			name = "Custom UI Controls";
 			sourceTree = "<group>";
 		};
 		CEE16E141B65471C00C6A191 /* Frameworks */ = {
@@ -1462,7 +1466,6 @@
 				CEB878DE1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m in Sources */,
 				1DDBFCFD1B83C91C00A17074 /* SendFeedTableViewCell.m in Sources */,
 				CEAE302A1BCB78D10078F0FD /* TimeTableViewController.m in Sources */,
-				CEDAABA61BCEF0700022ABFA /* NSString+MD5.m in Sources */,
 				1D5D844C1B87938300F0F3FB /* DropDownView.m in Sources */,
 				1DDBFCF71B83C91C00A17074 /* ContactViewController.m in Sources */,
 				CE9C37C71B65734A00716564 /* ASIAuthenticationDialog.m in Sources */,

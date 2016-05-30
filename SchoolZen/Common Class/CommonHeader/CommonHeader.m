@@ -3,7 +3,7 @@
 //  Fnight Frank
 //
 //  Created by Sheetal on 11/25/14.
-//  Copyright (c) 2014 Dotsquares. All rights reserved.
+//  Copyright (c) 2014 Mobiquel. All rights reserved.
 //
 
 #import "CommonHeader.h"

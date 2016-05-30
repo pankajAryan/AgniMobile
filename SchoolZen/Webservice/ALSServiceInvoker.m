@@ -1,10 +1,3 @@
-//
-//  ALServiceInvoker.m
-//  AliveAirtel
-//
-//  Created by Bhupendra on 2/5/13.
-//  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
-//
 
 #import "ALServiceInvoker.h"
 #import "ALUtilityClass.h"

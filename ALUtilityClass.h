@@ -3,7 +3,7 @@
 //  SelfCare
 //
 //  Created by Agile on 7/25/13.
-//  Copyright (c) 2013 Bharti Airtel. All rights reserved.
+//  Copyright (c) 2013 Mobiquel. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
