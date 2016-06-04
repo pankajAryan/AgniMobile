@@ -28,7 +28,9 @@
     self.scrollView.zoomScale = 1.0;
     
     if ([imageData isKindOfClass:[NSString class]]) {
-        [self.imageView setImageURL:[NSURL URLWithString:imageData]];// setImageWithURL:[NSURL URLWithString:imageData] placeholderImage:[UIImage ffplaceHolderWhiteBackground]];
+        
+        [self.imageView setPlaceholderImage:[UIImage imageNamed:@"placeholder"]];
+        [self.imageView setImageURL:[NSURL URLWithString:[imageData stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]] ];// setImageWithURL:[NSURL URLWithString:imageData] placeholderImage:[UIImage ffplaceHolderWhiteBackground]];
     }
  
 }

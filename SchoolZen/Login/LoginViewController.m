@@ -27,9 +27,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    GlobalDataPersistence *obj_glob=[GlobalDataPersistence sharedGlobalDataPersistence];
-    obj_glob.strUserType=@"P";
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,6 +50,9 @@
 
 -(IBAction)Click_Login:(id)sender
 {
+    GlobalDataPersistence *obj_glob=[GlobalDataPersistence sharedGlobalDataPersistence];
+    obj_glob.strUserType= _switch_userType.selectedSegmentIndex ? @"P" : @"T";
+
     
     if ((txtEmail.text.length != 10) || (txtPassword.text.length == 0 )) {
         [ALUtilityClass showAlertwithTitle:nil message:@"Wrong login credentials!"];
@@ -65,7 +65,7 @@
         
         [aCommunication loginUserName:txtEmail.text
                          withpassword:txtPassword.text
-                             UserType:([obj_glob.strUserType isEqualToString:@"T"]? @"T" : @"P")];
+                             UserType:obj_glob.strUserType];
     }
 }
 

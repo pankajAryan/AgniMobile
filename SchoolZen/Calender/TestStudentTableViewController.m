@@ -138,22 +138,33 @@
             
             for (NSString *imageUrl in images) {
                 
+                NSURL *thumbnailUrl = [NSURL URLWithString:[[imageUrl stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+
                 switch (index)
                 {
                     case 0:
-                        [cell.imgfirst setImageURL:[NSURL URLWithString:imageUrl]];
+                        
+                        [cell.imgfirst setPlaceholderImage:[UIImage imageNamed:@"placeholder"]];
+
+                        [cell.imgfirst setImageURL:thumbnailUrl];
                         [cell.buttonImage1 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
                         
                         break;
                         
                     case 1:
-                        [cell.imgSec setImageURL:[NSURL URLWithString:imageUrl]];
+                        
+                        [cell.imgSec setPlaceholderImage:[UIImage imageNamed:@"placeholder"]];
+
+                        [cell.imgSec setImageURL:thumbnailUrl];
                         [cell.buttonIMAGE2 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
                         
                         break;
                         
                     case 2:
-                        [cell.imgthird setImageURL:[NSURL URLWithString:imageUrl]];
+                        
+                        [cell.imgthird setPlaceholderImage:[UIImage imageNamed:@"placeholder"]];
+
+                        [cell.imgthird setImageURL:thumbnailUrl];
                         [cell.buttonImage3 addTarget:self action:@selector(imageGalleryDidTap:) forControlEvents:UIControlEventTouchUpInside];
                         
                         break;
@@ -175,21 +186,26 @@
             cell.lblMainHeading.frame = frame;
         }
         
-        NSString *linkText = [NSString stringWithFormat:@"%@",[[[self.dictPlanCommon objectAtIndex:0] valueForKey:@"mediaURLs"] objectAtIndex:0]];
-        if (!linkText) {
-            cell.linkIcon.hidden = cell.btnLink.hidden = YES;
-        }
-        else {
-            [cell.btnLink setTitle:[NSString stringWithFormat:@"%@",[[[self.dictPlanCommon objectAtIndex:0] valueForKey:@"mediaURLs"] objectAtIndex:0]] forState:UIControlStateNormal];
-            [cell.btnLink addTarget:self action:@selector(Link:) forControlEvents:UIControlEventTouchUpInside];
+        NSArray *mediaLinkUrls = [[self.dictPlanCommon objectAtIndex:0] valueForKey:@"mediaURLs"];
+        
+        if (mediaLinkUrls.count) {
             
-            frame = cell.btnLink.frame;
-            frame.origin.y = cell.lblSubHeading.frame.origin.y + cell.lblSubHeading.frame.size.height + 5;
-            cell.btnLink.frame = frame;
-            
-            CGPoint centre = cell.linkIcon.center;
-            centre.y = cell.btnLink.center.y;
-            cell.linkIcon.center = centre;
+            NSString *linkText = [NSString stringWithFormat:@"%@",[mediaLinkUrls objectAtIndex:0]];
+            if (!linkText || !linkText.length) {
+                cell.linkIcon.hidden = cell.btnLink.hidden = YES;
+            }
+            else {
+                [cell.btnLink setTitle:[NSString stringWithFormat:@"%@",[[[self.dictPlanCommon objectAtIndex:0] valueForKey:@"mediaURLs"] objectAtIndex:0]] forState:UIControlStateNormal];
+                [cell.btnLink addTarget:self action:@selector(Link:) forControlEvents:UIControlEventTouchUpInside];
+                
+                frame = cell.btnLink.frame;
+                frame.origin.y = cell.lblSubHeading.frame.origin.y + cell.lblSubHeading.frame.size.height + 5;
+                cell.btnLink.frame = frame;
+                
+                CGPoint centre = cell.linkIcon.center;
+                centre.y = cell.btnLink.center.y;
+                cell.linkIcon.center = centre;
+            }
         }
         
         

@@ -17,6 +17,9 @@
     IBOutlet UITextField *txtpasswordFeild;
 
 }
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *switch_userType;
+
 - (IBAction)googleSignInDidTap:(id)sender;
 -(IBAction)Click_Login:(id)sender;
 -(IBAction)Click_ForgetPassword:(id)sender;

@@ -52,11 +52,11 @@
         obj_GlobalDataPersistence.arrChild=[[loggedInUserData valueForKey:@"responseObject"] valueForKey:@"childList"];
         obj_GlobalDataPersistence.strUserType = [ALUtilityClass RetrieveDataFromUserDefault:@"loggedInUserType"];
         
-        NSLog(@"%@",obj_GlobalDataPersistence.arrChild);
+        //NSLog(@"%@",obj_GlobalDataPersistence.arrChild);
         NSLog(@"%@",obj_GlobalDataPersistence.dictUserInfo);
         
-        
-        DashBoradViewController *obj_dash=[[DashBoradViewController alloc] initWithNibName:([obj_GlobalDataPersistence.strUserType isEqualToString:@"T"])?@"DashBoradViewController_":@"DashBoradViewController" bundle:nil];
+        NSString *controllerStoryboardFile = ([obj_GlobalDataPersistence.strUserType isEqualToString:@"T"])?@"DashBoradViewController_":@"DashBoradViewController";
+        DashBoradViewController *obj_dash=[[DashBoradViewController alloc] initWithNibName:controllerStoryboardFile bundle:nil];
         
         UINavigationController *nav = [[UINavigationController alloc ] initWithRootViewController:obj_dash];
         
