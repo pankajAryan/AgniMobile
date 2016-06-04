@@ -265,7 +265,7 @@
         {
             GlobalDataPersistence *obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
             
-            obj_GlobalDataPersistence.dictUserInfo=[strResult valueForKey:@"responseObject"];
+            obj_GlobalDataPersistence.dictUserInfo=[[strResult valueForKey:@"responseObject"] mutableCopy];
             obj_GlobalDataPersistence.arrChild=[[strResult valueForKey:@"responseObject"] valueForKey:@"childList"];
             NSLog(@"%@",obj_GlobalDataPersistence.arrChild);
             
@@ -301,6 +301,22 @@
 }
 
 
+#pragma mark- TextField Delegate
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{   // return NO to not change text
+    
+    if (textField == txtEmail) {
+        NSString *mobileNumber = [NSString stringWithFormat:@"%@%@",textField.text, string];
+        if (mobileNumber.length > 10) {
+            return NO;
+        }else{
+            NSCharacterSet *blockedCharacters = [[NSCharacterSet characterSetWithCharactersInString:@"0123456789"] invertedSet];
+            return ([string rangeOfCharacterFromSet:blockedCharacters].location == NSNotFound);
+        }
+    }
+    return YES;
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
 
@@ -308,6 +324,7 @@
 
     return true;
 }
+
 -(IBAction)Click_ForgetPassword:(id)sender
 {
 

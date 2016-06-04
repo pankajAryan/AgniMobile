@@ -48,7 +48,7 @@
         NSDictionary *loggedInUserData = [ALUtilityClass RetrieveDataFromUserDefault:@"userDataPersistence"];
         
         GlobalDataPersistence *obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
-        obj_GlobalDataPersistence.dictUserInfo=[loggedInUserData valueForKey:@"responseObject"];
+        obj_GlobalDataPersistence.dictUserInfo=[[loggedInUserData valueForKey:@"responseObject"] mutableCopy];
         obj_GlobalDataPersistence.arrChild=[[loggedInUserData valueForKey:@"responseObject"] valueForKey:@"childList"];
         obj_GlobalDataPersistence.strUserType = [ALUtilityClass RetrieveDataFromUserDefault:@"loggedInUserType"];
         

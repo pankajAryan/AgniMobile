@@ -28,9 +28,9 @@
     GlobalDataPersistence *obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
     
     lblMainHeading.text=[NSString stringWithFormat:@"%@",[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"userName"]];
-        lblName.text=[NSString stringWithFormat:@"%@",[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"userName"]];
+    lblName.text=[NSString stringWithFormat:@"%@",[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"userName"]];
     
-        lblEmail.text=[NSString stringWithFormat:@"%@",[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"userEmail"]];
+    lblEmail.text=[NSString stringWithFormat:@"%@",[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"userEmail"]];
     
     lblcontact.text=[NSString stringWithFormat:@"%@",[obj_GlobalDataPersistence.dictUserInfo valueForKey:@"userMobile"]];
     
