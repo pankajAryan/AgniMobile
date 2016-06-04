@@ -15,7 +15,8 @@
 #import "ShowmsgTableViewCell.h"
 #import "FFZoomImageCollectionView.h"
 #import "WebCommunicationClass.h"
-
+#import "CircularDetailViewController.h"
+#import "AppDelegate.h"
 @interface PlannedTableViewController () <WebCommunicationClassDelegate>
 
 @end
@@ -196,6 +197,12 @@
             UIViewController *view = [[UIViewController alloc]initWithNibName:@"CalendarCell" bundle:nil];
             cell = (CalendarCell *)view.view;
             cell.selectedBackgroundView.backgroundColor = [UIColor clearColor];
+            if([self.strCateg isEqualToString:@"Circular"]) {
+                cell.WidthConstraintForDetailIcon.constant = 20;
+            }
+            else
+                cell.WidthConstraintForDetailIcon.constant = 0;
+ 
         }
         
         if ([self.strCateg isEqualToString:@"Feedback"])
@@ -406,59 +413,43 @@
     return nil;
 }
 
-/*
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 25.0f;
-}
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if([self.strCateg isEqualToString:@"Cir"]|| [self.strCateg isEqualToString:@"Me"])
+    if([self.strCateg isEqualToString:@"Circular"])
     {
+        CircularDetailViewController *controller = [[CircularDetailViewController alloc] initWithNibName:@"CircularDetailViewController" bundle:nil];
         
-        UILabel *myLabel = [[UILabel alloc] init];
-        myLabel.frame = CGRectMake(10,0, 320, 25);
-        myLabel.font = [UIFont boldSystemFontOfSize:13.0f];
-        myLabel.text = [self tableView:tableView titleForHeaderInSection:section]  ;
-        myLabel.font=[UIFont fontWithName:@"arial-Bold" size:15.0];
-        myLabel.textColor=[UIColor colorWithRed:7/255.0 green:42/255.0 blue:33/255.0 alpha:1.0f];
-        UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
+        AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
         
+        controller.mainHeading = [NSString stringWithFormat:@"%@",[[self.dictPlanCommon valueForKey:@"title"] objectAtIndex:indexPath.row]];
         
-        [headerView addSubview:myLabel];
+        controller.date = [[self.dictPlanCommon valueForKey:@"dateOf"] objectAtIndex:indexPath.row];
         
-        return headerView;
+        controller.noticeText = [NSString stringWithFormat:@"%@",[[self.dictPlanCommon valueForKey:@"message"] objectAtIndex:indexPath.row]];
         
+        [appDelegate.navigationController pushViewController:controller animated:YES];
+        
+//        [self presentViewController:controller animated:YES completion:^{
+//                controller.lblMainHeading.text = [NSString stringWithFormat:@"%@",[[self.dictPlanCommon valueForKey:@"title"] objectAtIndex:indexPath.row]];
+//        
+//                controller.lbldate.text = [[self.dictPlanCommon valueForKey:@"dateOf"] objectAtIndex:indexPath.row];
+//        }];
+//
+//        cell.lblSubHeading.text= [NSString stringWithFormat:@"%@",[[self.dictPlanCommon valueForKey:@"message"] objectAtIndex:indexPath.row]];
+//        
+//        cell.imgDate.layer.cornerRadius=cell.imgDate.frame.size.width/2;
+//        cell.imgDate.clipsToBounds=YES;
+//        NSString *dateString;
+//        
+//
+//            dateString =[[self.dictPlanCommon valueForKey:@"dateOf"] objectAtIndex:indexPath.row];
+//        
+//        NSArray* dateArray = [dateString componentsSeparatedByString: @" "];
+        
+//        cell.lblboxdate.text=[dateArray objectAtIndex:0];
+//        cell.lbldate.text=[NSString stringWithFormat:@"%@%@",[dateArray objectAtIndex:1],[dateArray objectAtIndex:2]];
     }
-    return nil;
 }
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if([self.strCateg isEqualToString:@"cal"])
-    {
-        return [[self.dictPlanCommon valueForKey:@"month"] objectAtIndex:section];
-    }
-    return nil;
-}
-*/
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    
-//    if([self.strCateg isEqualToString:@"Circular"] || [self.strCateg isEqualToString:@"Feedback"])
-//    {
-//        return 86.0;
-//    }
-//    else if ([self.strCateg isEqualToString:@"Homework"]) {
-//        return 119.0;
-//    }
-//    else if ([self.strCateg isEqualToString:@"Message"]) {
-//        return 100.0;
-//    }
-//    else //if ([self.strCateg isEqualToString:@"Media"])
-//        return [self calculateMediaCellHeight:indexPath];
-//}
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
     

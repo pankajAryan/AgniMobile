@@ -209,6 +209,9 @@
 		CE9C37CD1B65734A00716564 /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9C37C01B65734A00716564 /* ASIInputStream.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE9C37CE1B65734A00716564 /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9C37C21B65734A00716564 /* ASINetworkQueue.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CE9C37CF1B65734A00716564 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9C37C61B65734A00716564 /* Reachability.m */; };
+		CEA052DA1D0384C2003554F8 /* CircularDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEA052D91D0384C2003554F8 /* CircularDetailViewController.xib */; };
+		CEA052DC1D038E1A003554F8 /* detail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA052DB1D038E1A003554F8 /* detail@2x.png */; };
+		CEA052DE1D038E24003554F8 /* detail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA052DD1D038E24003554F8 /* detail@2x.png */; };
 		CEA93A221BCD819900B3AE33 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA93A191BCD819900B3AE33 /* TPKeyboardAvoidingCollectionView.m */; };
 		CEA93A231BCD819900B3AE33 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA93A1B1BCD819900B3AE33 /* TPKeyboardAvoidingScrollView.m */; };
 		CEA93A241BCD819900B3AE33 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA93A1D1BCD819900B3AE33 /* TPKeyboardAvoidingTableView.m */; };
@@ -228,6 +231,7 @@
 		CEB878DE1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB878DD1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m */; };
 		CEB878E01BCDB285009C8565 /* ZoomImageCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB878DF1BCDB285009C8565 /* ZoomImageCollectionView.xib */; };
 		CEB878E21BCDB4EB009C8565 /* ZoomImageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB878E11BCDB4EB009C8565 /* ZoomImageCollectionCell.xib */; };
+		CEC814F81D03744200FF4905 /* CircularDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC814F61D03744200FF4905 /* CircularDetailViewController.m */; };
 		CEDC41491BECB91400476737 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDC41481BECB91400476737 /* placeholder.png */; };
 		CEE16E1F1B654BC800C6A191 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE16E171B654BC800C6A191 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEE16E201B654BC800C6A191 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE16E191B654BC800C6A191 /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -504,6 +508,9 @@
 		CE9C37C31B65734A00716564 /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
 		CE9C37C51B65734A00716564 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		CE9C37C61B65734A00716564 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		CEA052D91D0384C2003554F8 /* CircularDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircularDetailViewController.xib; sourceTree = "<group>"; };
+		CEA052DB1D038E1A003554F8 /* detail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detail@2x.png"; sourceTree = "<group>"; };
+		CEA052DD1D038E24003554F8 /* detail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detail@2x.png"; sourceTree = "<group>"; };
 		CEA93A181BCD819900B3AE33 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
 		CEA93A191BCD819900B3AE33 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
 		CEA93A1A1BCD819900B3AE33 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
@@ -530,6 +537,8 @@
 		CEB878DD1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFZoomImageCollectionCell.m; sourceTree = "<group>"; };
 		CEB878DF1BCDB285009C8565 /* ZoomImageCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoomImageCollectionView.xib; sourceTree = "<group>"; };
 		CEB878E11BCDB4EB009C8565 /* ZoomImageCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoomImageCollectionCell.xib; sourceTree = "<group>"; };
+		CEC814F51D03744200FF4905 /* CircularDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularDetailViewController.h; sourceTree = "<group>"; };
+		CEC814F61D03744200FF4905 /* CircularDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularDetailViewController.m; sourceTree = "<group>"; };
 		CEDC41481BECB91400476737 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		CEE16E161B654BC800C6A191 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
 		CEE16E171B654BC800C6A191 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
@@ -732,7 +741,6 @@
 				1D7DD3491B62B3FB00CC95F4 /* PageControl Classes */,
 				1D7DD2F91B62B3E900CC95F4 /* About Us */,
 				1D7DD2FD1B62B3E900CC95F4 /* Calender */,
-				1D7DD30D1B62B3E900CC95F4 /* Cirular */,
 				1D7DD2E01B62B29E00CC95F4 /* Images.xcassets */,
 				1D7DD2E21B62B29E00CC95F4 /* LaunchScreen.xib */,
 				CEAE30271BCB78D10078F0FD /* TimeTableViewController.h */,
@@ -746,6 +754,7 @@
 		1D7DD2D31B62B29D00CC95F4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CEA052DD1D038E24003554F8 /* detail@2x.png */,
 				CEDC41481BECB91400476737 /* placeholder.png */,
 				CE89797D1BCFEE9B0029FD46 /* calendar_icon@2x.png */,
 				CE89797F1BCFEEA10029FD46 /* calendar_icon@3x.png */,
@@ -806,15 +815,11 @@
 				1D2624411BCB08AB00C228B6 /* ShowmsgTableViewCell.h */,
 				1D2624421BCB08AB00C228B6 /* ShowmsgTableViewCell.m */,
 				1D2624431BCB08AB00C228B6 /* ShowmsgTableViewCell.xib */,
+				CEC814F51D03744200FF4905 /* CircularDetailViewController.h */,
+				CEC814F61D03744200FF4905 /* CircularDetailViewController.m */,
+				CEA052D91D0384C2003554F8 /* CircularDetailViewController.xib */,
 			);
 			path = Calender;
-			sourceTree = "<group>";
-		};
-		1D7DD30D1B62B3E900CC95F4 /* Cirular */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cirular;
 			sourceTree = "<group>";
 		};
 		1D7DD30E1B62B3E900CC95F4 /* Common Class */ = {
@@ -1119,6 +1124,7 @@
 		CEB22DDA1BCC0FD80023CBAE /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				CEA052DB1D038E1A003554F8 /* detail@2x.png */,
 				CEB22DDB1BCC0FD80023CBAE /* lock_icon.png */,
 				CEB22DDD1BCC0FD80023CBAE /* text_area@2x.png */,
 				CEB22DDE1BCC0FD80023CBAE /* text_area@3x.png */,
@@ -1255,6 +1261,7 @@
 				1D6085191B64251B006DE39D /* curcular@3x.png in Resources */,
 				1D6085011B64251B006DE39D /* about@3x.png in Resources */,
 				1DDBFD0E1B83CC0A00A17074 /* HomeDetailViewController.xib in Resources */,
+				CEA052DC1D038E1A003554F8 /* detail@2x.png in Resources */,
 				1DD15ECC1B791277009F2727 /* dropdown_field@2x.png in Resources */,
 				1D60850B1B64251B006DE39D /* agnitio_logo.png in Resources */,
 				1D7DCBFD1B94B642000704C4 /* CalenderCollectionViewCell.xib in Resources */,
@@ -1304,6 +1311,7 @@
 				1D7DCC001B94DFB7000704C4 /* thumb_IMG_0761_1024.jpg in Resources */,
 				1DEC05271BC707AA00219CBC /* send_msg@2x.png in Resources */,
 				1DEC05281BC707AA00219CBC /* send_msg@3x.png in Resources */,
+				CEA052DA1D0384C2003554F8 /* CircularDetailViewController.xib in Resources */,
 				1D6085411B6431C9006DE39D /* school.png in Resources */,
 				1D6085121B64251B006DE39D /* calendar@2x.png in Resources */,
 				CEB22DE31BCC0FD80023CBAE /* lock_icon.png in Resources */,
@@ -1369,6 +1377,7 @@
 				1DB3692F1B8A4963007E0BC5 /* home_bg@2x.png in Resources */,
 				CE8416391C29F17B0030EB8C /* profile@3x.png in Resources */,
 				1D7DD33D1B62B3E900CC95F4 /* SideViewCell.xib in Resources */,
+				CEA052DE1D038E24003554F8 /* detail@2x.png in Resources */,
 				1DD15EE01B793042009F2727 /* google_btn@2x.png in Resources */,
 				CE84163D1C29F28C0030EB8C /* usericon@3x.png in Resources */,
 				CE8A7AA51BCBBEA4001A6CC6 /* add-feedback@3x.png in Resources */,
@@ -1433,6 +1442,7 @@
 				CE9C37A71B656FFD00716564 /* ALSServiceInvoker.m in Sources */,
 				CEA93A231BCD819900B3AE33 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				1D7DD33E1B62B3E900CC95F4 /* SideViewController.m in Sources */,
+				CEC814F81D03744200FF4905 /* CircularDetailViewController.m in Sources */,
 				1DDBFD0D1B83CC0A00A17074 /* HomeDetailViewController.m in Sources */,
 				1D7DD33C1B62B3E900CC95F4 /* SideViewCell.m in Sources */,
 				1D5D844B1B87938300F0F3FB /* DropDownTableView.m in Sources */,

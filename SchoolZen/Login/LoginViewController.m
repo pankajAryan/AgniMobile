@@ -51,7 +51,8 @@
 -(IBAction)Click_Login:(id)sender
 {
     GlobalDataPersistence *obj_glob=[GlobalDataPersistence sharedGlobalDataPersistence];
-    obj_glob.strUserType= _switch_userType.selectedSegmentIndex ? @"P" : @"T";
+    
+    obj_glob.strUserType= _switch_userType.selectedSegmentIndex ? @"T" : @"P";
 
     
     if ((txtEmail.text.length != 10) || (txtPassword.text.length == 0 )) {

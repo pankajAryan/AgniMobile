@@ -17,5 +17,8 @@
 @property(nonatomic,weak)IBOutlet UIImageView *imgcircle;
 
 
+@property (weak, nonatomic) IBOutlet UIImageView *bgImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *detailIcon;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *WidthConstraintForDetailIcon;
 
 @end

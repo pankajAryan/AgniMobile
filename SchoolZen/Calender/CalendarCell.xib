@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIViewController">
@@ -24,8 +25,8 @@
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="78" id="iar-p5-hvy"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="752" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Heavy Rains" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tj-MR-Low">
-                        <rect key="frame" x="69.5" y="37" width="235.5" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="752" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Heavy Rains" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tj-MR-Low">
+                        <rect key="frame" x="69.5" y="37" width="236.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -59,20 +60,29 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jso-4R-T17">
+                        <rect key="frame" x="310" y="30" width="0.0" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" id="rn4-zn-89H"/>
+                            <constraint firstAttribute="height" constant="20" id="w7t-S9-ycN"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="Jso-4R-T17" firstAttribute="centerY" secondItem="n8W-VT-4Xu" secondAttribute="centerY" id="0rQ-ZD-mio"/>
                     <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="2Tj-MR-Low" secondAttribute="bottom" constant="32" id="1jc-ek-YmH"/>
                     <constraint firstItem="xwC-85-gFR" firstAttribute="centerX" secondItem="RNp-lz-Cu9" secondAttribute="centerX" id="7bH-fr-oM6"/>
                     <constraint firstItem="xwC-85-gFR" firstAttribute="centerY" secondItem="n8W-VT-4Xu" secondAttribute="centerY" constant="-8" id="CCS-vD-Ph5"/>
                     <constraint firstItem="2Tj-MR-Low" firstAttribute="top" secondItem="WoN-Gx-jVu" secondAttribute="bottom" constant="6" id="DD8-0k-5fN"/>
+                    <constraint firstItem="Jso-4R-T17" firstAttribute="leading" secondItem="2Tj-MR-Low" secondAttribute="trailing" constant="4" id="F1p-zQ-X6l"/>
                     <constraint firstItem="2Tj-MR-Low" firstAttribute="leading" secondItem="WoN-Gx-jVu" secondAttribute="leading" id="HcN-qG-o6p"/>
                     <constraint firstItem="n8W-VT-4Xu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="LE4-dE-O5v"/>
                     <constraint firstItem="RNp-lz-Cu9" firstAttribute="top" secondItem="xwC-85-gFR" secondAttribute="bottom" constant="6" id="LUY-Dh-QC5"/>
                     <constraint firstItem="RNp-lz-Cu9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="17" id="Npa-LI-5Kz"/>
                     <constraint firstItem="WoN-Gx-jVu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="TzS-D1-sqK"/>
                     <constraint firstAttribute="bottom" secondItem="n8W-VT-4Xu" secondAttribute="bottom" constant="6" id="aC0-8R-Qvo"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Jso-4R-T17" secondAttribute="trailing" constant="2" id="bVq-rw-QwV"/>
                     <constraint firstItem="qOJ-mx-yNv" firstAttribute="centerX" secondItem="xwC-85-gFR" secondAttribute="centerX" id="brN-4V-MET"/>
-                    <constraint firstItem="2Tj-MR-Low" firstAttribute="width" secondItem="WoN-Gx-jVu" secondAttribute="width" id="fL8-Qr-li5"/>
                     <constraint firstItem="xwC-85-gFR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="fgp-20-Pd1"/>
                     <constraint firstItem="n8W-VT-4Xu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="iQD-ex-dzK"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RNp-lz-Cu9" secondAttribute="bottom" constant="13" id="j9p-55-ACl"/>
@@ -85,16 +95,20 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="WidthConstraintForDetailIcon" destination="rn4-zn-89H" id="F9a-xQ-zGR"/>
+                <outlet property="bgImageView" destination="n8W-VT-4Xu" id="fPA-aI-64g"/>
+                <outlet property="detailIcon" destination="Jso-4R-T17" id="qkM-qw-n97"/>
                 <outlet property="imgDate" destination="xwC-85-gFR" id="VlH-2D-XLy"/>
                 <outlet property="lblMainHeading" destination="WoN-Gx-jVu" id="8AC-kn-Tq4"/>
                 <outlet property="lblSubHeading" destination="2Tj-MR-Low" id="KSc-aZ-Ai5"/>
                 <outlet property="lblboxdate" destination="qOJ-mx-yNv" id="e0b-tn-MQs"/>
                 <outlet property="lbldate" destination="RNp-lz-Cu9" id="ahP-av-upv"/>
             </connections>
-            <point key="canvasLocation" x="189" y="130"/>
+            <point key="canvasLocation" x="113" y="115"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="detail.png" width="37" height="37"/>
         <image name="list_large.png" width="308" height="140"/>
     </resources>
 </document>
