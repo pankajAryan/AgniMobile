@@ -227,6 +227,11 @@
 		CEB22DE81BCC0FD80023CBAE /* text_field@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB22DE01BCC0FD80023CBAE /* text_field@2x.png */; };
 		CEB22DE91BCC0FD80023CBAE /* text_field@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB22DE11BCC0FD80023CBAE /* text_field@3x.png */; };
 		CEB22DEA1BCC0FD80023CBAE /* user_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CEB22DE21BCC0FD80023CBAE /* user_icon.png */; };
+		CEB684281D0EDBA70079B7E0 /* CryptoUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB6841F1D0EDBA70079B7E0 /* CryptoUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CEB684291D0EDBA70079B7E0 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB684211D0EDBA70079B7E0 /* NSData+Base64.m */; };
+		CEB6842A1D0EDBA70079B7E0 /* PBEWithMD5AndDES.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB684231D0EDBA70079B7E0 /* PBEWithMD5AndDES.m */; };
+		CEB6842B1D0EDBA70079B7E0 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB684251D0EDBA70079B7E0 /* RSA.m */; };
+		CEB6842C1D0EDBA70079B7E0 /* SecurityUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB684271D0EDBA70079B7E0 /* SecurityUtility.m */; };
 		CEB878DB1BCDB192009C8565 /* FFZoomImageCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB878DA1BCDB192009C8565 /* FFZoomImageCollectionView.m */; };
 		CEB878DE1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB878DD1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m */; };
 		CEB878E01BCDB285009C8565 /* ZoomImageCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB878DF1BCDB285009C8565 /* ZoomImageCollectionView.xib */; };
@@ -531,6 +536,16 @@
 		CEB22DE01BCC0FD80023CBAE /* text_field@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text_field@2x.png"; sourceTree = "<group>"; };
 		CEB22DE11BCC0FD80023CBAE /* text_field@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text_field@3x.png"; sourceTree = "<group>"; };
 		CEB22DE21BCC0FD80023CBAE /* user_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_icon.png; sourceTree = "<group>"; };
+		CEB6841E1D0EDBA70079B7E0 /* CryptoUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoUtil.h; sourceTree = "<group>"; };
+		CEB6841F1D0EDBA70079B7E0 /* CryptoUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptoUtil.m; sourceTree = "<group>"; };
+		CEB684201D0EDBA70079B7E0 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		CEB684211D0EDBA70079B7E0 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		CEB684221D0EDBA70079B7E0 /* PBEWithMD5AndDES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBEWithMD5AndDES.h; sourceTree = "<group>"; };
+		CEB684231D0EDBA70079B7E0 /* PBEWithMD5AndDES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBEWithMD5AndDES.m; sourceTree = "<group>"; };
+		CEB684241D0EDBA70079B7E0 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		CEB684251D0EDBA70079B7E0 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		CEB684261D0EDBA70079B7E0 /* SecurityUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityUtility.h; sourceTree = "<group>"; };
+		CEB684271D0EDBA70079B7E0 /* SecurityUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityUtility.m; sourceTree = "<group>"; };
 		CEB878D91BCDB17E009C8565 /* FFZoomImageCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFZoomImageCollectionView.h; sourceTree = "<group>"; };
 		CEB878DA1BCDB192009C8565 /* FFZoomImageCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFZoomImageCollectionView.m; sourceTree = "<group>"; };
 		CEB878DC1BCDB1B0009C8565 /* FFZoomImageCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFZoomImageCollectionCell.h; sourceTree = "<group>"; };
@@ -1138,6 +1153,7 @@
 		CEB4FB681CFC1EE300462551 /* Utility classes */ = {
 			isa = PBXGroup;
 			children = (
+				CEB6841D1D0EDBA70079B7E0 /* Encryption Utility */,
 				CEE16E151B654BC800C6A191 /* GTMOAuth2 */,
 				CE9C37A81B65717F00716564 /* ALUtilityClass.h */,
 				CE9C37A91B65717F00716564 /* ALUtilityClass.m */,
@@ -1159,6 +1175,24 @@
 				1DD792DD1B66AE7A003004DD /* EOGImageLoading */,
 			);
 			name = "Custom UI Controls";
+			sourceTree = "<group>";
+		};
+		CEB6841D1D0EDBA70079B7E0 /* Encryption Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CEB6841E1D0EDBA70079B7E0 /* CryptoUtil.h */,
+				CEB6841F1D0EDBA70079B7E0 /* CryptoUtil.m */,
+				CEB684201D0EDBA70079B7E0 /* NSData+Base64.h */,
+				CEB684211D0EDBA70079B7E0 /* NSData+Base64.m */,
+				CEB684221D0EDBA70079B7E0 /* PBEWithMD5AndDES.h */,
+				CEB684231D0EDBA70079B7E0 /* PBEWithMD5AndDES.m */,
+				CEB684241D0EDBA70079B7E0 /* RSA.h */,
+				CEB684251D0EDBA70079B7E0 /* RSA.m */,
+				CEB684261D0EDBA70079B7E0 /* SecurityUtility.h */,
+				CEB684271D0EDBA70079B7E0 /* SecurityUtility.m */,
+			);
+			name = "Encryption Utility";
+			path = "SchoolZen/Encryption Utility";
 			sourceTree = "<group>";
 		};
 		CEE16E141B65471C00C6A191 /* Frameworks */ = {
@@ -1448,6 +1482,8 @@
 				1D5D844B1B87938300F0F3FB /* DropDownTableView.m in Sources */,
 				1D7DD34C1B62B3FB00CC95F4 /* LoginViewController.m in Sources */,
 				CEE16E211B654BC800C6A191 /* GTMOAuth2SignIn.m in Sources */,
+				CEB6842C1D0EDBA70079B7E0 /* SecurityUtility.m in Sources */,
+				CEB6842A1D0EDBA70079B7E0 /* PBEWithMD5AndDES.m in Sources */,
 				CE9C37CE1B65734A00716564 /* ASINetworkQueue.m in Sources */,
 				1D7DCBFC1B94B642000704C4 /* CalenderCollectionViewCell.m in Sources */,
 				1D7DD33B1B62B3E900CC95F4 /* UIViewController+MFSideMenuAdditions.m in Sources */,
@@ -1457,6 +1493,7 @@
 				1DDBFCFF1B83C91C00A17074 /* TeacherFeedbackViewController.m in Sources */,
 				1DD792F21B66AE7A003004DD /* EGOImageView.m in Sources */,
 				1D2624441BCB08AB00C228B6 /* ShowmsgTableViewCell.m in Sources */,
+				CEB684281D0EDBA70079B7E0 /* CryptoUtil.m in Sources */,
 				1D7DD2D61B62B29D00CC95F4 /* main.m in Sources */,
 				1DD792F31B66AE7A003004DD /* UIImage+Additions.m in Sources */,
 				CEB878DB1BCDB192009C8565 /* FFZoomImageCollectionView.m in Sources */,
@@ -1465,6 +1502,7 @@
 				1D7DD3321B62B3E900CC95F4 /* PlannedTableViewController.m in Sources */,
 				1D7DD3401B62B3E900CC95F4 /* DashBoradViewController.m in Sources */,
 				CEA93A241BCD819900B3AE33 /* TPKeyboardAvoidingTableView.m in Sources */,
+				CEB684291D0EDBA70079B7E0 /* NSData+Base64.m in Sources */,
 				1D7DD3301B62B3E900CC95F4 /* CircularTableViewCell.m in Sources */,
 				CEE16E1F1B654BC800C6A191 /* GTMHTTPFetcher.m in Sources */,
 				CE9C37AE1B6571E600716564 /* MBProgressHUD.m in Sources */,
@@ -1474,6 +1512,7 @@
 				1DD792DC1B66A4A5003004DD /* GlobalDataPersistence.m in Sources */,
 				1D7DD32C1B62B3E900CC95F4 /* CalendarCell.m in Sources */,
 				CEB878DE1BCDB1B0009C8565 /* FFZoomImageCollectionCell.m in Sources */,
+				CEB6842B1D0EDBA70079B7E0 /* RSA.m in Sources */,
 				1DDBFCFD1B83C91C00A17074 /* SendFeedTableViewCell.m in Sources */,
 				CEAE302A1BCB78D10078F0FD /* TimeTableViewController.m in Sources */,
 				1D5D844C1B87938300F0F3FB /* DropDownView.m in Sources */,

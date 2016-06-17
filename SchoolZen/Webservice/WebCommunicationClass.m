@@ -40,8 +40,8 @@
 //    password = [password MD5String];
     
     NSMutableDictionary *aUserInfo= [NSMutableDictionary dictionary];
-    [aUserInfo setValue:username forKey:@"mobile"];
-    [aUserInfo setValue:password forKey:@"password"];
+//    [aUserInfo setValue:username forKey:@"mobile"];
+//    [aUserInfo setValue:password forKey:@"password"];
     [aUserInfo setValue:usertype forKey:@"userType"];
     
     if (password && password.length)
@@ -49,7 +49,9 @@
 //        [aUserInfo setValue:@"Mobile" forKey:@"loginType"];
         
         [ALUtilityClass SaveDatatoUserDefault:@"Mobile" :@"loginType"];
+        
         [ALUtilityClass SaveDatatoUserDefault:password :@"pass"];
+        [ALUtilityClass SaveDatatoUserDefault:username :@"mob"];
     }
     else {
 //        [aUserInfo setValue:@"G+" forKey:@"loginType"];

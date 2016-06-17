@@ -2,10 +2,16 @@
 #import "ALServiceInvoker.h"
 #import "ALUtilityClass.h"
 #import "Config.h"
+//#import "RSA.h"
+#import "PBEWithMD5AndDES.h"
+//#import "SecurityUtility.h"
+#import "GlobalDataPersistence.h"
 
 @implementation ALServiceInvoker
 
 @synthesize delegate = _delegate;
+
+NSString *encryptKey = @"@GE#r4ws6xLBJmx8fB-3";
 
 #pragma mark - Singleton Class Method
  
@@ -59,6 +65,19 @@
             }
             
             //[request addPostValue:[ALUtilityClass getDeviceIdentifier] forKey:@"deviceId"];
+            GlobalDataPersistence *obj_global=[GlobalDataPersistence sharedGlobalDataPersistence];
+
+            NSString *username = [ALUtilityClass RetrieveDataFromUserDefault:@"mob"];
+            NSString *password = [ALUtilityClass RetrieveDataFromUserDefault:@"pass"];
+            
+            NSString* encrypted_username = [PBEWithMD5AndDES encrypt:username KEY:encryptKey];
+            NSString* encrypted_password = [PBEWithMD5AndDES encrypt:password KEY:encryptKey];
+            
+            [request addPostValue:encrypted_username forKey:@"mobile"];
+            [request addPostValue:encrypted_password forKey:@"password"];
+            
+            [request addPostValue:obj_global.strUserType forKey:@"userType"];
+
             NSLog(@"API Request Params = %@",postParams);
 
             

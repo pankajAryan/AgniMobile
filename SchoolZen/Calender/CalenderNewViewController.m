@@ -54,8 +54,14 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     CalenderCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CalenderCollectionViewCell" forIndexPath:indexPath];
-    cell.lblMonth.text=[arrMonth objectAtIndex:indexPath.row];
     
+    cell.lblMonth.text = [arrMonth objectAtIndex:indexPath.row];
+    
+    NSDate *timestamp = [NSDate date];
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:timestamp];
+    NSInteger year = [components year];
+    
+    cell.lblYear.text = [NSString stringWithFormat:@"%i",year];
     return cell;
 }
 
