@@ -24,7 +24,7 @@
 #define whiteCharacterSet [NSCharacterSet whitespaceAndNewlineCharacterSet]
 
 
-#define KApplicationName @"TIA Dubai"
+#define KApplicationName @"TIAD"
 
 
 //#define BASE_URL_STRING @"http://128.199.129.241:8080/SchoolApp/rest/service/"

@@ -74,7 +74,12 @@ NSString *encryptKey = @"@GE#r4ws6xLBJmx8fB-3";
             NSString* encrypted_password = [PBEWithMD5AndDES encrypt:password KEY:encryptKey];
             
             [request addPostValue:encrypted_username forKey:@"mobile"];
-            [request addPostValue:encrypted_password forKey:@"password"];
+            
+            if ([stringURL isEqualToString:KupdateUser])
+                [request addPostValue:encrypted_password forKey:@"oldPassword"];
+            else
+                [request addPostValue:encrypted_password forKey:@"password"];
+
             
             [request addPostValue:obj_global.strUserType forKey:@"userType"];
 

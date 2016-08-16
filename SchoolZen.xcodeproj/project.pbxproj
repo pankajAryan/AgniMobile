@@ -243,6 +243,8 @@
 		CEE16E211B654BC800C6A191 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE16E1B1B654BC800C6A191 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEE16E221B654BC800C6A191 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE16E1D1B654BC800C6A191 /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CEE16E231B654BC800C6A191 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEE16E1E1B654BC800C6A191 /* GTMOAuth2ViewTouch.xib */; };
+		CEEA01E21D63956000426DDB /* CalEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEA01E01D63956000426DDB /* CalEventTableViewCell.m */; };
+		CEEA01E31D63956000426DDB /* CalEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEA01E11D63956000426DDB /* CalEventTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -564,6 +566,9 @@
 		CEE16E1C1B654BC800C6A191 /* GTMOAuth2ViewControllerTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2ViewControllerTouch.h; sourceTree = "<group>"; };
 		CEE16E1D1B654BC800C6A191 /* GTMOAuth2ViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2ViewControllerTouch.m; sourceTree = "<group>"; };
 		CEE16E1E1B654BC800C6A191 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
+		CEEA01DF1D63956000426DDB /* CalEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalEventTableViewCell.h; sourceTree = "<group>"; };
+		CEEA01E01D63956000426DDB /* CalEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalEventTableViewCell.m; sourceTree = "<group>"; };
+		CEEA01E11D63956000426DDB /* CalEventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalEventTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -809,6 +814,9 @@
 				1D7DD3041B62B3E900CC95F4 /* CircularTableViewCell.h */,
 				1D7DD3051B62B3E900CC95F4 /* CircularTableViewCell.m */,
 				1D7DD3061B62B3E900CC95F4 /* CircularTableViewCell.xib */,
+				CEEA01DF1D63956000426DDB /* CalEventTableViewCell.h */,
+				CEEA01E01D63956000426DDB /* CalEventTableViewCell.m */,
+				CEEA01E11D63956000426DDB /* CalEventTableViewCell.xib */,
 				1D7DD3071B62B3E900CC95F4 /* PlannedTableViewController.h */,
 				1D7DD3081B62B3E900CC95F4 /* PlannedTableViewController.m */,
 				1D7DD3091B62B3E900CC95F4 /* PlannedTableViewController.xib */,
@@ -1437,6 +1445,7 @@
 				CE8A7AA41BCBBEA4001A6CC6 /* add-feedback@2x.png in Resources */,
 				CE89797E1BCFEE9B0029FD46 /* calendar_icon@2x.png in Resources */,
 				1DEC05351BC707AA00219CBC /* view_timetable.png in Resources */,
+				CEEA01E31D63956000426DDB /* CalEventTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1450,6 +1459,7 @@
 				CE9C37C81B65734A00716564 /* ASIDataCompressor.m in Sources */,
 				1D7DD32A1B62B3E900CC95F4 /* AboutViewController.m in Sources */,
 				CE9C37AA1B65717F00716564 /* ALUtilityClass.m in Sources */,
+				CEEA01E21D63956000426DDB /* CalEventTableViewCell.m in Sources */,
 				1DDBFCFB1B83C91C00A17074 /* SendFeedbackViewController.m in Sources */,
 				1DDBFD081B83C97B00A17074 /* HomeWorkViewController.m in Sources */,
 				1DDBFCF91B83C91C00A17074 /* AddFeedbackViewController.m in Sources */,

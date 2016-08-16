@@ -17,6 +17,8 @@
 #import "WebCommunicationClass.h"
 #import "CircularDetailViewController.h"
 #import "AppDelegate.h"
+#import "CalEventTableViewCell.h"
+
 @interface PlannedTableViewController () <WebCommunicationClassDelegate>
 
 @end
@@ -202,7 +204,6 @@
             }
             else
                 cell.WidthConstraintForDetailIcon.constant = 0;
- 
         }
         
         if ([self.strCateg isEqualToString:@"Feedback"])
@@ -396,18 +397,20 @@
     
     else //self.strCateg == @"Calendar"
     {
-        CircularTableViewCell*   cell1 = (CircularTableViewCell *)[tblPlanned dequeueReusableCellWithIdentifier:CellIdentifier];
+        CalEventTableViewCell*   cell1 = (CalEventTableViewCell *)[tblPlanned dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell1 == nil)
         {
-            UIViewController *view = [[UIViewController alloc]initWithNibName:@"CircularTableViewCell" bundle:nil];
-            cell1 = (CircularTableViewCell *)view.view;
+            UIViewController *view = [[UIViewController alloc]initWithNibName:@"CalEventTableViewCell" bundle:nil];
+            cell1 = (CalEventTableViewCell *)view.view;
             cell1.selectedBackgroundView.backgroundColor = [UIColor clearColor];
-            NSArray *arr= [[self.dictPlanCommon objectAtIndex:indexPath.section] objectForKey:@"holidays"];
-            cell1.lblSubHeading.text=[NSString stringWithFormat:@"%@",[[arr objectAtIndex:indexPath.row] valueForKey:@"reason"]];
-            cell1.lblHeading.text=[NSString stringWithFormat:@"%@",[[arr objectAtIndex:indexPath.row] valueForKey:@"date"]];
-            
-            return cell1;
         }
+        
+        NSArray *arr= [[self.dictPlanCommon objectAtIndex:indexPath.section] objectForKey:@"holidays"];
+        cell1.lblSubHeading.text=[NSString stringWithFormat:@"%@",[[arr objectAtIndex:indexPath.row] valueForKey:@"reason"]];
+        cell1.lblHeading.text=[NSString stringWithFormat:@"%@",[[arr objectAtIndex:indexPath.row] valueForKey:@"date"]];
+        
+        return cell1;
+
     }
     
     return nil;
@@ -462,6 +465,9 @@
     }
     else if ([self.strCateg isEqualToString:@"Message"]) {
         return 100.0;
+    }
+    else if ([self.strCateg isEqualToString:@"Calendar"]) {
+        return 79.0;
     }
     else if ([self.strCateg isEqualToString:@"Media"]) {
             return [self calculateMediaCellHeight:indexPath];

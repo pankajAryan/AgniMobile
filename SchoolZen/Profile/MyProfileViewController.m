@@ -164,6 +164,11 @@
         [obj_glob.dictUserInfo setValue:lblName.text forKey:@"userName"];
         [obj_glob.dictUserInfo setValue:lblcontact.text forKey:@"userMobile"];
         
+        
+        if (_txtField_newPassword.text.length) {
+            [ALUtilityClass SaveDatatoUserDefault:_txtField_newPassword.text :@"pass"];
+        }
+        
         UIAlertView *alert = KALERT(KApplicationName, @"Your profile has been updated.", self);
         
         [alert show];

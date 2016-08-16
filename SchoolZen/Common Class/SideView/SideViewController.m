@@ -162,7 +162,7 @@
 	}
     if (indexPath.row == 4)
     {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Logout from TIA Dubai" message:@"Are you sure?" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Cancel",@"Yes", nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Logout from TIAD" message:@"Are you sure?" delegate:self cancelButtonTitle:nil otherButtonTitles:@"Cancel",@"Yes", nil];
         alertView.tag = 1;
         [alertView show];
     }

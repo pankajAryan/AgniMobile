@@ -454,7 +454,8 @@
     if(isSuccessNumber)
     {
         if (aReq.tag == 41) {
-            self.demoLabel1.text = [result valueForKey:@"responseObject"];
+            NSString *tickerText = [[[result valueForKey:@"responseObject"] componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]] componentsJoinedByString:@" "];
+            self.demoLabel1.text = tickerText;
         }
         else {
             GlobalDataPersistence *obj_GlobalDataPersistence=[GlobalDataPersistence sharedGlobalDataPersistence];
